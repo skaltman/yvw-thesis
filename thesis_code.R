@@ -1,12 +1,13 @@
-
-## @knitr params_helpers
-
-library(tidyverse)
+# Libraries
 library(readxl)
+library(tidyverse)
 library(langcog)
+library(broom)
 library(knitr)
 
-# Parameters
+#----------------------------------------------------------------------------------
+# PARAMETERS
+
 three_toy_path <- "~/Dropbox/YouVWorld/Data/YouVWorldData_forSophie.xlsx"
 three_toy_sheet <- "DataUpdated"
 
@@ -19,7 +20,25 @@ modified_sheet <- "Data"
 # Global variables
 fig_num_counter <- 1
 
-# Helper functions
+#----------------------------------------------------------------------------------
+# READ IN DATA
+three_toy <- 
+  read_xlsx(path = three_toy_path, 
+            sheet = three_toy_sheet) %>% 
+  rename(excludeCode = exclude_code)   # want all excludeCode variables named the same thing
+
+two_toy <- 
+  read_xlsx(path = two_toy_path, 
+            sheet = two_toy_sheet)
+
+modified <- 
+  read_xlsx(path = modified_path, 
+            sheet = modified_sheet)
+
+#----------------------------------------------------------------------------------
+
+# SUMMARY STAT AND INITIAL FORMATTING HELPER FUNCTIONS
+
 get_summ_stat <- function(data, stat, summary_var, ..., num_digits = 2){
   summary_var <- enquo(summary_var)
   stat <- enquo(stat)
@@ -71,58 +90,58 @@ format_data <- function(data) {
            age = as.double(age)) 
 }
 
-# Results section helper functions
+#----------------------------------------------------------------------------------
+# BETWEEN CONDITION HELPER FUNCTIONS
 
 # Returns a tibble with the number + percentage of children in each condition, variable group
 format_for_between_stats <- function(data, variable, variable_option) {
   variable <- enquo(variable)
   
   data %>%
+    mutate(condition = fct_recode(as.factor(condition), 
+                                  bt = "Broken Toy",
+                                  bb = "Broken Button")) %>% #this makes it easier to access variables later -- no longer have a space
     group_by(condition, !!variable) %>%
     summarise(n = n()) %>%
     mutate(percentage = n/sum(n) * 100) %>%
     ungroup() %>% 
     filter(!!variable == variable_option) %>% 
     unite("stat", condition, !!variable) %>% 
-    mutate(num_bb_other = .$n[[1]],
-           num_bt_other = .$n[[2]]) %>% 
+    mutate(num_bb = .$n[[1]],
+           num_bt = .$n[[2]]) %>% 
     select(-n) %>% 
     spread(stat, percentage) %>% 
     mutate_all(~ round(., 0))
 }
 
-# Returns a p-value from a fisher's exact test 
+# Returns a p-value from a fisher's exact test conducted on the table
 get_fishers_p_value <- function(table, digits = 4) {
   fisher.test(table)[[1]] %>% round(digits)
 }
 
-# Returns stats (num, percentages, p-value) for response data
-between_condition_response <- function(data) {
-  choices <-
-    data %>% 
-    format_for_between_stats(variable = firstChoice, 
-                             variable_option = "Other toy") %>% 
-    rename(perc_bt_other = `Broken Toy_Other toy`,
-           perc_bb_other = `Broken Button_Other toy`) %>% 
-    mutate(p_value = get_fishers_p_value(
-      table(data$condition, 
-            data$firstChoice)))
+# Returns a tibble with 5 variables -- num_bb, num_bt, perc_bb, perc_bt, and p_value
+# num_bb and num_bt are the number of children with variable == variable_option in each condition (e.g., firstChoice == "Confederate's toy")
+# perc_bb and perc_bt are num_bb and num_bt divided by the number of children in each condition
+# p_value is the p-value from a fisher's exact test that tests for differences in `variable` by condition
+# This will work for first reponse, helpfulness, correctness, etc.
+between_condition_stats <- function(data, variable, variable_option, digits = 4) {
+  variable <- enquo(variable)
+  
+  data %>%
+    format_for_between_stats(variable = !!variable,
+                             variable_option = variable_option) %>%
+    rename_at(vars(contains(variable_option)), 
+              funs(str_c("perc_", str_extract(., "[a-z][a-z]")))) %>% 
+    mutate(p_value =
+             get_fishers_p_value(
+               table(data$condition, data %>% pull(!!variable)),
+               digits = digits))
 }
 
-# Returns stats (num, percentages, p-value) for helpfulness data
-between_condition_helpful <- function(data) {
-  helpful <- 
-    data %>% 
-    format_for_between_stats(variable = helpfulCategory,
-                             variable_option = "Helpful") %>% 
-    rename(perc_bb_helpful = `Broken Button_Helpful`,
-           perc_bt_helpful = `Broken Toy_Helpful`) %>% 
-    mutate(p_value = get_fishers_p_value(
-      table(data$condition, 
-            data$helpfulCategory)))
-}
+#----------------------------------------------------------------------------------
 
-# Within condition stats helper functions
+# WITHIN CONDITION STATS HELPER FUNCTIONS
+
 get_binom_p_value <- function(k, n, digits = 4) {
   binom.test(k, n, alternative = "two.sided")$p.value %>% 
     round(digits)
@@ -132,6 +151,9 @@ format_for_within_stats <- function(data, variable, variable_option) {
   variable = enquo(variable)
   
   data %>% 
+    mutate(condition = fct_recode(as.factor(condition), 
+                                  bt = "Broken Toy",
+                                  bb = "Broken Button")) %>% #this makes it easier to access variables later -- no longer have a space
     group_by(condition, !!variable) %>% 
     summarise(n = n()) %>% 
     ungroup() %>% 
@@ -140,29 +162,25 @@ format_for_within_stats <- function(data, variable, variable_option) {
     spread(stat, n)
 }
 
-within_condition_response <- function(data, num_bt, num_bb) {
-  three_toy_tidy %>% 
-    format_for_within_stats(variable = firstChoice, 
-                            variable_option = "Other toy") %>% 
-    rename(num_bb_other = `Broken Button_Other toy`,
-           num_bt_other = `Broken Toy_Other toy`) %>% 
-    mutate(p_value_bt = get_binom_p_value(num_bt_other, num_bt),
-           p_value_bb = get_binom_p_value(num_bb_other, num_bb))
-}
-
-within_condition_helpful <- function(data, num_bt, num_bb) {
+within_condition_stats <- function(data, variable, variable_option, digits = 4) {
+  total_bt <- data %>% filter(condition == "Broken Toy") %>% nrow()
+  total_bb <- data %>% filter(condition == "Broken Button") %>% nrow()
+  
+  variable = enquo(variable)
+  
   data %>% 
-    format_for_within_stats(variable = helpfulCategory, 
-                            variable_option = "Helpful") %>% 
-    rename(num_bb_help = `Broken Button_Helpful`,
-           num_bt_help = `Broken Toy_Helpful`) %>% 
-    mutate(num_total_help = num_bb_help + num_bt_help,
-           perc_total_help = num_total_help / (num_bt + num_bb) %>% round(0)) %>% 
-    mutate(p_value_bt = get_binom_p_value(num_bt_help, num_bt),
-           p_value_bb = get_binom_p_value(num_bb_help, num_bb))
+    format_for_within_stats(variable = !!variable,
+                            variable_option = variable_option) %>% 
+    rename_all(funs(str_c("num_", str_extract(., "[a-z][a-z]")))) %>% 
+    mutate(num_total = num_bb + num_bt,
+           perc_total = num_total / (total_bt + total_bb) %>% round(0),
+           p_value_bt = get_binom_p_value(num_bt, total_bt),
+           p_value_bb = get_binom_p_value(num_bb, total_bb))
 }
 
-# Plot functions
+#----------------------------------------------------------------------------------
+
+# PLOT HELPER FUNCTIONS
 
 # Returns a tibble that includes bootstrapped CI for the specified variable
 # Variable option is the reference value of the specified variable (i.e., "Other toy")
@@ -222,17 +240,3 @@ help_plot <- function(data) {
     theme_minimal() +
     coord_fixed(ratio = 2/1)
 }
-
-# Read in data
-three_toy <- 
-  read_xlsx(path = three_toy_path, 
-            sheet = three_toy_sheet) %>% 
-  rename(excludeCode = exclude_code)   # want all excludeCode variables named the same thing
-
-two_toy <- 
-  read_xlsx(path = two_toy_path, 
-            sheet = two_toy_sheet)
-
-modified <- 
-  read_xlsx(path = modified_path, 
-            sheet = modified_sheet)
