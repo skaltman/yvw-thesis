@@ -18,10 +18,13 @@ modified_path <- "~/Dropbox/YouVWorld/TwoToys/new_version_data/YouVWorld_modifie
 modified_sheet <- "Data"
 
 # Global variables
+
+# Counts the number of figures so that you don't have to hand caption them
 fig_num_counter <- 1
 
 #----------------------------------------------------------------------------------
 # READ IN DATA
+
 three_toy <- 
   read_xlsx(path = three_toy_path, 
             sheet = three_toy_sheet) %>% 
@@ -36,9 +39,9 @@ modified <-
             sheet = modified_sheet)
 
 #----------------------------------------------------------------------------------
-
 # SUMMARY STAT AND INITIAL FORMATTING HELPER FUNCTIONS
 
+# Returns a tibble filtered by ... (can be nothing if you want)
 get_summ_stat <- function(data, stat, summary_var, ..., num_digits = 2){
   summary_var <- enquo(summary_var)
   stat <- enquo(stat)
@@ -139,7 +142,6 @@ between_condition_stats <- function(data, variable, variable_option, digits = 4)
 }
 
 #----------------------------------------------------------------------------------
-
 # WITHIN CONDITION STATS HELPER FUNCTIONS
 
 get_binom_p_value <- function(k, n, digits = 4) {
@@ -179,7 +181,44 @@ within_condition_stats <- function(data, variable, variable_option, digits = 4) 
 }
 
 #----------------------------------------------------------------------------------
+# FORMAT DATA
 
+three_toy_tidy <-
+  three_toy %>% 
+  format_data() %>% 
+  filter(exclude != "yes",
+         between(ageBucket, 2, 3),
+         n != 109) %>% 
+  mutate(firstChoiceCorrect = as.integer(firstChoiceCorrect)) %>% 
+  select(-contains("second"),
+         -contains("third"),
+         -contains("fourth"),
+         -contains("language"),
+         -contains("?"),
+         -contains("child's choice matches")) %>% 
+  rename(helpfulCategory = HelpfulCategory)
+
+two_toy_tidy <-
+  two_toy %>% 
+  format_data() %>% 
+  filter(exclude == "no") %>% 
+  mutate(helpfulCategory = HelpfulCategory,
+         firstChoiceCorrect = as.integer(firstChoiceCorrect))
+
+modified_tidy <-
+  modified %>% 
+  format_data() %>% 
+  filter(exclude != "yes") %>% 
+  rename(helpfulCategory = HelpfulCategory) %>% 
+  mutate(as_predicted = 
+           case_when(
+            condition == "Broken Toy" & firstChoice == "Other toy" ~ 1,
+            condition == "Broken Button" & firstChoice == "Confederate's toy" ~ 1,
+            TRUE ~ 0
+           )
+         )
+
+#----------------------------------------------------------------------------------
 # PLOT HELPER FUNCTIONS
 
 # Returns a tibble that includes bootstrapped CI for the specified variable

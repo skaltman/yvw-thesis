@@ -1,0 +1,21 @@
+---
+title: "test"
+author: "Sara Altman"
+date: "4/10/2018"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+source("thesis_code.R")
+```
+
+```{r}
+fig_num_counter
+
+three_toy_tidy
+```
+

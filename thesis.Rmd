@@ -10,25 +10,6 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 
-```{r format}
-#formatting three toy data
-three_toy_tidy <-
-  three_toy %>% 
-  format_data() %>% 
-  filter(exclude != "yes",
-         between(ageBucket, 2, 3),
-         n != 109) %>% 
-  mutate(firstChoiceCorrect = as.integer(firstChoiceCorrect)) %>% 
-  select(-contains("second"),
-         -contains("third"),
-         -contains("fourth"),
-         -contains("language"),
-         -contains("?"),
-         -contains("child's choice matches")) %>% 
-  rename(helpfulCategory = HelpfulCategory)
-```
-
-
 # Experiment 1
 
 ## Methods
@@ -112,7 +93,7 @@ within_response <-
   three_toy_tidy %>%
   within_condition_stats(firstChoice, "Other toy")
 
-# Helpfulness: Between condition differences -- Fisher's exact test
+# Helpfulness: Between condition differences -- Fishers exact test
 between_help <-
   three_toy_tidy %>%
   filter(n != 11) %>%
@@ -122,7 +103,7 @@ between_help <-
 within_help <-
   three_toy_tidy %>%
   filter(n != 11) %>%
-  within_condition_helpful(num_bt, num_bb)
+  within_condition_stats(helpfulCategory, "Helpful")
 
 glm_fit <-
   glm(firstChoiceCorrect ~ condition + age,
@@ -153,7 +134,8 @@ We then looked at children’s responses within each condition. In the Broken To
 
 In the Broken Button condition, however, it is ambiguous whether or not the confederate has the fully inert toy. There is a 33% chance any toy the child flips over will have an inert yellow button. Since all toys are now equally likely to produce music, it is helpful for the child to target any toy. However, there are reasons to expect that children would prefer the confederate's toy in this condition. First, children may be inclined to approach the toy just acted upon by the confederate. Second, it is reasonable to conclude from the confederate's actions that she not only wants help playing music, but also that she wants help playing music specifically with her chosen toy. Thus, we expected that children might show a mild preference for the confederate’s toy. The majority of children in the Broken Button condition did approach the "confederate's toy" (`r num_bb - within_response$num_bb`/`r num_bb`; two-tailed binomial test, p = `r within_response$p_value_bb`). See Figure 2 for a summary of children’s first responses.
 
-As a secondary measure of interest, we looked at the success of children's helping responses. We considered responses successful if they helped the confederate produce music. In the Broken Toy condition, a behavior could be successful only if it involved approaching the "toys on the tray." In the Broken Button condition, successful behaviors involved revealing a bottom button on any of the toys. Therefore, it is plausible that helping successfully is more difficult in the Broken Button condition than in the Broken Toy condition. However, we found no difference in success of helping behavior across the two conditions (`r between_help$perc_bt_helpful`% in Broken Toy vs. `r perc_bt_helpful` in Broken Button; two-tailed Fisher’s Exact Test, p = `r between_help$p_value`). Children within each condition were also more likely to help successfully than unsuccessfully (Broken Toy: `r num_bt_help`/`r num_bt`; Broken Button: `r num_bb_help`/`r num_bb - 1`). One child in the Broken Button condition was dropped from this analysis because the camera angle prevented visual access to the content of her helping behavior.
+As a secondary measure of interest, we looked at the success of children's helping responses. We considered responses successful if they helped the confederate produce music. In the Broken Toy condition, a behavior could be successful only if it involved approaching the "toys on the tray." In the Broken Button condition, successful behaviors involved revealing a bottom button on any of the toys. Therefore, it is plausible that helping successfully is more difficult in the Broken Button condition than in the Broken Toy condition. However, we found no difference in success of helping behavior across the two conditions (`r between_help$perc_bt`% in Broken Toy vs. `r between_help$perc_bb` in Broken Button; two-tailed Fisher’s Exact Test, p = `r between_help$p_value`). Children within each condition were also more likely to help successfully than unsuccessfully (Broken Toy: `r between_help$num_bt`/`r num_bt`; Broken Button: `r between_help$num_bb`/`r num_bb - 1`). One child in the Broken Button condition was dropped from this analysis because the camera angle prevented visual access to the content of her helping behavior.
+
 
 ```{r}
 three_toy_tidy %>%
@@ -174,13 +156,6 @@ In Experiment 1, the toys were color-coded such that all red buttons were inert,
 ### Participants
 
 ```{r}
-# for some reason there are some NA's still in the age column? I thought we fixed this?
-two_toy_tidy <-
-  two_toy %>% 
-  format_data() %>% 
-  filter(exclude == "no") %>% 
-  mutate(helpfulCategory = HelpfulCategory,
-         firstChoiceCorrect = as.integer(firstChoiceCorrect))
   
 
 num_participants <- 
@@ -415,18 +390,7 @@ In this experiment, we change the structure of one toy in each pair such that th
 ### Participants
 
 ```{r}
-modified_tidy <-
-  modified %>% 
-  format_data() %>% 
-  filter(exclude != "yes") %>% 
-  rename(helpfulCategory = HelpfulCategory) %>% 
-  mutate(as_predicted = case_when(
-                          condition == "Broken Toy" & firstChoice == "Other toy" ~
-                            1,
-                          condition == "Broken Button" & firstChoice == "Confederate's toy" ~
-                            1,
-                          TRUE ~ 0
-                        ))
+
 
 num_participants <- modified_tidy %>% nrow()
 
