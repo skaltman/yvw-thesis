@@ -2,7 +2,7 @@
 title: "Untitled"
 author: "Sara Altman"
 date: "2/13/2018"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -156,8 +156,6 @@ In Experiment 1, the toys were color-coded such that all red buttons were inert,
 ### Participants
 
 ```{r}
-  
-
 num_participants <- 
   two_toy_tidy %>% 
   nrow()

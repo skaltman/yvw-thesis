@@ -230,8 +230,12 @@ get_bootstrapped_ci <- function(data, variable, variable_option) {
     mutate(var_num = if_else(!!variable == variable_option, 1, 0)) %>%
     group_by(condition) %>%
     multi_boot_standard(col = "var_num") %>%
-    mutate(Confederate = 1 - mean) %>% 
+    mutate(kids_in_variable_option = 1 - mean) %>% 
     ungroup()
+}
+
+proportion_by_condition_plot <- function(data, variable, variable_option, title, legend, labels) {
+  
 }
 
 # Plots the response plot. Captions with figure_num
@@ -240,13 +244,13 @@ response_plot <- function(data) {
   
   data %>% 
     get_bootstrapped_ci(firstChoice, "Confederate's toy") %>% 
-    gather(key, val, mean, Confederate) %>% 
+    gather(key, val, mean, kids_in_variable_option) %>% 
     ggplot(aes(x = condition, y = val, fill = key)) +
     geom_col(position = "fill", width = .7) +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = .1) +
     geom_hline(yintercept = .5, linetype = "dashed") +
     scale_fill_solarized(name = "Target toy of first response", 
-                         breaks = c("Confederate", "mean"),
+                         breaks = c("kids_in_variable_option", "mean"),
                          labels = c("Other toy", "Confederate's toy")) +
     theme_minimal() + 
     labs(x = "Condition",
@@ -261,7 +265,7 @@ help_plot <- function(data) {
   
   data %>% 
     get_bootstrapped_ci(helpfulCategory, "Helpful") %>% 
-    mutate(unhelpful = 1 - mean) %>% 
+    #mutate(unhelpful = 1 - mean) %>% 
     gather(key = "measure", value = "val", mean, unhelpful) %>% 
     mutate(measure = forcats::fct_rev(as.factor(measure))) %>% 
     ggplot(aes(x = condition, y = val, fill = measure)) +
