@@ -17,8 +17,11 @@ two_toy_sheet <- "Data"
 modified_path <- "~/Dropbox/YouVWorld/TwoToys/new_version_data/YouVWorld_modified_toy_updated.xlsx"
 modified_sheet <- "Data"
 
-# Global variables
+# COLORS FOR PLOTS
+response_colors <- c("#dc322f", "#268bd2")
+helpfulness_colors <- c("#dddddd", "#addd8e")
 
+# Global variables
 # Counts the number of figures so that you don't have to hand caption them
 fig_num_counter <- 1
 
@@ -37,40 +40,8 @@ two_toy <-
 modified <- 
   read_xlsx(path = modified_path, 
             sheet = modified_sheet)
-
 #----------------------------------------------------------------------------------
-# SUMMARY STAT AND INITIAL FORMATTING HELPER FUNCTIONS
-
-# Returns a tibble filtered by ... (can be nothing if you want)
-get_summ_stat <- function(data, stat, summary_var, ..., num_digits = 2){
-  summary_var <- enquo(summary_var)
-  stat <- enquo(stat)
-  
-  data %>% 
-    filter(...) %>% 
-    summarise(mean = round(mean(!!summary_var), num_digits),
-              sd = round(sd(!!summary_var)), num_digits) %>% 
-    pull(!!stat)
-}
-
-get_percentage_female <- function(data, ..., num_digits = 0){
-  data %>% 
-    filter(gender == "F", ...) %>% 
-    summarise(percentage = round(n() / num_participants * 100, 0)) %>% 
-    pull(percentage)
-}
-
-get_num_excluded <- function(data, exclude_code_var, ...){
-  exclude_code <- enquo(exclude_code_var)
-  
-  data %>% 
-    filter(`exclude?` == "yes") %>% 
-    count(!!exclude_code) %>% 
-    spread(!!exclude_code, nn) %>% 
-    select(...) %>% 
-    mutate(total = as.integer(rowSums(.))) %>% 
-    rename_all(funs(str_replace_all(., " ", "_")))
-}
+# FORMAT DATA FUNCTION -- MAKES SURE ALL DATA FRAMES HAVE SAME VARIABLE NAMES, ETC.
 
 format_data <- function(data) {
   data %>% 
@@ -91,6 +62,63 @@ format_data <- function(data) {
            firstChoiceNum = as.integer(firstChoice == "Confederate's toy"),
            flip = str_detect(firstBehaviorCode, "flip"),
            age = as.double(age)) 
+}
+
+#----------------------------------------------------------------------------------
+# SUMMARY STAT HELPER FUNCTIONS
+
+# Returns a tibble filtered by ... (can be nothing if you want) with either the mean or sd of stat
+get_summ_stat <- function(data, stat, summary_var, ..., num_digits = 2){
+  summary_var <- enquo(summary_var)
+  stat <- enquo(stat)
+  
+  data %>% 
+    filter(...) %>% 
+    summarise(mean = round(mean(!!summary_var), num_digits),
+              sd = round(sd(!!summary_var), num_digits)) %>% 
+    pull(!!stat)
+}
+
+# Returns the percentage of female participants in data, filtered by ... if supplied
+get_percentage_female <- function(data, ..., num_digits = 0){
+  data %>% 
+    filter(gender == "F", ...) %>% 
+    summarise(percentage = round(n() / num_participants * 100, 0)) %>% 
+    pull(percentage)
+}
+
+# Returns a with various summary statistics -- mean and sd for full data and by condition, percentage female, num participants and num per condition
+summary_tibble <- function(data) {
+  tibble(
+    num_participants = data %>% nrow(),
+    num_bb = data %>% filter(condition == "Broken Button") %>% nrow(),
+    num_bt = data %>% filter(condition == "Broken Toy") %>% nrow(),
+    perc_female = get_percentage_female(data),
+    mean_age = data %>% get_summ_stat(mean, age),
+    sd_age = data %>% get_summ_stat(sd, age),
+    mean_age_bt = data %>% get_summ_stat(mean, age, condition == "Broken Toy"),
+    mean_age_bb = data %>% get_summ_stat(mean, age, condition == "Broken Button"),
+    sd_age_bt = data %>% get_summ_stat(sd, age, condition == "Broken Toy"),
+    sd_age_bb = data %>% get_summ_stat(sd, age, condition == "Broken Button"),
+    num_bing = data %>% filter(str_detect(location, "Bing")) %>% nrow(),
+    num_jmz = data %>% filter(location == "JMZ") %>% nrow(),
+    mean_age_bing = data %>% get_summ_stat(mean, age, str_detect(location, "Bing")),
+    mean_age_jmz = data %>% get_summ_stat(mean, age, location == "JMZ"),
+    sd_age_bing = data %>% get_summ_stat(sd, age, str_detect(location, "Bing")),
+    sd_age_jmz = data %>% get_summ_stat(sd, age, location == "JMZ")
+  )
+}
+
+get_num_excluded <- function(data, exclude_code_var, ...){
+  exclude_code <- enquo(exclude_code_var)
+  
+  data %>% 
+    filter(`exclude?` == "yes") %>% 
+    count(!!exclude_code) %>% 
+    spread(!!exclude_code, nn) %>% 
+    select(...) %>% 
+    mutate(total = as.integer(rowSums(.))) %>% 
+    rename_all(funs(str_replace_all(., " ", "_")))
 }
 
 #----------------------------------------------------------------------------------
@@ -234,52 +262,71 @@ get_bootstrapped_ci <- function(data, variable, variable_option) {
     ungroup()
 }
 
-proportion_by_condition_plot <- function(data, variable, variable_option, title, legend, labels) {
-  
-}
-
-# Plots the response plot. Captions with figure_num
-response_plot <- function(data) {
+proportion_by_condition_plot <- function(data, variable, variable_option_1, colors, title, legend_name, labels) {
   fig_num_counter <<- fig_num_counter + 1
+  variable <- enquo(variable)
   
   data %>% 
-    get_bootstrapped_ci(firstChoice, "Confederate's toy") %>% 
+    get_bootstrapped_ci(!!variable, variable_option_1) %>% 
     gather(key, val, mean, kids_in_variable_option) %>% 
     ggplot(aes(x = condition, y = val, fill = key)) +
     geom_col(position = "fill", width = .7) +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = .1) +
     geom_hline(yintercept = .5, linetype = "dashed") +
-    scale_fill_solarized(name = "Target toy of first response", 
-                         breaks = c("kids_in_variable_option", "mean"),
-                         labels = c("Other toy", "Confederate's toy")) +
+    scale_fill_manual(name = legend_name, 
+                      values = colors,
+                      breaks = c("kids_in_variable_option", "mean"),
+                      labels = labels) +
     theme_minimal() + 
     labs(x = "Condition",
          y = "Proportion of children",
-         title = "Response by condition",
+         title = title,
          caption = str_c("Figure", fig_num_counter, sep = " ")) +
     coord_fixed(ratio = 2/1)
 }
 
-help_plot <- function(data) {
-  fig_num_counter <<- fig_num_counter + 1
-  
-  data %>% 
-    get_bootstrapped_ci(helpfulCategory, "Helpful") %>% 
-    #mutate(unhelpful = 1 - mean) %>% 
-    gather(key = "measure", value = "val", mean, unhelpful) %>% 
-    mutate(measure = forcats::fct_rev(as.factor(measure))) %>% 
-    ggplot(aes(x = condition, y = val, fill = measure)) +
-    geom_col(width = .7) +
-    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = .1) +
-    geom_hline(yintercept = .5, linetype = "dashed") +
-    scale_fill_manual(breaks = c("mean", "unhelpful"), 
-                      labels = c("Successful", "Unsuccessful"), 
-                      name = "Success of helping behavior",
-                      values = c("#dddddd", "#addd8e"))  +
-    labs(x = "Condition",
-         y = "Proportion of children",
-         title = "Success of help by condition",
-         caption = str_c("Figure", fig_num_counter, sep = " ")) +
-    theme_minimal() +
-    coord_fixed(ratio = 2/1)
-}
+# Plots the response plot. Captions with figure_num
+# response_plot <- function(data) {
+#   fig_num_counter <<- fig_num_counter + 1
+#   
+#   data %>% 
+#     get_bootstrapped_ci(firstChoice, "Confederate's toy") %>% 
+#     gather(key, val, mean, kids_in_variable_option) %>% 
+#     ggplot(aes(x = condition, y = val, fill = key)) +
+#     geom_col(position = "fill", width = .7) +
+#     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = .1) +
+#     geom_hline(yintercept = .5, linetype = "dashed") +
+#     scale_fill_solarized(name = "Target toy of first response", 
+#                          breaks = c("kids_in_variable_option", "mean"),
+#                          labels = c("Other toy", "Confederate's toy")) +
+#     theme_minimal() + 
+#     labs(x = "Condition",
+#          y = "Proportion of children",
+#          title = "Response by condition",
+#          caption = str_c("Figure", fig_num_counter, sep = " ")) +
+#     coord_fixed(ratio = 2/1)
+# }
+# 
+# help_plot <- function(data) {
+#   fig_num_counter <<- fig_num_counter + 1
+#   
+#   data %>% 
+#     get_bootstrapped_ci(helpfulCategory, "Helpful") %>% 
+#     #mutate(unhelpful = 1 - mean) %>% 
+#     gather(key = "measure", value = "val", mean, unhelpful) %>% 
+#     mutate(measure = forcats::fct_rev(as.factor(measure))) %>% 
+#     ggplot(aes(x = condition, y = val, fill = measure)) +
+#     geom_col(width = .7) +
+#     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = .1) +
+#     geom_hline(yintercept = .5, linetype = "dashed") +
+#     scale_fill_manual(breaks = c("mean", "unhelpful"), 
+#                       labels = c("Successful", "Unsuccessful"), 
+#                       name = "Success of helping behavior",
+#                       values = c("#dddddd", "#addd8e"))  +
+#     labs(x = "Condition",
+#          y = "Proportion of children",
+#          title = "Success of help by condition",
+#          caption = str_c("Figure", fig_num_counter, sep = " ")) +
+#     theme_minimal() +
+#     coord_fixed(ratio = 2/1)
+# }

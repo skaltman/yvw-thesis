@@ -17,51 +17,16 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ### Participants
 
 ```{r three-toy}
-num_participants <- 
-  three_toy_tidy %>% 
-  nrow()
+summary_three_toy <- summary_tibble(three_toy_tidy)
 
-num_bb <- 
-  three_toy_tidy %>% 
-  filter(condition == "Broken Button") %>% 
-  nrow()
-
-num_bt <- num_participants - num_bb
-  
-female <- get_percentage_female(three_toy_tidy)
-
-mean_age <- 
-  three_toy_tidy %>% 
-  get_summ_stat(mean, age)
-
-sd_age <-
-  three_toy_tidy %>% 
-  get_summ_stat(sd, age)
-
-mean_age_bt <-
-  three_toy_tidy %>% 
-  get_summ_stat(mean, age, condition == "Broken Toy")
-
-sd_age_bt <-
-  three_toy_tidy %>% 
-  get_summ_stat(sd, age, condition == "Broken Toy")
-
-mean_age_bb <-
-  three_toy_tidy %>% 
-  get_summ_stat(mean, age, condition == "Broken Button")
-
-sd_age_bb <-
-  three_toy_tidy %>% 
-  get_summ_stat(sd, age, condition == "Broken Button")
-
-#excluded kids 
+# excluded kids 
 # check that these codes are right--some are different than ones in cogsci
 num_excluded <-
   three_toy %>% 
   get_num_excluded(excludeCode, parent, audio, exp, withdrew)
 ```
 
-Fifty-two 24- to 48-month-olds (M(SD) = `r mean_age`(`r sd_age`)yrs, `r female` % female) from a museum in Palo Alto, CA participated. An additional `r num_excluded` children were excluded from analysis due to parental interference (n = `r num_excluded$parent`), experimenter error (n = `r num_excluded$experimenter`), shyness (n = `r num_excluded$withdrew`), or lack of video recording (n = `r num_excluded$audio`). We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r num_bt`; M(SD) = `r round(mean_age_bt, 2)`(`r sd_age_bt`)yrs) or the Broken Button condition (n = `r num_bb`; M(SD) = `r mean_age_bb`(`r sd_age_bb`)yrs).
+Fifty-two 24- to 48-month-olds (M(SD) = `r summary_three_toy$mean_age`(`r summary_three_toy$sd_age`)yrs, `r summary_three_toy$perc_female` % female) from a museum in Palo Alto, CA participated. An additional `r num_excluded$total` children were excluded from analysis due to parental interference (n = `r num_excluded$parent`), experimenter error (n = `r num_excluded$exp`), shyness (n = `r num_excluded$withdrew`), or lack of video recording (n = `r num_excluded$audio`). We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r summary_three_toy$num_bt`; M(SD) = `r round(summary_three_toy$mean_age_bt, 2)`(`r summary_three_toy$sd_age_bt`)yrs) or the Broken Button condition (n = `r summary_three_toy$num_bb`; M(SD) = `r summary_three_toy$mean_age_bb`(`r summary_three_toy$sd_age_bb`)yrs).
 
 ### Stimuli
 We constructed three identical-looking toys. One side of each toy was covered in yellow felt and had a yellow button in the center. The opposite side was covered in red felt and had a red button in the center. The yellow button on two toys played music, while the yellow button on the third toy was inert. All red buttons were inert. The toys were placed on a white plastic tray and covered with grey felt. See Figure 1 for a schematic of the toys and procedure.
@@ -156,6 +121,8 @@ In Experiment 1, the toys were color-coded such that all red buttons were inert,
 ### Participants
 
 ```{r}
+summary_two_toy <- summary_tibble(two_toy_tidy)
+
 num_participants <- 
   two_toy_tidy %>% 
   nrow()
@@ -210,9 +177,9 @@ num_excluded <-
 ```
 
 
-We recruited `r num_participants` 24- to 48-month-old participants (M(SD) = x, `r female`% female) from a local preschool. An additional `r num_excluded$total` children were excluded from analysis due to experimenter error (n = `r num_excluded$experimenter_error`), the child responding too early (n = `r num_excluded$pre-failure_help`), the child having prior exposure to the experiment (n = `r num_excluded$played_before`), or lack of video recording (n = `r num_excluded$video`).
+We recruited `r summary_two_toy$num_participants` 24- to 48-month-old participants (M(SD) = `r summary_two_toy$mean_age`, `r summary_two_toy$perc_female`% female) from a local preschool. An additional `r num_excluded$total` children were excluded from analysis due to experimenter error (n = `r num_excluded$experimenter_error`), the child responding too early (n = `r num_excluded$pre-failure_help`), the child having prior exposure to the experiment (n = `r num_excluded$played_before`), or lack of video recording (n = `r num_excluded$video`).
 
-We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r num_bt`; M(SD) = `r round(mean_age_bt, 2)`(`r round(sd_age_bt, 2)`)yrs) or the Broken Button condition (n = `r bb`; M(SD) = `r round(mean_age_bb, 2)`(`r round(sd_age_bb, 2)`)yrs).
+We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r summary_two_toy$num_bt`; M(SD) = `r round(summary_two_toy$mean_age_bt, 2)`(`r summary_two_toy$sd_age_bt`)yrs) or the Broken Button condition (n = `r summary_two_toy$num_bb`; M(SD) = `r summary_two_toy$mean_age_bb`(`r summary_two_toy$sd_age_bb`)yrs).
 
 ### Stimuli
 
@@ -388,34 +355,10 @@ In this experiment, we change the structure of one toy in each pair such that th
 ### Participants
 
 ```{r}
-
-
-num_participants <- modified_tidy %>% nrow()
-
-mean_age <- 
-  modified_tidy %>% 
-  get_summ_stat(mean, age) 
-
-sd_age <- 
-  modified_tidy %>% 
-  get_summ_stat(sd, age) 
-
-females <- 
-  modified_tidy %>% 
-  get_percentage_female()
-
-num_jmz <- 
-  modified_tidy %>% 
-  filter(location == "JMZ") %>% 
-  nrow()
-
-age_jmz <- modified_tidy %>% get_summ_stat(mean, age, location == "JMZ")
-sd_jmz <- modified_tidy %>% get_summ_stat(sd, age, location == "JMZ")
-
-num_bing <- num_participants - num_jmz
-
-age_bing <- modified_tidy %>% get_summ_stat(mean, age, location != "JMZ")
-sd_bing <- modified_tidy %>% get_summ_stat(sd, age, location != "JMZ")
+# currently are 38 kids in broken button
+# I removed the last two kids 
+summary_modified <- summary_tibble(modified_tidy %>% 
+                                     filter(n != 109, n != 110))
 
 num_excluded <- 
   modified %>% 
@@ -430,18 +373,11 @@ num_excluded <-
 
 #is shyness not helping? or withdrawing from the game?
 
-num_bt <- 
-  modified_tidy %>% 
-  filter(condition == "Broken Toy") %>% 
-  nrow()
-
-num_bb <- num_participants - num_bt
-#currently are 38 in bb and 36 in bt ... fix later
 ```
 
-We recruited `r num_participants` 24- to 48-month-old participants (M(SD) = `r mean_age`(`r sd_age`), %% female). `r num_jmz` of these participants (M(SD) = `r age_jmz`(`r sd_jmz`)) were recruited from a museum in Palo Alto, CA. `r num_bing` of these participants (M(SD) = `r age_bing`(`r sd_bing`)) were recruited from a local preschool. An additional `r num_excluded$total` children were excluded from analysis due to experimenter error (n = `r num_excluded$experimenter`), parental or sibling interference (n = `r num_excluded$parent + num_excluded$sibling`), the child responding too early (n = `r num_excluded$early`), the child having prior exposure to the experiment (n = `r num_excluded$already_played`), or lack of video recording (n = `r num_excluded$no_video`).
+We recruited `r num_participants` 24- to 48-month-old participants (M(SD) = `r summary_modified$mean_age`(`r summary_modified$sd_age`), %% female). `r summary_modified$num_jmz` of these participants (M(SD) = `r summary_modified$mean_age_jmz`(`r summary_modified$sd_jmz`)) were recruited from a museum in Palo Alto, CA. `r num_bing` of these participants (M(SD) = `r summary_modified$mean_age_bing`(`r summary_modified$sd_bing`)) were recruited from a local preschool. An additional `r num_excluded$total` children were excluded from analysis due to experimenter error (n = `r num_excluded$experimenter`), parental or sibling interference (n = `r num_excluded$parent + num_excluded$sibling`), the child responding too early (n = `r num_excluded$early`), the child having prior exposure to the experiment (n = `r num_excluded$already_played`), or lack of video recording (n = `r num_excluded$no_video`).
 
-We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r num_bt`; M(SD) = `r round(mean_age_bt, 2)`(`r sd_age_bt`)yrs) or the Broken Button condition (n = `r bb`; M(SD) = `r mean_age_bb`(`r sd_age_bb`)yrs).
+We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r summary_modified$num_bt`; M(SD) = `r summary_modified$mean_age_bt`(`r summary_modified$sd_age_bt`)yrs) or the Broken Button condition (n = `r summary_modified$num_bb`; M(SD) = `r summary_modified$mean_age_bb`(`r summary_modified$sd_age_bb`)yrs).
 
 ### Stimuli
 
@@ -484,8 +420,13 @@ within_response <-
   modified_tidy %>% 
   within_condition_response(num_bt, num_bb)
 
-modified_tidy %>% 
-  response_plot()
+proportion_by_condition_plot(modified_tidy, 
+                             firstChoice, 
+                             "Confederate's toy", 
+                             response_colors, 
+                             "Response by condition", 
+                             "Target toy of first response", 
+                             c("Other toy", "Confederate's toy"))
 ```
 
 Again, we predicted that responses would vary across conditions depending on the source of the confederate's failure, and that children in the Broken Toy condition would be more likely to target the "other toy" than children in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward the "other toy" in the Broken Toy condition than in the Broken Button condition (`r between_response$perc_bt_other`% % vs. `r between_response$perc_bb_other`%; two-tailed Fisher’s Exact Test, p = `r between_response$p_value`). This replicates the findings in Experiment 1 and 2.
@@ -495,7 +436,13 @@ As in the previous two experiments, we also predicted and found that children wi
 In contrast to Experiment 2, we predicted that children within the Broken Button condition would preferentially target the "confederate's toy" over the "other toy." the two toys in this experiment are visually different. Therefore, in the Broken Button condition, children can no longer effectively help the confederate by demonstrating the correct action on the "other toy." Additionally, because the toys are visually distinct, it now appears more likely that the confederate expresses a preference for one type of toy over the other when she selects a toy to operate. If children interpret her choice as a preference for her chosen type of toy, then they may also think it is more likely that she holds the "specific" goal of playing music with her chosen toy, and not the "general" goal of playing music with either toy. As predicted, children in this condition were more likely to target the "confederate's toy" than the "other toy" (`r within_response$num_bb_other`/`num_bb`; two-tailed binomial test, p = `r within_response$p_value_bb`).
 
 ```{r}
-
+proportion_by_condition_plot(modified_tidy, 
+                             helpfulCategory, 
+                             "Helpful", 
+                             helpfulness_colors, 
+                             "Success of helping behavior by condition", 
+                             "Success of helping behavior", 
+                             c("Unsuccessful", "Successful"))
 ```
 
 
