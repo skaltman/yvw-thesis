@@ -285,6 +285,26 @@ proportion_by_condition_plot <- function(data, variable, variable_option_1, colo
     coord_fixed(ratio = 2/1)
 }
 
+plot_responses <- function(data) {
+  proportion_by_condition_plot(data, 
+                               firstChoice, 
+                               "Confederate's toy", 
+                               response_colors, 
+                               "Response by condition", 
+                               "Target toy of first response", 
+                               c("Other toy", "Confederate's toy"))
+}
+
+plot_helpfulness <- function(data) {
+  proportion_by_condition_plot(data, 
+                               helpfulCategory, 
+                               "Helpful", 
+                               helpfulness_colors, 
+                               "Success of helping behavior by condition", 
+                               "Success of helping behavior", 
+                               c("Unsuccessful", "Successful"))
+}
+
 # Plots the response plot. Captions with figure_num
 # response_plot <- function(data) {
 #   fig_num_counter <<- fig_num_counter + 1

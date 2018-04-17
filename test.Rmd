@@ -19,3 +19,5 @@ fig_num_counter
 three_toy_tidy
 ```
 
+source("thesis_code.R")
+rmarkdown::render('thesis.Rmd')
