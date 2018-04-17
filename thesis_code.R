@@ -51,7 +51,8 @@ format_data <- function(data) {
                                  condition == "broken toy" ~ "Broken Toy",
                                  condition == "person" ~ "Broken Button",
                                  condition == "toy" ~ "Broken Toy"),
-           condition = fct_rev(condition),
+           condition = fct_relevel(condition, "Broken Toy", "Broken Button"),
+           #condition = fct_rev(condition),
            HelpfulCategory = str_to_title(HelpfulCategory) %>% 
              str_trim(side = "both"),
            firstBehaviorCode = str_to_lower(firstBehaviorCode),
@@ -138,8 +139,8 @@ format_for_between_stats <- function(data, variable, variable_option) {
     ungroup() %>% 
     filter(!!variable == variable_option) %>% 
     unite("stat", condition, !!variable) %>% 
-    mutate(num_bb = .$n[[1]],
-           num_bt = .$n[[2]]) %>% 
+    mutate(num_bb = .$n[[2]],
+           num_bt = .$n[[1]]) %>% 
     select(-n) %>% 
     spread(stat, percentage) %>% 
     mutate_all(~ round(., 0))
@@ -169,11 +170,23 @@ between_condition_stats <- function(data, variable, variable_option, digits = 4)
                digits = digits))
 }
 
+between_condition_helpful <- function(data, digits = 4) {
+  between_condition_stats(data, helpfulCategory, "Helpful", digits = digits)
+}
+
+between_condition_response <- function(data, digits = 4) {
+  between_condition_stats(data, firstChoice, "Other toy", digits = digits)
+}
+
+between_condition_correct <- function(data, digits = 4) {
+  between_condition_stats(data, firstChoiceCorrect, "1", digits = digits)
+}
+
 #----------------------------------------------------------------------------------
 # WITHIN CONDITION STATS HELPER FUNCTIONS
 
-get_binom_p_value <- function(k, n, digits = 4) {
-  binom.test(k, n, alternative = "two.sided")$p.value %>% 
+get_binom_p_value <- function(k, n, digits = 4, alternative = "two.sided") {
+  binom.test(k, n, alternative = alternative)$p.value %>% 
     round(digits)
 }
 
@@ -204,8 +217,16 @@ within_condition_stats <- function(data, variable, variable_option, digits = 4) 
     rename_all(funs(str_c("num_", str_extract(., "[a-z][a-z]")))) %>% 
     mutate(num_total = num_bb + num_bt,
            perc_total = num_total / (total_bt + total_bb) %>% round(0),
-           p_value_bt = get_binom_p_value(num_bt, total_bt),
-           p_value_bb = get_binom_p_value(num_bb, total_bb))
+           p_value_bt = get_binom_p_value(num_bt, total_bt, digits = digits),
+           p_value_bb = get_binom_p_value(num_bb, total_bb, digits = digits)) 
+}
+
+within_condition_helpful <- function(data, digits = 4) {
+  within_condition_stats(data, helpfulCategory, "Helpful", digits = digits)
+}
+
+within_condition_response <- function(data, digits = 4) {
+  within_condition_stats(data, firstChoice, "Other toy", digits = digits)
 }
 
 #----------------------------------------------------------------------------------
@@ -244,7 +265,9 @@ modified_tidy <-
             condition == "Broken Button" & firstChoice == "Confederate's toy" ~ 1,
             TRUE ~ 0
            )
-         )
+         ) %>% 
+  filter(n != 109,
+         n != 110)
 
 #----------------------------------------------------------------------------------
 # PLOT HELPER FUNCTIONS
@@ -304,49 +327,3 @@ plot_helpfulness <- function(data) {
                                "Success of helping behavior", 
                                c("Unsuccessful", "Successful"))
 }
-
-# Plots the response plot. Captions with figure_num
-# response_plot <- function(data) {
-#   fig_num_counter <<- fig_num_counter + 1
-#   
-#   data %>% 
-#     get_bootstrapped_ci(firstChoice, "Confederate's toy") %>% 
-#     gather(key, val, mean, kids_in_variable_option) %>% 
-#     ggplot(aes(x = condition, y = val, fill = key)) +
-#     geom_col(position = "fill", width = .7) +
-#     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = .1) +
-#     geom_hline(yintercept = .5, linetype = "dashed") +
-#     scale_fill_solarized(name = "Target toy of first response", 
-#                          breaks = c("kids_in_variable_option", "mean"),
-#                          labels = c("Other toy", "Confederate's toy")) +
-#     theme_minimal() + 
-#     labs(x = "Condition",
-#          y = "Proportion of children",
-#          title = "Response by condition",
-#          caption = str_c("Figure", fig_num_counter, sep = " ")) +
-#     coord_fixed(ratio = 2/1)
-# }
-# 
-# help_plot <- function(data) {
-#   fig_num_counter <<- fig_num_counter + 1
-#   
-#   data %>% 
-#     get_bootstrapped_ci(helpfulCategory, "Helpful") %>% 
-#     #mutate(unhelpful = 1 - mean) %>% 
-#     gather(key = "measure", value = "val", mean, unhelpful) %>% 
-#     mutate(measure = forcats::fct_rev(as.factor(measure))) %>% 
-#     ggplot(aes(x = condition, y = val, fill = measure)) +
-#     geom_col(width = .7) +
-#     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = .1) +
-#     geom_hline(yintercept = .5, linetype = "dashed") +
-#     scale_fill_manual(breaks = c("mean", "unhelpful"), 
-#                       labels = c("Successful", "Unsuccessful"), 
-#                       name = "Success of helping behavior",
-#                       values = c("#dddddd", "#addd8e"))  +
-#     labs(x = "Condition",
-#          y = "Proportion of children",
-#          title = "Success of help by condition",
-#          caption = str_c("Figure", fig_num_counter, sep = " ")) +
-#     theme_minimal() +
-#     coord_fixed(ratio = 2/1)
-# }
