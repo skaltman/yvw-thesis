@@ -9,6 +9,11 @@ output: github_document
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
+
+```{r}
+source('thesis_code.R')
+```
+
 # Introduction
 
 Humans are willing to help others from a relatively young age (*citation*)
@@ -31,10 +36,12 @@ num_excluded <-
   get_num_excluded(excludeCode, parent, audio, exp, withdrew)
 ```
 
-Fifty-two 24- to 48-month-olds (M(SD) = `r summary_three_toy$mean_age`(`r summary_three_toy$sd_age`)yrs, `r summary_three_toy$perc_female` % female) from a museum in Palo Alto, CA participated. An additional `r num_excluded$total` children were excluded from analysis due to parental interference (n = `r num_excluded$parent`), experimenter error (n = `r num_excluded$exp`), shyness (n = `r num_excluded$withdrew`), or lack of video recording (n = `r num_excluded$audio`). We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r summary_three_toy$num_bt`; M(SD) = `r round(summary_three_toy$mean_age_bt, 2)`(`r summary_three_toy$sd_age_bt`)yrs) or the Broken Button condition (n = `r summary_three_toy$num_bb`; M(SD) = `r summary_three_toy$mean_age_bb`(`r summary_three_toy$sd_age_bb`)yrs).
+We recruited fifty-two 24- to 48-month-olds (M(SD) = `r summary_three_toy$mean_age`(`r summary_three_toy$sd_age`)yrs, `r summary_three_toy$perc_female`% female) from a museum in Palo Alto, CA. An additional `r num_excluded$total` children were excluded from analysis due to parental interference (n = `r num_excluded$parent`), experimenter error (n = `r num_excluded$exp`), shyness (n = `r num_excluded$withdrew`), or lack of video recording (n = `r num_excluded$audio`). We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r summary_three_toy$num_bt`; M(SD) = `r round(summary_three_toy$mean_age_bt, 2)`(`r summary_three_toy$sd_age_bt`)yrs) or the Broken Button condition (n = `r summary_three_toy$num_bb`; M(SD) = `r summary_three_toy$mean_age_bb`(`r summary_three_toy$sd_age_bb`)yrs).
 
 ### Stimuli
-We constructed three identical-looking toys. One side of each toy was covered in yellow felt and had a yellow button in the center. The opposite side was covered in red felt and had a red button in the center. The yellow button on two toys played music, while the yellow button on the third toy was inert. All red buttons were inert. The toys were placed on a white plastic tray and covered with grey felt. See Figure 1 for a schematic of the toys and procedure.
+We constructed three identical-looking toys. One side of each toy was covered in yellow felt and had a yellow button in the center. The opposite side was covered in red felt and had a red button in the center. The yellow button on two toys played music, while the yellow button on the third toy was inert. All red buttons were inert. The toys were placed on a white plastic tray and covered with grey felt. See Figure 1 for a schematic of the toys.
+
+![`r fig_num_counter`](images/three-toy-schematic.png)
 
 ### Procedure
 The experiment began with a *warm-up phase* in which a confederate and experimenter engaged the child in reciprocal games (e.g., rolling a ball back and forth through a tube) in order to help the child feel comfortable with the researchers, and promote general helping behavior (see Cortes Barragan & Dweck, 2014). After approximately 5 minutes of warm-up, the confederate excused herself from the room, explaining that she had work to do.
@@ -43,12 +50,12 @@ Then, the child gained experience with the toys during the *play phase*. The exp
 
 The Broken Button condition proceeded identically except that the toys were placed with the red side up, such that the red button was discovered first, and then the yellow. By the end of the play phase, all children experienced that pressing the yellow buttons on two of the toys played music (and one was inert), and that none of the red buttons played music.
 
-In the helping phase, the experimenter placed toys back on the tray and covered them with the felt. The toys were placed as they were during the play phase: yellow-side-up in the Broken Toy condition, and red-side-up in the Wrong Ac- tion condition. The child sat approximately 6 ft away from the tray, either by him-/herself or with a parent. The exper- imenter then called the confederate back into the room and explained that she and the child were playing with toys that played music. The confederate said, “I love music!” and knelt down behind the tray, facing the child. She appeared to select a toy at random from behind the felt; the child could not see which toy was chosen.
+In the helping phase, the experimenter placed toys back on the tray and covered them with the felt. The toys were placed as they were during the play phase: yellow-side-up in the Broken Toy condition, and red-side-up in the Broken Button condition. The child sat approximately 6 ft away from the tray, either by him-/herself or with a parent. The experimenter then called the confederate back into the room and explained that she and the child were playing with toys that played music. The confederate said, “I love music!” and knelt down behind the tray, facing the child. She appeared to select a toy at random from behind the felt; the child could not see which toy was chosen.
 
 ### Coding
 We were interested in children’s first helping behavior after the confederate’s failure to activate her toy (i.e., her first button press). The key dependent measure was the target toy of this behavior, coded as either the “confederate’s toy” or the “toys on the tray”. All children who responded fell into one of these two categories.
 
-We also looked at the consequence of children’s first helping responses. We coded whether their behavior was “successful or “unsuccessful” in achieving the confed- erate’s goal of playing music. In the Broken Toy condition, we coded a child’s first response as “successful” if the child pressed the yellow button on a toy from the tray or directed the confederate to press it (e.g., telling her to do so; handing or pointing to a toy yellow side up). “Unsuccessful” responses included pressing or directing the confederate to press the red button on any toy or the yellow button on the confederate’s toy. In the Wrong Action condition, a behavior was coded as “successful” if a child flipped and pressed the yellow button or directed the confederate to do so (e.g., telling her to press it, flipping a toy and handing or pointing to it yellow-side- up). Thus, in the Wrong Action condition, a behavior could be successful regardless of which toy a child’s first response targeted, whereas in the Broken Toy condition, only behavior directed toward the toys on the tray could be successful. The first and second author transcribed and coded children’s behavior and a researcher blind to the hypotheses coded these transcriptions for reliability and agreement was 100%.
+We also looked at the consequence of children’s first helping responses. We coded whether their behavior was “successful or “unsuccessful” in achieving the confederate’s goal of playing music. In the Broken Toy condition, we coded a child’s first response as “successful” if the child pressed the yellow button on a toy from the tray or directed the confederate to press it (e.g., telling her to do so; handing or pointing to a toy yellow side up). “Unsuccessful” responses included pressing or directing the confederate to press the red button on any toy or the yellow button on the confederate’s toy. In the Wrong Action condition, a behavior was coded as “successful” if a child flipped and pressed the yellow button or directed the confederate to do so (e.g., telling her to press it, flipping a toy and handing or pointing to it yellow-side- up). Thus, in the Wrong Action condition, a behavior could be successful regardless of which toy a child’s first response targeted, whereas in the Broken Toy condition, only behavior directed toward the toys on the tray could be successful. The first and second author transcribed and coded children’s behavior and a researcher blind to the hypotheses coded these transcriptions for reliability and agreement was 100%.
 
 # Results
 
@@ -129,9 +136,6 @@ In Experiment 1, the toys were color-coded such that all red buttons were inert,
 summary_two_toy <- summary_tibble(two_toy_tidy)
 
 # excluded kids
-two_toy %>% 
-  filter(`exclude?` == "yes") %>% 
-  count(excludeCode)
 
 num_excluded <-
   two_toy %>% 
@@ -150,7 +154,9 @@ We randomly assigned children to one of two conditions: the Broken Toy condition
 
 ### Stimuli
 
-We constructed four toys, similar to those used in Experiment 1. Two opposite sides of each toy were covered in red felt and had a red button in the center. The others sides of the toys were covered in blue felt. For two of the four toys, the button on one side played music when pressed, while the other was inert. Both buttons on one of the other two toys played music, while neither button on the final toy did anything. The fully functional and the inert toys were used in the Broken Toy condition. The two identical, half-functional toys were used in the Broken Button condition. In each condition, the two toys were placed in a woven basket. See Figure X for a schematic of the toys and procedure.
+We constructed four toys, similar to those used in Experiment 1. Two opposite sides of each toy were covered in red felt and had a red button in the center. The others sides of the toys were covered in blue felt. For two of the four toys, the button on one side played music when pressed, while the other was inert. Both buttons on one of the other two toys played music, while neither button on the final toy did anything. The fully functional and the inert toys were used in the Broken Toy condition. The two identical, half-functional toys were used in the Broken Button condition. In each condition, the two toys were placed in a woven basket. See Figure 1 for a schematic of the toys.
+
+![`r figure_num`](images/three-toy-schematic.png)
 
 ### Procedure
 
@@ -250,10 +256,10 @@ two_collapsed_correct <-
   spread(firstChoiceCorrect, nn) %>% 
   rename(incorrect = `0`,
          correct = `1`) %>% 
-  mutate(p_value = get_binom_p_value(correct, num_participants, digits = 7))
+  mutate(p_value = get_binom_p_value(correct, summary_two_toy$num_participants, digits = 7))
 ```
 
-We found no significant difference across conditions (`r two_between_correct$perc_bt`% in Broken Toy vs. `r two_between_correct$perc_bb`% in Broken Button; two-tailed Fisher’s Exact Test, p = `r two_between_correct$p_value`). We then collapsed across conditions to test if children were more likely to respond "correctly" or "incorrectly" versus the alternative. Children were more likely to respond "correctly" than "incorrectly" (`r collapsed_correct$correct`/`num_participants`; two-tailed binomial test, p = `r two_collapsed_correct$p_value`)
+We found no significant difference across conditions (`r two_between_correct$perc_bt`% in Broken Toy vs. `r two_between_correct$perc_bb`% in Broken Button; two-tailed Fisher’s Exact Test, p = `r two_between_correct$p_value`). We then collapsed across conditions to test if children were more likely to respond "correctly" or "incorrectly" versus the alternative. Children were more likely to respond "correctly" than "incorrectly" (`r collapsed_correct$correct`/`summary_two_toy$num_participants`; two-tailed binomial test, p = `r two_collapsed_correct$p_value`)
 
 
 ## [transition to modified experiment--put somewhere]
@@ -336,7 +342,7 @@ num_excluded <-
 
 ```
 
-We recruited `r num_participants` 24- to 48-month-old participants (M(SD) = `r summary_modified$mean_age`(`r summary_modified$sd_age`), %% female). `r summary_modified$num_jmz` of these participants (M(SD) = `r summary_modified$mean_age_jmz`(`r summary_modified$sd_jmz`)) were recruited from a museum in Palo Alto, CA. `r num_bing` of these participants (M(SD) = `r summary_modified$mean_age_bing`(`r summary_modified$sd_bing`)) were recruited from a local preschool. An additional `r num_excluded$total` children were excluded from analysis due to experimenter error (n = `r num_excluded$experimenter`), parental or sibling interference (n = `r num_excluded$parent + num_excluded$sibling`), the child responding too early (n = `r num_excluded$early`), the child having prior exposure to the experiment (n = `r num_excluded$already_played`), or lack of video recording (n = `r num_excluded$no_video`).
+We recruited `r summary_modified$num_participants` 24- to 48-month-old participants (M(SD) = `r summary_modified$mean_age`(`r summary_modified$sd_age`), %% female). `r summary_modified$num_jmz` of these participants (M(SD) = `r summary_modified$mean_age_jmz`(`r summary_modified$sd_jmz`)) were recruited from a museum in Palo Alto, CA. `r num_bing` of these participants (M(SD) = `r summary_modified$mean_age_bing`(`r summary_modified$sd_bing`)) were recruited from a local preschool. An additional `r num_excluded$total` children were excluded from analysis due to experimenter error (n = `r num_excluded$experimenter`), parental or sibling interference (n = `r num_excluded$parent + num_excluded$sibling`), the child responding too early (n = `r num_excluded$early`), the child having prior exposure to the experiment (n = `r num_excluded$already_played`), or lack of video recording (n = `r num_excluded$no_video`).
 
 We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r summary_modified$num_bt`; M(SD) = `r summary_modified$mean_age_bt`(`r summary_modified$sd_age_bt`)yrs) or the Broken Button condition (n = `r summary_modified$num_bb`; M(SD) = `r summary_modified$mean_age_bb`(`r summary_modified$sd_age_bb`)yrs).
 
@@ -453,3 +459,5 @@ Second, we can look at the content of children's helping behaviors. This is a st
 Another possible counteragument to the idea that children are helping the confederate, however, is that children are just answering a prompt. The confederate asks the child, either to help her or to show her, after stating that she likes music. Although this is often how people ask for help, it could also be interpreted as a command to the child or as "**Can** (i.e., are you capable of) helping me play music?". Children may also be more used to adults giving them commands than asking them for help. 
 
 What's the difference between helping and answering a question? Sometimes helping involves answering a question. For example, if someone asks you to explain a concept from a class they are struggling in, we would tend to count that as helping. However, question answering is often not helping, such as when having a casual conversation or answering a question during a job interview. What's the difference between these two scenarios? 
+
+
