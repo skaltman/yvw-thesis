@@ -9,8 +9,13 @@ output: github_document
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
+# Introduction
+
+Humans are willing to help others from a relatively young age (*citation*)
 
 # Experiment 1
+
+We presented children with a situation in which there were multiple ways to help another person. We manipulated the likely cause of the person in need of help's failure, which made one course of action more helpful than another. 
 
 ## Methods
 
@@ -406,6 +411,9 @@ modified_between_helpful <-
   between_helpful_stats()
 ```
 
+```{r}
+plot_flip(modified_tidy)
+```
 
 
 ```{r}
@@ -435,5 +443,13 @@ modified_tidy %>%
 ```
 
 
+# COMMENTS TO SELF
+## ARE CHILDREN REALLY HELPING?
 
+It is possible to argue that children are not really helping the confederate. Here, we address two possible counterarguments. First, it seems possible that children are behaving in the observed manner because they want to play music for themselves and are not really considering what the confederate wants. Most of the observed behavior discussed so far is consistent with this idea. If children want to play music for themselves, they would operate the other toy in the Broken Toy conditon. In the Broken Button condition, it makes the most sense to flip over the confederate's toy because children know the bottom or side button plays music (if they remember how the toys work). This does not, however, explain why children in the Broken Button condition in Experiment 2 showed no preference for either toy. One could argue that, because the toys were visually and functionally identical, children tended to forget which toy was which, or that they assumed the toys were oriented in the same direction. However, as argued earlier, we do not find either of these arguments very convincing, and instead argue that the observed differences in behavior between Experiment 2 and Experiment 3 are evidence that children are considering the confederate's goals when helping. Very little changes between Experiment 2 and Experiment 3 besides the appearance of the toys, but children in the Broken Button condition in Experiement 2 show no preference for either toy, while children in the same condition in Experiment 3 preferentially target the confederate's toy. The main difference between these two conditions is the appearance of the toys, but the appearance itself is unlikely to be the reason children prefer the confederate's toy, since we might then expect to see a similar pattern in the Broken Button condition. However, having visually distinct toys seems to change what the confederate's goal is, or at least limits the ways in which you can help her achieve her goal. [something about choosing between identical toys = no preference; choosing between different ones = preference] Therefore, it appears as if children are attending to the subtle visual change and incorporating that information when reasoning about the confederate's goal. Children would not have a reason to do this if they just wanted to play music for themselves.
 
+Second, we can look at the content of children's helping behaviors. This is a stronger argument for teh idea that children are acting for the confederate. [insert social referencing stuff]
+
+Another possible counteragument to the idea that children are helping the confederate, however, is that children are just answering a prompt. The confederate asks the child, either to help her or to show her, after stating that she likes music. Although this is often how people ask for help, it could also be interpreted as a command to the child or as "**Can** (i.e., are you capable of) helping me play music?". Children may also be more used to adults giving them commands than asking them for help. 
+
+What's the difference between helping and answering a question? Sometimes helping involves answering a question. For example, if someone asks you to explain a concept from a class they are struggling in, we would tend to count that as helping. However, question answering is often not helping, such as when having a casual conversation or answering a question during a job interview. What's the difference between these two scenarios? 

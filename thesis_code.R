@@ -20,6 +20,7 @@ modified_sheet <- "Data"
 # COLORS FOR PLOTS
 response_colors <- c("#dc322f", "#268bd2")
 helpfulness_colors <- c("#dddddd", "#addd8e")
+flip_colors <- c("#dddddd", "#fec44f")
 
 # Global variables
 # Counts the number of figures so that you don't have to hand caption them
@@ -326,4 +327,14 @@ plot_helpfulness <- function(data) {
                                "Success of helping behavior by condition", 
                                "Success of helping behavior", 
                                c("Unsuccessful", "Successful"))
+}
+
+plot_flip <- function(data) {
+  proportion_by_condition_plot(data,
+                               flip,
+                               TRUE,
+                               flip_colors,
+                               "Flipping behavior by condition",
+                               "Behavior",
+                               c("Does not flip", "Flips"))
 }
