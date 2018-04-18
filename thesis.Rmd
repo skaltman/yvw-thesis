@@ -2,7 +2,8 @@
 title: "Untitled"
 author: "Sara Altman"
 date: "2/13/2018"
-output: github_document
+output: 
+  github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -39,18 +40,22 @@ num_excluded <-
 We recruited fifty-two 24- to 48-month-olds (M(SD) = `r summary_three_toy$mean_age`(`r summary_three_toy$sd_age`)yrs, `r summary_three_toy$perc_female`% female) from a museum in Palo Alto, CA. An additional `r num_excluded$total` children were excluded from analysis due to parental interference (n = `r num_excluded$parent`), experimenter error (n = `r num_excluded$exp`), shyness (n = `r num_excluded$withdrew`), or lack of video recording (n = `r num_excluded$audio`). We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r summary_three_toy$num_bt`; M(SD) = `r round(summary_three_toy$mean_age_bt, 2)`(`r summary_three_toy$sd_age_bt`)yrs) or the Broken Button condition (n = `r summary_three_toy$num_bb`; M(SD) = `r summary_three_toy$mean_age_bb`(`r summary_three_toy$sd_age_bb`)yrs).
 
 ### Stimuli
-We constructed three identical-looking toys. One side of each toy was covered in yellow felt and had a yellow button in the center. The opposite side was covered in red felt and had a red button in the center. The yellow button on two toys played music, while the yellow button on the third toy was inert. All red buttons were inert. The toys were placed on a white plastic tray and covered with grey felt. See Figure 1 for a schematic of the toys.
+We constructed three identical-looking toys. One side of each toy was covered in yellow felt and had a yellow button in the center. The opposite side was covered in red felt and had a red button in the center. The yellow button on two toys played music, while the yellow button on the third toy was inert. All red buttons were inert. The toys were placed on a white plastic tray and covered with grey felt. See Figure `r fig_num_counter+1` for a schematic of the toys.
 
-![`r fig_num_counter`](images/three-toy-schematic.png)
+![Figure `r caption_figure()`](images/three-toy-schematic.png)
 
 ### Procedure
 The experiment began with a *warm-up phase* in which a confederate and experimenter engaged the child in reciprocal games (e.g., rolling a ball back and forth through a tube) in order to help the child feel comfortable with the researchers, and promote general helping behavior (see Cortes Barragan & Dweck, 2014). After approximately 5 minutes of warm-up, the confederate excused herself from the room, explaining that she had work to do.
 
-Then, the child gained experience with the toys during the *play phase*. The experimenter behaved as if she were exploring the toys for the first time. She took one toy out at a time and showed it to the child. In the Broken Toy condition, the toys were oriented such that the yellow side was on top. She noticed the yellow button, pressed it, and reacted positively to the music that played. She also encouraged the child to press the yellow button and again reacted positively, saying, “Music! The yellow side plays music!”. She then turned the toy around in her hands until she discovered the red button on the opposite side, and expressed mild surprise, as if she did not expect it to be there. She pressed the red button and also encouraged the child to do so, acting perplexed and disappointed that it did not play music. The experimenter then took the second toy out, which she and the child explored in the same way (i.e., the experimenter pressed each button, and then encouraged the child to do so). This second toy was always the broken toy. This process was repeated with the third toy, which functioned the same as the first (i.e., the yellow button played music, but the red button did nothing). The child and experimenter then explored each toy again, taking turns pressing the buttons. 
+Then, the child gained experience with the toys during the *play phase*. The experimenter behaved as if she were exploring the toys for the first time. She took one toy out at a time and showed it to the child. In the Broken Toy condition, the toys were oriented such that the yellow side was on top. She noticed the yellow button, pressed it, and reacted positively to the music that played. She also encouraged the child to press the yellow button and again reacted positively, saying, “Music! The yellow side plays music!”. She then turned the toy around in her hands until she discovered the red button on the opposite side, and expressed mild surprise, as if she did not expect it to be there. She pressed the red button and also encouraged the child to do so, acting perplexed and disappointed that it did not play music. The experimenter then took the second toy out, which she and the child explored in the same way (i.e., the experimenter pressed each button, and then encouraged the child to do so). This second toy was always the broken toy. This process was repeated with the third toy, which functioned the same as the first (i.e., the yellow button played music, but the red button did nothing). The child and experimenter then explored each toy again, taking turns pressing the buttons. The Broken Button condition proceeded identically except that the toys were placed with the red side up, such that the red button was discovered first, and then the yellow. By the end of the play phase, all children experienced that pressing the yellow buttons on two of the toys played music (and one was inert), and that none of the red buttons played music. See Figure `r fig_num_counter` for a schematic of the play phase.
+ 
+![Figure `r caption_figure()` Order in which children saw and pressed the buttons in each of the conditions. Children explored both buttons on a toy before moving onto the next toy. In the Broken Toy condition, children encountered the yellow button on each toy before the red button. In the Broken Button condition, children encountered the red button on each toy before the yellow button.](images/three-toy-play-phase.png)
 
-The Broken Button condition proceeded identically except that the toys were placed with the red side up, such that the red button was discovered first, and then the yellow. By the end of the play phase, all children experienced that pressing the yellow buttons on two of the toys played music (and one was inert), and that none of the red buttons played music.
 
-In the helping phase, the experimenter placed toys back on the tray and covered them with the felt. The toys were placed as they were during the play phase: yellow-side-up in the Broken Toy condition, and red-side-up in the Broken Button condition. The child sat approximately 6 ft away from the tray, either by him-/herself or with a parent. The experimenter then called the confederate back into the room and explained that she and the child were playing with toys that played music. The confederate said, “I love music!” and knelt down behind the tray, facing the child. She appeared to select a toy at random from behind the felt; the child could not see which toy was chosen.
+In the helping phase, the experimenter placed toys back on the tray and covered them with the felt. The toys were placed as they were during the play phase: yellow-side-up in the Broken Toy condition, and red-side-up in the Broken Button condition. The child sat approximately 6 ft away from the tray, either by him-/herself or with a parent. The experimenter then called the confederate back into the room and explained that she and the child were playing with toys that played music. The confederate said, “I love music!” and knelt down behind the tray, facing the child. She appeared to select a toy at random from behind the felt; the child could not see which toy was chosen. 
+
+![Figure `r caption_figure() PLACEHOLDER FIX LATER Depiction of the helping phase in the Broken Toy condition. The Broken Button condition proceeded identically, except that all three toys were oriented such that the red button was on top.`](images/three-toy-helping-phase.png)
+
 
 ### Coding
 We were interested in children’s first helping behavior after the confederate’s failure to activate her toy (i.e., her first button press). The key dependent measure was the target toy of this behavior, coded as either the “confederate’s toy” or the “toys on the tray”. All children who responded fell into one of these two categories.
@@ -154,9 +159,10 @@ We randomly assigned children to one of two conditions: the Broken Toy condition
 
 ### Stimuli
 
-We constructed four toys, similar to those used in Experiment 1. Two opposite sides of each toy were covered in red felt and had a red button in the center. The others sides of the toys were covered in blue felt. For two of the four toys, the button on one side played music when pressed, while the other was inert. Both buttons on one of the other two toys played music, while neither button on the final toy did anything. The fully functional and the inert toys were used in the Broken Toy condition. The two identical, half-functional toys were used in the Broken Button condition. In each condition, the two toys were placed in a woven basket. See Figure 1 for a schematic of the toys.
+We constructed four toys, similar to those used in Experiment 1. Two opposite sides of each toy were covered in red felt and had a red button in the center. The others sides of the toys were covered in blue felt. For two of the four toys, the button on one side played music when pressed, while the other was inert. Both buttons on one of the other two toys played music, while neither button on the final toy did anything. The fully functional and the inert toys were used in the Broken Toy condition. The two identical, half-functional toys were used in the Broken Button condition. In each condition, the two toys were placed in a woven basket. See Figure `r fig_num_counter` for a schematic of the toys.
 
-![`r figure_num`](images/three-toy-schematic.png)
+![Figure `r fig_num_counter`](images/two-toy-schematic.png)
+
 
 ### Procedure
 
@@ -349,6 +355,8 @@ We randomly assigned children to one of two conditions: the Broken Toy condition
 ### Stimuli
 
 We constructed three pairs of toys. One toy in each pair looked identical to the toys constructed in Experiment 2 (*top-bottom toys*). The other three toys had a button on the top and on an adjacent side (*top-side toys*), instead of on the top and bottom, but were otherwise identical to the toys in Experiment 2. The toys in one pair each had one functional button and one inert button. For the other two pairs of toys, one toy had two functional buttons and the other had two inert buttons. In one of these pairs, the functional toy was a top-bottom toy; in the other pair, the functional toy was a top-side toy.
+
+![Figure `r fig_num_counter`](images/modified-toy-schematic.png)
 
 ### Procedure
 

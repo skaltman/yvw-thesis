@@ -27,6 +27,14 @@ flip_colors <- c("#dddddd", "#fec44f")
 fig_num_counter <- 1
 
 #----------------------------------------------------------------------------------
+# AUTOMATED FIGURE NUMBER COUNTING
+
+caption_figure <- function() {
+  fig_num_counter <<- fig_num_counter + 1
+  return(fig_num_counter)
+}
+
+#----------------------------------------------------------------------------------
 # READ IN DATA
 
 three_toy <- 
