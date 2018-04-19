@@ -3,7 +3,7 @@ title: "Untitled"
 author: "Sara Altman"
 date: "2/13/2018"
 output: 
-  github_document
+  pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -251,24 +251,25 @@ glm_fit <-
  
 age_stats <- 
   glm_fit %>% 
-  filter(term == "age") 
+  filter(Term == "age") 
 
 condition_stats <-
   glm_fit %>% 
-  filter(term == "conditionBroken Button")
+  filter(Term == "conditionBroken Button")
 ```
 
-To verify that children did not express a side bias or preference for any confederate or experimenter, we ran a logistic regression with "correctness" of response as the outcome and toy side, experimenter identity, and confederate identity as predictors. None were signficant predictors of correctness. See Table 1 for details.
+To verify that children did not express a side bias or preference for any confederate or experimenter, we ran a logistic regression with "correctness" of response as the outcome and toy side, experimenter identity, and confederate identity as predictors. None were signficant predictors of correctness. See Table `r caption_figure()` for details.
 
 ```{r}
 glm_fit %>% 
-  knitr::kable(caption = "Table 1", digits = 2)
+  knitr::kable(caption = c("Table ",fig_num_counter), digits = 2)
 ```
 
+Children in each condition saw identical-looking toys and watched the confederate perform the same set of actions. The only difference across the two conditions was the functionality of the toys, and therefore the likely source of the confederate's failure. 
 
+We again predicted responses to vary across conditions depending on the source of the confederate's failure. In the Broken Toy condition, the confederate presses a button that does not produce music. Since the only toy with inert buttons is the fully inert toy, is then possible to infer that she has the inert toy. Therefore, children must target the other toy in order to effectively help the confederate play music.
 
-
-Children in each condition saw identical-looking toys. The only difference across the two conditions was the functionality of the toys. In the Broken Toy condition, one toy has two functional buttons and the other has two inert buttons. When the confederate presses the top button on her own toy, the child can then know that she has the broken toy. The only way to effectively help the confederate with her goal of playing music is to act on the other toy. In the Broken Button condition, the toys are identical. Each toy has one functional button and one inert button. Once the confederate presses the top button on her toy, it's possible to infer that the bottom button will be functional. It is therefore reasonable to help by targeting the "confederate's toy". However, the "other toy" also has a functional button, and so targeting this toy can also address the confederate's goal of playing music. Since it is reasonable for children to target either toy in this condition, we predicted that children would be more likely to target the "other toy" in the Broken Toy condition than in the Broken Broken Button condition. As predicted, children were significantly more likely to direct their help toward the "other toy" in the Broken Toy condition than in the Broken Button condition (`r two_between_response$perc_bt_other`% % vs. `r two_between_response$perc_bb_other`%; two-tailed Fisher’s Exact Test, p = `r two_between_response$p_value`).
+In the Broken Button condition, however, the toys are identical. Each toy has one functional button and one inert button. Once the confederate presses the top button on her toy, it's possible to infer that the bottom button will be functional. It is therefore reasonable to help by targeting the "confederate's toy". However, the "other toy" also has a functional button, and so targeting this toy can also address the confederate's goal of playing music. Since it is reasonable for children to target either toy in this condition, we predicted that children would be more likely to target the "other toy" in the Broken Toy condition than in the Broken Broken Button condition. As predicted, children were significantly more likely to direct their help toward the "other toy" in the Broken Toy condition than in the Broken Button condition (`r two_between_response$perc_bt_other`% % vs. `r two_between_response$perc_bb_other`%; two-tailed Fisher’s Exact Test, p = `r two_between_response$p_value`).
 
 ```{r}
 plot_responses(two_toy_tidy)
