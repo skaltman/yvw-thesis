@@ -195,24 +195,15 @@ We constructed four toys, similar to those used in Experiment 1. Two opposite si
 
 As in Experiment 1, the experiment consisted of a *warm-up phase*, *play phase*, and *helping phase*. During the warm-up phase, the confederate engaged the child in the same reciprocal games as in Experiment 1. The warm-up phase lasted approximately three minutes. This was two minutes shorter than the warm-up phase in Experiment 1 because the children in this experiment were already familiar with the experimenter and room in which the experiment was held. 
 
-During the *play phase*, the experimenter and the child interacted with two of the four toys. The experimenter behaved in a manner similar to that of Experiment 1. In contrast to Experiment 1, however, children saw different sets of toys in each condition. The child engaged with the fully inert toy and the fully functional toy in the Broken Toy condition. In the Wrong Action condition, the child engaged with the two identical toys that each had one functional button and one inert button.
+During the play phase, the experimenter and the child interacted with two of the four toys. The experimenter behaved in a manner similar to that of Experiment 1. In contrast to Experiment 1, however, children saw different sets of toys in each condition. The child engaged with the fully inert toy and the fully functional toy in the Broken Toy condition. In the Wrong Action condition, the child engaged with the two identical toys that each had one functional button and one inert button.
 
 The play phase began with the two toys in the woven basket. The experimenter took one toy out of the basket. She remarked that it had a blue bottom on the top and pushed the button. In both conditions, this first button played music. The experimenter reacted positively to the music and said, "Music! It plays music!" She then asked the child if s/he would like to try and encouraged him/her to push the button. After the child pressed the button, the experimener said, "Music! It plays music! This side plays music."
 
-The experimenter then wondered aloud if the toy could do anything else, while turning the toy over in her hands. Upon finding the bottom button, the confederate acted mildly surprised and remarked that the toy had a blue button on the bottom. She then pressed the button. In the Broken Toy condition, this button played music. She reacted as she had to the top button, encouraged the child to press the button, then said, "Music! It plays music! This side plays music. So this toy plays music." In the Broken Button condition, however, the bottom button on the first toy did not play music. The experimenter remarked, "Nothing! No music," and shook her head while she spoke. She then encouraged the child to push the button. After the child had done so, she said, "Nothing! No music! This side does not play music. So only this side plays music," pointing to the functional side of the toy.
+The experimenter then wondered aloud if the toy could do anything else, while turning the toy over in her hands. Upon finding the bottom button, the confederate acted mildly surprised and remarked that the toy had a blue button on the bottom. She then pressed the button. In the Broken Toy condition, this button played music. She reacted as she had to the top button, encouraged the child to press the button, then said, "Music! It plays music! This side plays music. So this toy plays music." In the Broken Button condition, however, the bottom button on the first toy did not play music. The experimenter remarked, "Nothing! No music," and shook her head while she spoke. She then encouraged the child to push the button. After the child had done so, she said, "Nothing! No music! This side does not play music. So only this side plays music," pointing to the functional side of the toy. She then placed the toy to the side and removed the second toy from the basket. In the Broken Toy condition, this toy was the inert toy. In the Broken Button condition, the inert button was on the top. The experimenter again remarked that the toy had a blue button on top. She pressed the button and it did nothing. She reacted as described previously (commenting that it did not play music, summarising that the side did not play music after the child had pressed the button). The experimenter discovered the bottom button of the toy as she had with the first toy. In the Broken Toy condition, this button was also inert and the confederate acted as just described. In the Broken Button condition, this button was functional. The confederate acted as she had when the button on the first toy had played music. Thus, by the end of the play phase, all children had either experienced that one toy had two functional buttons and one had two inert buttons (Broken Toy) or that each toy had one functional and one inert button (Broken Button).
 
+In the helping phase, the experimenter returned the toys to the basket before placing the toys approximately 4 feet in front of the child and 4 feet 6 inches apart from each other. The midpoint between the two toys was directly in front of the child so that the child was equidistant from each toy. In the Broken Button condition, both toys were oriented so that the inert button was on top. As in Experiment 1, the experimenter called the confederate back into the room and explained that she and the child were playing with toys that played music. The confederate responded, "I love music!" and stood 2 feet behind the toys such that she was equidistant from each toy. She glanced at each toy, then fixed her gaze on one (side counterbalanced) and said, "Hmm, I think I'll play with this one." She knelt behind her chosen toy and pressed the top button, which did not play music. As in Experiment 1, she remarked, "Hmm, no music!" and then pressed it again and said, "Still no music!" She then returned, still kneeling, to the spot X feet behind the toys equidistant from each and said, "I really want music! Can you show me?" while gesturing to each toy simultaneously.
 
-
-
-
-The experimenter took the first toy out of the basket, remarked that it had a blue button on the top, and pushed the button. When the button played music, she reacted positively, saying, "Music! It plays music!" She asked the child if s/he would like to try and encouraged the child to push the same button. When the toy played music, the confederate remarked again, "Music! It plays music! This side plays music." The confederate then turned the toy around until she discovered the button on the bottom of the toy. She expressed mild surprise upon finding a button on the bottom of the toy. She pressed the button. In the Broken Toy condition, this button played music, and the confederate responded in exactly the same way as she did when the top button played music. In the Broken Button condition, however, the bottom button did not play music. The confederate remarked, "Nothing! No music," shaking her head as she spoke. After the child 
-
-
-Then, the child gained experience with the toys during the *play phase*. The experimenter behaved as if she were exploring the toys for the first time. She took one toy out at a time and showed it to the child. In the Broken Toy condition, the toys were oriented such that the yellow side was on top. She noticed the yellow button, pressed it, and reacted positively to the music that played. She also encouraged the child to press the yellow button and again reacted positively, saying, “Music! The yellow side plays music!”. She then turned the toy around in her hands until she discovered the red button on the opposite side, and expressed mild surprise, as if she did not expect it to be there. She pressed the red button and also encouraged the child to do so, acting perplexed and disappointed that it did not play music. The experimenter then took the second toy out, which she and the child explored in the same way (i.e., the experimenter pressed each button, and then encouraged the child to do so). This second toy was always the broken toy. This process was repeated with the third toy, which functioned the same as the first (i.e., the yellow button played music, but the red button did nothing). The child and experimenter then explored each toy again, taking turns pressing the buttons. The Broken Button condition proceeded identically except that the toys were placed with the red side up, such that the red button was discovered first, and then the yellow. By the end of the play phase, all children experienced that pressing the yellow buttons on two of the toys played music (and one was inert), and that none of the red buttons played music. See Figure `r fig_num_counter` for a schematic of the play phase.
-
-In the *helping phase*, the experimenter returned the toys to the basket before placing one toy X1 to the right of the child and Y feet in front of her, and the other X2 feet to the left of the child and Y feet in front of her. In the Broken Button condition, both toys were oriented so that the inert button was on top. As in Experiment 1, the experimenter called the confederate back into the room and explained that she and the child were playing with toys that played music. The confederate responded, "I love music!" and stood X3 feet behind the toys such that she was equidistant from each toy. She then glanced at each toy, then looked at one adn said, "Hmm, I think I'll play with this one." She knelt behind her chosen toy and pressed the top button, which did not play music. As in Experiment 1, she remarked, "Hmm, no music!" and then pressed it again and said, "Still no music!" She then returned, still kneeling, to the spot X feet behind the toys equidistant from each and said, "I really want music! Can you show me?" while gesturing to each toy simultaneously.
-
-If the child did not respond, the confederate and experimenter provided additional prompts as in Experiment 1, ending in moving the toys closer to the child.
+If the child did not respond, the confederate and experimenter provided additional prompts as in Experiment 1 until the child responded or the last prompt was given. Before giving the final prompt, the confederate picked up both toys and brought them closer, but still out of reach, of the child.
 
 If the child provided help that did not involve a physical demonstration (i.e., pointed or gave verbal instructions) before the confederate moved back to the center and gave her prompt, the confederate indicated that she had noticed the help by saying, "Ooh," moved back to the center, and said, "Can you show me?" If the child did not respond, the experimenter and confederate continued prompting as explained above.
 
@@ -220,9 +211,7 @@ If the child provided help that did not involve a physical demonstration (i.e., 
 
 As in Experiment 1, the key dependent measure was the target of the child's first response after the confederate's failure. This target was either the toy that the confederate had acted upon ("confederate's toy"), or the other toy that she had not touched ("other toy"). All children included in this experiment fell into one of these two categories. 
 
-We also looked at the effect of each child's first response. We coded a response as "successful" if the behavior helped the confederate play music, and "unsuccessful" otherwise. In the Broken Toy condition, we coded a response as "successful" if the child pressed a button on the other toy or indicated (by pointing or verbally instructing) that the confederate should do so. We coded a response as "unsuccesful" if the target of the child's first behavior was the confederate's toy. In the Broken button condition, we coded a response as "successful" if the child flipped and pressed the bottom button on either of the two toys, or indicated (by pointing or verbally instructing) that the confederate should flip and press a bottom button. Unsuccessful behaviors involved acting on a top button or indicating that the confederate should act on a top button.
-
-[include coding contents of helping behavior?]
+The consequence of each child's first respons was also coded. We coded a response as "successful" if the behavior helped the confederate play music, and "unsuccessful" otherwise. In the Broken Toy condition, we coded a response as "successful" if the child pressed a button on the other toy or indicated (by pointing or verbally instructing) that the confederate should do so. We coded a response as "unsuccesful" if the target of the child's first behavior was the confederate's toy. In the Broken button condition, we coded a response as "successful" if the child flipped and pressed the bottom button on either of the two toys, or indicated (by pointing or verbally instructing) that the confederate should flip and press a bottom button. Unsuccessful behaviors involved acting on a top button or indicating that the confederate should act on a top button.
 
 # Results
 ```{r}
@@ -251,12 +240,7 @@ two_collapsed_help <-
 glm_control <-
   glm(firstChoiceCorrect ~ toySide + experimenter + confederate, 
       family = "binomial", 
-      data = two_toy_tidy)
-
-glm_fit <- 
-  glm(firstChoiceCorrect ~ condition + age, 
-                  family = "binomial", 
-                  data = two_toy_tidy) %>% 
+      data = two_toy_tidy) %>% 
   tidy() %>% 
   mutate(term = fct_recode(term,
                            "Intercept" = "(Intercept)",
@@ -265,21 +249,14 @@ glm_fit <-
   rename(SE = std.error,
          `Z statistic` = statistic,
          `p-value` = p.value) %>% 
-  rename_at(vars(term, estimate), str_to_title)
- 
-age_stats <- 
-  glm_fit %>% 
-  filter(Term == "age") 
-
-condition_stats <-
-  glm_fit %>% 
-  filter(Term == "conditionBroken Button")
+  rename_at(vars(term, estimate), str_to_title) %>% 
+  mutate_at(vars(-Term), funs(round(., 2)))
 ```
 
 To verify that children did not express a side bias or preference for any confederate or experimenter, we ran a logistic regression with "correctness" of response as the outcome and toy side, experimenter identity, and confederate identity as predictors. None were signficant predictors of correctness. See Table `r caption_figure()` for details.
 
 ```{r}
-glm_fit %>% 
+glm_control %>% 
   knitr::kable(caption = c("Table ",fig_num_counter), digits = 2)
 ```
 
