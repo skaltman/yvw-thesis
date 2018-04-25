@@ -169,6 +169,12 @@ are therefore not identical in this condition.
 
 If children are responding effectively to the likely source of the confederate's failure, we should expect children in the Broken Button condition to be more likely to flip the toys over than children in the Broken Toy condition, as the toys in the Broken Toy condition are already oriented such that the functional buttons are on top. We found that were significantly more likely to target a non-obvious button in the Broken Button condition than in the Broken Toy condition (`r three_between_flip$perc_bb`% vs. `r three_between_flip$perc_bt`%; two-tailed Fisher’s Exact Test, p < .001). Furthermore, children in the Broken Button condition were significantly more likely to target a non-obvious button than an obvious button (`r three_within_flip$num_bb`/`r summary_three_toy$num_bb`, two-tailed binomial test, p < .001), while children in the Broken Toy condition were significantly more likely to target an obvious button than a non-obvious one (`r three_within_flip$num_bt`/`r summary_three_toy$num_bt`, two-tailed binomial test, p < .001). 
 
+```{r}
+three_toy_tidy %>% 
+  plot_flip()
+```
+
+
 ### Discussion
 
 However, the Broken Button condition does not require children to make an inference about the source of the confederate's failure. Because of the toys color-coding, in the Broken Button condition, all possible helpful actions are marked in yellow. Therefore, children could just remember that yellow produces music, instead of inferring that the source of the confederate's failure. This is not the case, however, in the Broken Toy condition. Both the confederate's failed action and all helpful actions are marked in yellow. Children need to target a yellow button on a *new* toy and cannot simply target a particular color. To eliminate this alternative explanation in the Broken Button condition as well as the asymmetry between the two conditions, we designed a second experiment with two identical toys. 
