@@ -62,8 +62,6 @@ Thus, the only differences across condiitions involved what color button the chi
 ![Figure `r caption_figure()` PLACEHOLDER FIX LATER Depiction of the helping phase in the Broken Toy condition. The Broken Button condition proceeded identically, except that all three toys were oriented such that the red button was on top.`](images/three-toy-helping-phase.png)
 
 
-
-
 ### Coding
 We were interested in children’s first helping behavior after the confederate’s failure to activate her toy (i.e., her first button press). The key dependent measure was the target toy of this behavior, coded as either the “confederate’s toy” or the “toys on the tray”. All children who responded fell into one of these two categories.
 
@@ -444,7 +442,7 @@ Again, we predicted that responses would vary across conditions depending on the
 
 As in the previous two experiments, we also predicted and found that children within the Broken Toy condition would be more likely to target the "other toy" than the "confederate's toy" (`r modified_within_response$num_bt`/`r summary_modified$num_bt`; two-tailed binomial test, p < .001).
 
-In contrast to Experiment 2, we predicted that children within the Broken Button condition would preferentially target the "confederate's toy" over the "other toy." the two toys in this experiment are visually different. Therefore, in the Broken Button condition, children can no longer effectively help the confederate by demonstrating the correct action on the "other toy." Additionally, because the toys are visually distinct, it now appears more likely that the confederate expresses a preference for one type of toy over the other when she selects a toy to operate. If children interpret her choice as a preference for her chosen type of toy, then they may also think it is more likely that she holds the "specific" goal of playing music with her chosen toy, and not the "general" goal of playing music with either toy. As predicted, children in this condition were more likely to target the "confederate's toy" than the "other toy" (`r modified_within_response$num_bb`/`r summary_modified$num_bb`; two-tailed binomial test, p = `r modified_within_response$p_value_bb`).
+In contrast to Experiment 2, we predicted that children within the Broken Button condition would preferentially target the "confederate's toy" over the "other toy." The two toys in this experiment are visually different. Therefore, in the Broken Button condition, children can no longer effectively help the confederate by demonstrating the correct action on the "other toy." Additionally, because the toys are visually distinct, it now appears more likely that the confederate expresses a preference for one type of toy over the other when she selects a toy to operate. If children interpret her choice as a preference for her chosen type of toy, then they may also think it is more likely that she holds the "specific" goal of playing music with her chosen toy, and not the "general" goal of playing music with either toy. As predicted, children in this condition were more likely to target the "confederate's toy" than the "other toy" (`r modified_within_response$num_bb`/`r summary_modified$num_bb`; two-tailed binomial test, p = `r modified_within_response$p_value_bb`).
 
 ```{r}
 modified_between_as_pred <- between_condition_stats(modified_tidy, as_predicted, "1")
@@ -453,19 +451,41 @@ modified_between_as_pred <- between_condition_stats(modified_tidy, as_predicted,
 modified_within_as_pred <- within_condition_stats(modified_tidy, as_predicted, "1", digits = 8)
 ```
 
-As a secondary analysis, we investigated whether the proportion of children who behaved as predicted differed across conditions. Again, behaving as predicted consists of targeting the other toy in the Broken Toy condition and the confederate's toy in the Broken Button condition. Children were significantly more likely to behave as predicted in the Broken Toy condition than in the Broken Button condition (`r modified_between_as_pred$perc_bt`% % vs. `r modified_between_as_pred$perc_bb`%; two-tailed Fisher’s Exact Test, p = `r modified_between_as_pred$p_value`).
+As a secondary analysis, we investigated whether the proportion of children who behaved as predicted differed across conditions. Again, children in the Broken Toy condition behaved as predicted if they targeted the other toy. Children in the Broken Button condition behaved as predicted if they targeted the confederate's toy. Children were significantly more likely to behave as predicted in the Broken Toy condition than in the Broken Button condition (`r modified_between_as_pred$perc_bt`% % vs. `r modified_between_as_pred$perc_bb`%; two-tailed Fisher’s Exact Test, p = `r modified_between_as_pred$p_value`).
 
-Since we found a signficant difference across conditions, we then looked at children's tendencies to behave as predicted within each condition....
+Since we found a signficant difference across conditions, we then looked at children's tendencies to behave as predicted within each condition. These analyses are identical to the analyses run to test our predictions about response within each condition. Thus, both children in the Broken Toy condition and Broken Button condition were significantly more likely to behave as predicted than not.
+
+```{r}
+plot_predicted(modified_tidy)
+```
+
+```{r}
+modified_between_helpful <-
+  modified_tidy %>% 
+  between_condition_helpful(digits = 3)
+
+modified_within_helpful <-
+  modified_tidy %>% 
+  within_condition_helpful(digits = 3)
+```
+
+As another secondary analysis, we again looked at the proportion of children who were helped successfully. Children could successfully help in the Broken Toy condition if they targeted the other toy. Children could successfully help in the Broken Button condition if they targeted the non-obvious (i.e., either the bottom or side) button of either the confederate's toy or the other toy. We found that children in the Broken Toy condition were significantly more likely to help successfully than children in the Broken Button condition (`r modified_between_helpful$perc_bt`% % vs. `r modified_between_response$perc_bb`%; two-tailed Fisher’s Exact Test, p = `r modified_between_helpful$p_value`). Children in the Broken Toy condition were significantly more likely to help successfully than to help unsuccessfully (`r modified_within_helpful$num_bt`/`r summary_modified$num_bt`; two-tailed binomial test, p < .001). Children in the Broken Button condition were also significantly more likely to help successfully than to unsuccessfully (`r modified_within_helpful$num_bb`/`r summary_modified$num_bb`; two-tailed binomial test, p = `r modified_within_help$p_value_bb`). 
 
 ```{r}
 plot_helpfulness(modified_tidy)
 ```
 
 ```{r}
-modified_between_helpful <-
+modified_between_flip <- 
   modified_tidy %>% 
-  between_helpful_stats()
+  between_condition_flip(digits = 10)
+
+modified_within_flip <-
+  modified_tidy %>% 
+  within_condition_flip(digits = 10)
 ```
+
+Finally, as an exploratory analysis, we looked at the tendency of children to target the non-obvious button on a toy (i.e., to flip over a toy or indicate that the confederate should flip over a toy). Children were significantly more likely to target a non-obvious button in the Broken Button condition than in the Broken Toy condition (`r modified_between_flip$perc_bb`% % vs. `r modified_between_flip$perc_bb`%; two-tailed Fisher’s Exact Test, p < .001). Furthermore, children in the Broken Button condition were significantly more likely to target a non-obvious button than an obvious button (`r modified_within_flip$num_bb`/`r summary_modified$num_bb`; two-tailed binomial test, p = ` rmodified_within_flip$p_value_bb`). Children in the Broken Toy condition were significantly more likely to target an obvious button than a non-obvious button (`r modified_within_flip$num_bt`/`r summary_modified$num_bt`; two-tailed binomial test, p < .001). 
 
 ```{r}
 plot_flip(modified_tidy)

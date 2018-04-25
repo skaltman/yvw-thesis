@@ -20,7 +20,8 @@ modified_sheet <- "Data"
 # COLORS FOR PLOTS
 response_colors <- c("#dc322f", "#268bd2")
 helpfulness_colors <- c("#dddddd", "#addd8e")
-flip_colors <- c("#dddddd", "#fec44f")
+flip_colors <- c("#ffdb69", "#f08226")
+predicted_colors <- c("#dddddd", "#8856a7")
 
 # Global variables
 # Counts the number of figures so that you don't have to hand caption them
@@ -191,6 +192,10 @@ between_condition_correct <- function(data, digits = 4) {
   between_condition_stats(data, firstChoiceCorrect, "1", digits = digits)
 }
 
+between_condition_flip <- function(data, digits = 4) {
+  between_condition_stats(data, flip, "TRUE", digits = digits)
+}
+
 #----------------------------------------------------------------------------------
 # WITHIN CONDITION STATS HELPER FUNCTIONS
 
@@ -236,6 +241,10 @@ within_condition_helpful <- function(data, digits = 4) {
 
 within_condition_response <- function(data, digits = 4) {
   within_condition_stats(data, firstChoice, "Other toy", digits = digits)
+}
+
+within_condition_flip <- function(data, digits = 4) {
+  within_condition_stats(data, flip, "TRUE", digits = digits)
 }
 
 #----------------------------------------------------------------------------------
@@ -342,7 +351,17 @@ plot_flip <- function(data) {
                                flip,
                                TRUE,
                                flip_colors,
-                               "Flipping behavior by condition",
-                               "Behavior",
-                               c("Does not flip", "Flips"))
+                               "Button type targeted by condition",
+                               "Target button of first response",
+                               c("Obvious", "Non-obvious"))
+}
+
+plot_predicted <- function(data) {
+  proportion_by_condition_plot(data, 
+                               as_predicted, 
+                               1, 
+                               predicted_colors, 
+                               "", 
+                               "Target toy matches prediction", 
+                               c("No", "Yes"))
 }
