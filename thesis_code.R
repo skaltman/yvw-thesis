@@ -92,6 +92,8 @@ get_summ_stat <- function(data, stat, summary_var, ..., num_digits = 2){
 
 # Returns the percentage of female participants in data, filtered by ... if supplied
 get_percentage_female <- function(data, ..., num_digits = 0){
+  num_participants <- data %>% nrow()
+  
   data %>% 
     filter(gender == "F", ...) %>% 
     summarise(percentage = round(n() / num_participants * 100, 0)) %>% 

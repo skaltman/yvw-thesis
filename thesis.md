@@ -13,7 +13,7 @@ output:
 
 # Introduction
 
-Humans are willing to help others from a relatively young age (*citation*)
+Humans are willing to help others from a relatively young age
 
 # Experiment 1
 
@@ -27,6 +27,10 @@ We presented children with a situation in which there were multiple ways to help
 ```
 ## Error in summarise_impl(.data, dots): Evaluation error: object 'num_participants' not found.
 ```
+
+
+
+
 
 
 

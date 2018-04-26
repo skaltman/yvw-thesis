@@ -17,7 +17,7 @@ source('thesis_code.R')
 
 # Introduction
 
-Humans are willing to help others from a relatively young age (*citation*)
+Humans are willing to help others from a relatively young age
 
 # Experiment 1
 
@@ -61,11 +61,9 @@ Thus, the only differences across condiitions involved what color button the chi
 
 ![Figure `r caption_figure()` PLACEHOLDER FIX LATER Depiction of the helping phase in the Broken Toy condition. The Broken Button condition proceeded identically, except that all three toys were oriented such that the red button was on top.`](images/three-toy-helping-phase.png)
 
+We were interested in children’s first response after the confederate’s failure to activate her toy (i.e., her first button press). The key dependent measure was the target toy of this behavior, coded as either the “confederate’s toy” or the “toys on the tray”. All children who responded fell into one of these two categories.
 
-### Coding
-We were interested in children’s first helping behavior after the confederate’s failure to activate her toy (i.e., her first button press). The key dependent measure was the target toy of this behavior, coded as either the “confederate’s toy” or the “toys on the tray”. All children who responded fell into one of these two categories.
-
-We also looked at the consequence of children’s first helping responses. We coded whether their behavior was “successful" or “unsuccessful” in achieving the confederate’s goal of playing music. In the Broken Toy condition, we coded a child’s first response as “successful” if the child pressed the yellow button on a toy from the tray or directed the confederate to press it (e.g., telling her to do so; handing or pointing to a toy yellow side up). “Unsuccessful” responses included pressing or directing the confederate to press the red button on any toy or the yellow button on the confederate’s toy. In the Broken Button condition, we coded a behavior as “successful” if a child flipped and pressed the yellow button or directed the confederate to do so (e.g., telling her to press it, flipping a toy and handing or pointing to it yellow-side- up). Thus, in the Broken Button condition, a behavior could be successful regardless of which toy a child’s first response targeted, whereas in the Broken Toy condition, only behavior directed toward the toys on the tray could be successful. A researcher blind to the hypotheses coded these transcriptions for reliability and agreement was 100%.
+We also looked at the consequence of children’s first helping responses. We coded whether the behavior was “successful" or “unsuccessful” in achieving the confederate’s goal of playing music. In the Broken Toy condition, we coded a child’s first response as “successful” if the child pressed the yellow button on a toy from the tray or directed the confederate to press it (e.g., telling her to do so, pointing, or handing her a toy yellow side up). “Unsuccessful” responses included pressing or directing the confederate to press the red button on any toy or the yellow button on the confederate’s toy. In the Broken Button condition, we coded a behavior as “successful” if a child flipped and pressed the yellow button or directed the confederate to do so (e.g., telling her to press it, flipping a toy and handing it to the confederate or pointing to a yellow side). Therefore, in the Broken Button condition, children could respond successfully regardless of which toy they targeted. In the Broken Toy condition, however, children could only respond successfully if they targete the toys on the tray. A researcher blind to the hypotheses coded these transcriptions for reliability and agreement was 100%.
 
 # Results
 
@@ -228,11 +226,9 @@ If the child did not respond, the confederate and experimenter provided addition
 
 If the child provided help that did not involve a physical demonstration (i.e., pointed or gave verbal instructions) before the confederate moved back to the center and gave her prompt, the confederate indicated that she had noticed the help by saying, "Ooh," moved back to the center, and said, "Can you show me?" If the child did not respond, the experimenter and confederate continued prompting as explained above.
 
-### Coding
+As in Experiment 1, the key dependent measure was the target of the child's first response after the confederate's failure. We coded the target as either the toy that the confederate had acted upon ("confederate's toy") or the other toy that she had not touched ("other toy"). All children included in this experiment fell into one of these two categories. 
 
-As in Experiment 1, the key dependent measure was the target of the child's first response after the confederate's failure. This target was either the toy that the confederate had acted upon ("confederate's toy"), or the other toy that she had not touched ("other toy"). All children included in this experiment fell into one of these two categories. 
-
-The consequence of each child's first respons was also coded. We coded a response as "successful" if the behavior helped the confederate play music, and "unsuccessful" otherwise. In the Broken Toy condition, we coded a response as "successful" if the child pressed a button on the other toy or indicated (by pointing or verbally instructing) that the confederate should do so. We coded a response as "unsuccesful" if the target of the child's first behavior was the confederate's toy. In the Broken button condition, we coded a response as "successful" if the child flipped and pressed the bottom button on either of the two toys, or indicated (by pointing or verbally instructing) that the confederate should flip and press a bottom button. Unsuccessful behaviors involved acting on a top button or indicating that the confederate should act on a top button.
+The consequence of each child's first response was also coded. We coded a response as "successful" if the behavior helped the confederate play music, and "unsuccessful" otherwise. In the Broken Toy condition, we coded a response as "successful" if the child pressed a button on the other toy or indicated (by pointing or verbally instructing) that the confederate should do so. We coded a response as "unsuccesful" if the target of the child's first behavior was the confederate's toy. In the Broken button condition, we coded a response as "successful" if the child flipped and pressed the bottom button on either of the two toys, or indicated (by pointing or verbally instructing) that the confederate should flip and press a bottom button. Unsuccessful behaviors involved acting on a top button or indicating that the confederate should act on a top button.
 
 # Results
 ```{r}
