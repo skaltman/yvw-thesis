@@ -3,7 +3,7 @@ title: "Untitled"
 author: "Sara Altman"
 date: "2/13/2018"
 output: 
-  github_document
+  pdf_document
 ---
 
 ```{r setup, include=FALSE}

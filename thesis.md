@@ -1,37 +1,43 @@
-Untitled
-================
-Sara Altman
-2/13/2018
+---
+title: "Untitled"
+author: "Sara Altman"
+date: "2/13/2018"
+output: 
+  pdf_document
+---
 
-Introduction
-============
 
-Experiment 1
-============
 
-We presented children with a situation in which there were multiple ways to help another person. We manipulated the likely cause of the person in need of help's failure, which made one course of action more helpful than another.
 
-Methods
--------
+
+
+# Introduction
+
+
+# Experiment 1
+
+We presented children with a situation in which there were multiple ways to help another person. We manipulated the likely cause of the person in need of help's failure, which made one course of action more helpful than another. 
+
+## Methods
 
 ### Participants
 
-\[need check that the exclude codes are right--some of the counts are different than ones in cogsci paper\]
+[need check that the exclude codes are right--some of the counts are different than ones in cogsci paper]
+
+
 
 We recruited fifty-two 24- to 48-month-olds (M(SD) = 2.78(0.48)yrs, 44% female) from a museum in Palo Alto, CA. An additional 18 children were excluded from analysis due to parental interference (n = 9), experimenter error (n = 3), shyness (n = 3), or lack of video recording (n = 3). We randomly assigned children to one of two conditions: the Broken Toy condition (n = 26; M(SD) = 2.78(0.54)yrs) or the Broken Button condition (n = 26; M(SD) = 2.78(0.43)yrs).
 
 ### Stimuli
-
 We constructed three identical-looking toys. One side of each toy was covered in yellow felt and had a yellow button in the center. The opposite side was covered in red felt and had a red button in the center. The yellow button on two toys played music, while the yellow button on the third toy was inert. All red buttons were inert. The toys were placed on a white plastic tray and covered with grey felt. See Figure 2 for a schematic of the toys.
 
 ![](images/three-toy-schematic.png)
 
 ### Procedure
-
 The experiment began with a *warm-up phase* in which a confederate and experimenter engaged the child in reciprocal games (e.g., rolling a ball back and forth through a tube) in order to help the child feel comfortable with the researchers, and promote general helping behavior (see Cortes Barragan & Dweck, 2014). After approximately 5 minutes of warm-up, the confederate excused herself from the room, explaining that she had work to do.
 
 Then, the child gained experience with the toys during the *play phase*. The experimenter behaved as if she were exploring the toys for the first time. She took one toy out at a time and showed it to the child. In the Broken Toy condition, the toys were oriented such that the yellow side was on top. She noticed the yellow button, pressed it, and reacted positively to the music that played. She also encouraged the child to press the yellow button and again reacted positively, saying, “Music! The yellow side plays music!”. She then turned the toy around in her hands until she discovered the red button on the opposite side, and expressed mild surprise, as if she did not expect it to be there. She pressed the red button and also encouraged the child to do so, acting perplexed and disappointed that it did not play music. The experimenter then took the second toy out, which she and the child explored in the same way (i.e., the experimenter pressed each button, and then encouraged the child to do so). This second toy was always the broken toy. This process was repeated with the third toy, which functioned the same as the first (i.e., the yellow button played music, but the red button did nothing). The child and experimenter then explored each toy again, taking turns pressing the buttons. The Broken Button condition proceeded identically except that the toys were placed with the red side up, such that the red button was discovered first, and then the yellow. By the end of the play phase, all children experienced that pressing the yellow buttons on two of the toys played music (and one was inert), and that none of the red buttons played music. See Figure 1 for a schematic of the play phase.
-
+ 
 ![Order in which children saw and pressed the buttons in each of the conditions. Children explored both buttons on a toy before moving onto the next toy. In the Broken Toy condition, children encountered the yellow button on each toy before the red button. In the Broken Button condition, children encountered the red button on each toy before the yellow button.](images/three-toy-play-phase.png)
 
 In the helping phase, the experimenter placed toys back on the tray and covered them with the felt. The toys were placed as they were during the play phase: yellow-side-up in the Broken Toy condition, and red-side-up in the Broken Button condition. The child sat approximately 6 ft away from the tray, either by him-/herself or with a parent. The experimenter then called the confederate back into the room and explained that she and the child were playing with toys that played music. The confederate said, “I love music!” and knelt down behind the tray, facing the child. She appeared to think about which toy to select, then said, "Hmm, I think I'll play with this one!" She then took a toy out from behind the felt such that the child could not see from where on the tray the toy was selected. She placed her chosen toy in front of her and moved the tray containing the remaining two toys, covered by felt, off to one side (counterbalanced).
@@ -40,62 +46,77 @@ She then pressed the button on top of her chosen toy (the yellow button in the B
 
 If the child did not respond, the confederate and experimenter provided planned prompts, waiting 5 seconds in between, until the child responded. The last of these prompts involved the confederate moving closer to the child (approx. 2 ft.) and placing the tray and the toy within the child’s reach but still far enough apart that the child could only reach to one location at a time.
 
-Thus, the only differences across condiitions involved what color button the child perceived as the bottom or hidden buttons. In the Broken Toy condition, the experimenter presented the yellow button of each toy to the child first, then revealed the non-obvious red button. The toys were still oriented this way when the confederate came in, chose her toy, and acted upon the toy. In the Broken Button condition, the experimenter presented the red, inert buttons first, and the red buttons were on top during the confederate's interaction with the toys.
+Thus, the only differences across condiitions involved what color button the child perceived as the bottom or hidden buttons. In the Broken Toy condition, the experimenter presented the yellow button of each toy to the child first, then revealed the non-obvious red button. The toys were still oriented this way when the confederate came in, chose her toy, and acted upon the toy. In the Broken Button condition, the experimenter presented the red, inert buttons  first, and the red buttons were on top during the confederate's interaction with the toys.
 
-![Figure 2 PLACEHOLDER FIX LATER Depiction of the helping phase in the Broken Toy condition. The Broken Button condition proceeded identically, except that all three toys were oriented such that the red button was on top.\`](images/three-toy-helping-phase.png)
+![Figure 2 PLACEHOLDER FIX LATER Depiction of the helping phase in the Broken Toy condition. The Broken Button condition proceeded identically, except that all three toys were oriented such that the red button was on top.`](images/three-toy-helping-phase.png)
 
 We were interested in children’s first response after the confederate’s failure to activate her toy (i.e., her first button press). The key dependent measure was the target toy of this behavior, coded as either the “confederate’s toy” or the “toys on the tray”. All children who responded fell into one of these two categories.
 
 We also looked at the consequence of children’s first helping responses. We coded whether the behavior was “successful" or “unsuccessful” in achieving the confederate’s goal of playing music. In the Broken Toy condition, we coded a child’s first response as “successful” if the child pressed the yellow button on a toy from the tray or directed the confederate to press it (e.g., telling her to do so, pointing, or handing her a toy yellow side up). “Unsuccessful” responses included pressing or directing the confederate to press the red button on any toy or the yellow button on the confederate’s toy. In the Broken Button condition, we coded a behavior as “successful” if a child flipped and pressed the yellow button or directed the confederate to do so (e.g., telling her to press it, flipping a toy and handing it to the confederate or pointing to a yellow side). Therefore, in the Broken Button condition, children could respond successfully regardless of which toy they targeted. In the Broken Toy condition, however, children could only respond successfully if they targeted the toys on the tray. A researcher blind to the hypotheses coded these transcriptions for reliability and agreement was 100%.
 
-Results
-=======
+# Results
 
-Children in both conditions saw the same set of toys and watched the confederate perform the same action (pressing an obvious button on the top of a toy, which subsequently did not play music). All children could then either approach the toy the confederate had just pressed or a toy on the tray. The conditions differed only in the likely source of the confederate's failure to play music. We manipulated the likely source of her failure by varying whether the button pressed by the confederate was the type of button that worked on a majority of the toys (i.e., a yellow button; Broken Toy condition) or the type of button that was always inert (i.e., a red button; Broken Button condition).
+
+
+Children in both conditions saw the same set of toys and watched the confederate perform the same action (pressing an obvious button on the top of a toy, which subsequently did not play music). All children could then either approach the toy the confederate had just pressed or a toy on the tray. The conditions differed only in the likely source of the confederate's failure to play music. We manipulated the likely source of her failure by varying whether the button pressed by the confederate was the type of button that worked on a majority of the toys (i.e., a yellow button; Broken Toy condition) or the type of button that was always inert (i.e., a red button; Broken Button condition).  
 
 We predicted responses to vary across conditions depending on the source of the confederate’s failure. In the Broken Toy condition, the confederate presses a yellow button. From this action alone, you can infer that she has the inert toy, since yellow buttons produce music on all toys except one. The source of her failure is therefore the toy itself. Her action (pressing a yellow button) would have produced music if she had chosen another toy. The child can thus only help the confederate achieve her goal of playing music by targeting a new toy from the tray.
 
 In the Broken Button condition, however, it is only possible to infer that the confederate is taking the wrong action on a toy (i.e., pressing a red button instead of a yellow one). Each toy has an inert red button, so the confederate's action provides no information about which type of toy (functional or inert) she has chosen. Therefore, in this condition, children could help the confederate by approaching her toy, as toy may have a functional yellow button on the bottom. We thus predicted that more children would approach the “toys on the tray” in the Broken Toy condition than in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward a toy on the tray in the Broken Toy condition than in the Broken Button condition (73% vs. 27%; two-tailed Fisher’s Exact Test, p = 0.002).
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18-1.png)
 
 We then looked at children’s responses within each condition. In the Broken Toy condition, children could not help fulfill the confederate's goal of producing music by acting on the confederate's toy. We thus predicted that children in this condition would preferentially direct their help toward a toy on the tray. As predicted, children were more likely to approach the “toys on the tray” than the “confederate’s toy” (19/26; two-tailed binomial test, p = 0.029).
 
 In the Broken Button condition, however, it is not clear which toy the confederate has chosen. There is a 33% chance that any toy is the inert toy, and thus all toys are equally likely to be capable of producing music. It is therefore reasonable to target any toy. However, there are several reasons to expect that children would prefer the confederate's toy in this condition. First, children may be inclined to approach the toy just acted upon by the confederate. Second, children may conclude that the confederate's goal is not just to play music, but to play music specifically with her chosen toy. Thus, we expected that children would show a mild preference for the confederate’s toy. The majority of children in the Broken Button condition did approach the "confederate's toy" (19/26; two-tailed binomial test, p = 0.029). See Figure 2 for a summary of children’s first responses.
 
-As a secondary measure, we looked at the success of children's helping responses. We considered response successful if the child acted in way that could fulfill the confederate's goal of playing music. In the Broken Toy condition, a behavior could be successful only if it involved approaching the "toys on the tray." In the Broken Button condition, successful behaviors involved revealing a yellow button on any of the toys. It is plausible that helping successfully is more difficult in the Broken Button condition, as it involves revealing a non-obvious button. However, children can be helpful at either toy in the Broken Button condition and there are therefore more ways to offer successful help. All children in the Broken Button condition included in this analysis helped successfully (25/25). One child in the Broken Button condition was dropped from this analysis because the camera angle prevented visual access to the content of her helping behavior. Children in the Broken Button condition were more likely to help successfully than children in the Broken Button condition (73% in Broken Toy vs. 100% in Broken Button; two-tailed Fisher’s Exact Test, p = 0.01). Children tended to help successfully overall; within each condition, children were more likely to help successfully than unsuccessfully (Broken Toy: 19/26, two-tailed binomial test, p = 0.0289593; Broken Button: 25/25, two-tailed binomial test, p = 610^{-8}).
+As a secondary measure, we looked at the success of children's helping responses. We considered response successful if the child acted in way that could fulfill the confederate's goal of playing music. In the Broken Toy condition, a behavior could be successful only if it involved approaching the "toys on the tray." In the Broken Button condition, successful behaviors involved revealing a yellow button on any of the toys. It is plausible that helping successfully is more difficult in the Broken Button condition, as it involves revealing a non-obvious button. However, children can be helpful at either toy in the Broken Button condition and there are therefore more ways to offer successful help. All children in the Broken Button condition included in this analysis helped successfully (25/25). One child in the Broken Button condition was dropped from this analysis because the camera angle prevented visual access to the content of her helping behavior. Children in the Broken Button condition were more likely to help successfully than children in the Broken Button condition (73% in Broken Toy vs. 100% in Broken Button; two-tailed Fisher’s Exact Test, p = 0.01). Children tended to help successfully overall; within each condition, children were more likely to help successfully than unsuccessfully (Broken Toy: 19/26, two-tailed binomial test, p = 0.0289593; Broken Button: 25/25, two-tailed binomial test, p = 6 &times; 10<sup>-8</sup>). 
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-3-1.png)
 
-As an exploratory analysis, we coded children’s first responses as “correct” (Broken Toy: “toys on tray”; Broken Button: “confederate’s toy”) or “incorrect”. We fit a generalized linear model with correctness as the outcome variable, condition as a categorical predictor variable, and age as a continuous predictor variable. This analysis revealed that age is a significant predictor of "correctness" (*β* = 1.67, p = 0.03), but that condition is not (*β* = -0.08, p = 0.9). For details, see Table 5.
+![plot of chunk unnamed-chunk-19](figure/unnamed-chunk-19-1.png)
 
-    ## [1] 5
 
-| Term                    |  Estimate|    SE|  Z statistic|  p\_value|
-|:------------------------|---------:|-----:|------------:|---------:|
-| Intercept               |     -3.45|  2.07|        -1.67|      0.09|
-| condition:Broken Button |     -0.08|  0.66|        -0.13|      0.90|
-| Age                     |      1.67|  0.78|         2.13|      0.03|
 
-\[note: im really note sure that this is helpful to include\]
 
-As a second exploratory analysis, we investigated how often children targeted on a non-obvious (i.e., bottom) button as a second exploratory analysis. This is similar to the helpfulness analysis discussed previously in that we are interested in the content of children's helping behavior beyond which toy they choose to target. In the Broken Button condition, children who target a bottom button were also coded as "helpful" and thus the two codes are identical. However, in the Broken Toy condition, children can only be helpful if they target a top (i.e., yellow) button on a toy on the tray. Thus, children could be unhelpful in multiple ways. They could target a red button on a toy on the tray or confederate's toy, but they could also target the yellow button on the confederate's toy. The two codes are therefore not identical in this condition.
+As an exploratory analysis, we coded children’s first responses as “correct” (Broken Toy: “toys on tray”; Broken Button: “confederate’s toy”) or “incorrect”. We fit a generalized linear model with correctness as the outcome variable, condition as a categorical predictor variable, and age as a continuous predictor variable. This analysis revealed that age is a significant predictor of "correctness" ($\beta$ = 1.67, p = 0.03), but that condition is not ($\beta$ = -0.08, p = 0.9). For details, see Table 5.
 
-If children are responding effectively to the likely source of the confederate's failure, we should expect children in the Broken Button condition to be more likely to flip the toys over than children in the Broken Toy condition, as the toys in the Broken Toy condition are already oriented such that the functional buttons are on top. We found that were significantly more likely to target a non-obvious button in the Broken Button condition than in the Broken Toy condition (96% vs. 12%; two-tailed Fisher’s Exact Test, p &lt; 0.001). Furthermore, children in the Broken Button condition were significantly more likely to target a non-obvious button than an obvious button (25/26, two-tailed binomial test, p &lt; 0.001), while children in the Broken Toy condition were significantly more likely to target an obvious button than a non-obvious one (3/26, two-tailed binomial test, p &lt; 0.001).
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-7-1.png)
+```
+## [1] 5
+```
+
+
+
+|Term                    | Estimate|   SE| Z statistic| p_value|
+|:-----------------------|--------:|----:|-----------:|-------:|
+|Intercept               |    -3.45| 2.07|       -1.67|    0.09|
+|condition:Broken Button |    -0.08| 0.66|       -0.13|    0.90|
+|Age                     |     1.67| 0.78|        2.13|    0.03|
+
+
+
+[note: im really note sure that this is helpful to include]
+
+As a second exploratory analysis, we investigated how often children targeted on a non-obvious (i.e., bottom) button as a second exploratory analysis. This is similar to the helpfulness analysis discussed previously in that we are interested in the content of children's helping behavior beyond which toy they choose to target. In the Broken Button condition, children who target a bottom button were also coded as "helpful" and thus the two codes are identical. However, in the Broken Toy condition, children can only be helpful if they target a top (i.e., yellow) button on a toy on the tray. Thus, children could be unhelpful in multiple ways. They could target a red button on a toy on the tray or confederate's toy, but they could also target the yellow button on the confederate's toy. The two codes
+are therefore not identical in this condition. 
+
+If children are responding effectively to the likely source of the confederate's failure, we should expect children in the Broken Button condition to be more likely to flip the toys over than children in the Broken Toy condition, as the toys in the Broken Toy condition are already oriented such that the functional buttons are on top. We found that were significantly more likely to target a non-obvious button in the Broken Button condition than in the Broken Toy condition (96% vs. 12%; two-tailed Fisher’s Exact Test, p < 0.001). Furthermore, children in the Broken Button condition were significantly more likely to target a non-obvious button than an obvious button (25/26, two-tailed binomial test, p < 0.001), while children in the Broken Toy condition were significantly more likely to target an obvious button than a non-obvious one (3/26, two-tailed binomial test, p < 0.001). 
+
+![plot of chunk unnamed-chunk-23](figure/unnamed-chunk-23-1.png)
+
 
 ### Discussion
 
-However, the Broken Button condition does not require children to make an inference about the source of the confederate's failure. Because of the toys color-coding, in the Broken Button condition, all possible helpful actions are marked in yellow. Therefore, children could just remember that yellow produces music, instead of inferring that the source of the confederate's failure. This is not the case, however, in the Broken Toy condition. Both the confederate's failed action and all helpful actions are marked in yellow. Children need to target a yellow button on a *new* toy and cannot simply target a particular color. To eliminate this alternative explanation in the Broken Button condition as well as the asymmetry between the two conditions, we designed a second experiment with two identical toys.
+However, the Broken Button condition does not require children to make an inference about the source of the confederate's failure. Because of the toys color-coding, in the Broken Button condition, all possible helpful actions are marked in yellow. Therefore, children could just remember that yellow produces music, instead of inferring that the source of the confederate's failure. This is not the case, however, in the Broken Toy condition. Both the confederate's failed action and all helpful actions are marked in yellow. Children need to target a yellow button on a *new* toy and cannot simply target a particular color. To eliminate this alternative explanation in the Broken Button condition as well as the asymmetry between the two conditions, we designed a second experiment with two identical toys. 
 
-Experiment 2
-============
+# Experiment 2
 
-Methods
--------
+## Methods
 
 ### Participants
+
+
+
 
 We recruited 64 24- to 48-month-old participants (M(SD) = 3.03, 42% female) from a local preschool. An additional 11 children were excluded from analysis due to experimenter error (n = 2), the child responding too early (n = 4), the child having prior exposure to the experiment (n = 4), or lack of video recording (n = 1).
 
@@ -107,9 +128,10 @@ We constructed four toys, similar to those used in Experiment 1. Two opposite si
 
 ![Figure 6](images/two-toy-schematic.png)
 
+
 ### Procedure
 
-As in Experiment 1, the experiment consisted of a *warm-up phase*, *play phase*, and *helping phase*. During the warm-up phase, the confederate engaged the child in the same reciprocal games as in Experiment 1. The warm-up phase lasted approximately three minutes. This was two minutes shorter than the warm-up phase in Experiment 1 because the children in this experiment were already familiar with the experimenter and room in which the experiment was held.
+As in Experiment 1, the experiment consisted of a *warm-up phase*, *play phase*, and *helping phase*. During the warm-up phase, the confederate engaged the child in the same reciprocal games as in Experiment 1. The warm-up phase lasted approximately three minutes. This was two minutes shorter than the warm-up phase in Experiment 1 because the children in this experiment were already familiar with the experimenter and room in which the experiment was held. 
 
 During the play phase, the experimenter and the child interacted with two of the four toys. The experimenter behaved in a manner similar to that of Experiment 1. In contrast to Experiment 1, however, children saw different sets of toys in each condition. The child engaged with the fully inert toy and the fully functional toy in the Broken Toy condition. In the Wrong Action condition, the child engaged with the two identical toys that each had one functional button and one inert button.
 
@@ -123,83 +145,94 @@ If the child did not respond, the confederate and experimenter provided addition
 
 If the child provided help that did not involve a physical demonstration (i.e., pointed or gave verbal instructions) before the confederate moved back to the center and gave her prompt, the confederate indicated that she had noticed the help by saying, "Ooh," moved back to the center, and said, "Can you show me?" If the child did not respond, the experimenter and confederate continued prompting as explained above.
 
-As in Experiment 1, the key dependent measure was the target of the child's first response after the confederate's failure. We coded the target as either the toy that the confederate had acted upon ("confederate's toy") or the other toy that she had not touched ("other toy"). All children included in this experiment fell into one of these two categories.
+As in Experiment 1, the key dependent measure was the target of the child's first response after the confederate's failure. We coded the target as either the toy that the confederate had acted upon ("confederate's toy") or the other toy that she had not touched ("other toy"). All children included in this experiment fell into one of these two categories. 
 
 The consequence of each child's first response was also coded. We coded a response as "successful" if the behavior helped the confederate play music, and "unsuccessful" otherwise. In the Broken Toy condition, we coded a response as "successful" if the child pressed a button on the other toy or indicated (by pointing or verbally instructing) that the confederate should do so. We coded a response as "unsuccesful" if the target of the child's first behavior was the confederate's toy. In the Broken button condition, we coded a response as "successful" if the child flipped and pressed the bottom button on either of the two toys, or indicated (by pointing or verbally instructing) that the confederate should flip and press a bottom button. Unsuccessful behaviors involved acting on a top button or indicating that the confederate should act on a top button.
 
-Results
-=======
+# Results
+
 
 To verify that children did not express a side bias or preference for any confederate or experimenter, we ran a logistic regression with "correctness" of response as the outcome and toy side, experimenter identity, and confederate identity as predictors. None were signficant predictors of correctness. See Table 7 for details.
 
-| Term                   |  Estimate|    SE|  Z statistic|  p-value|
-|:-----------------------|---------:|-----:|------------:|--------:|
-| Intercept              |      2.53|  1.69|         1.50|     0.13|
-| toySideR               |      0.20|  0.61|         0.33|     0.74|
-| experimenterSara       |     -0.40|  1.31|        -0.31|     0.76|
-| experimenterSophie     |     -1.15|  1.50|        -0.77|     0.44|
-| confederateGrace       |     -1.06|  1.20|        -0.89|     0.37|
-| confederateHuda        |     -1.71|  1.43|        -1.20|     0.23|
-| confederateMaria Marta |     -1.22|  1.46|        -0.83|     0.41|
-| confederateSara        |     -0.07|  1.51|        -0.05|     0.96|
-| confederateSophie      |     -1.61|  1.27|        -1.27|     0.21|
+
+|Term                   | Estimate|   SE| Z statistic| p-value|
+|:----------------------|--------:|----:|-----------:|-------:|
+|Intercept              |     2.53| 1.69|        1.50|    0.13|
+|toySideR               |     0.20| 0.61|        0.33|    0.74|
+|experimenterSara       |    -0.40| 1.31|       -0.31|    0.76|
+|experimenterSophie     |    -1.15| 1.50|       -0.77|    0.44|
+|confederateGrace       |    -1.06| 1.20|       -0.89|    0.37|
+|confederateHuda        |    -1.71| 1.43|       -1.20|    0.23|
+|confederateMaria Marta |    -1.22| 1.46|       -0.83|    0.41|
+|confederateSara        |    -0.07| 1.51|       -0.05|    0.96|
+|confederateSophie      |    -1.61| 1.27|       -1.27|    0.21|
 
 Children in each condition saw identical-looking toys and watched the confederate perform the same set of actions. We manipulated the cause of the confederate's failure by varying the functionality of the toy chosen by the confederate. In the Broken Toy condition, one toy is fully inert and one plays music. Thus, the confederate is not operating her toy incorrectly-she has chosen a broken toy. The source of her failure is her choice of toy. However, in the Broken Button condition, each toy is capable of making music. The confederate did not choose the wrong toy since both toys are identical. Instead, her failure is due to her incorrect operation of her chosen toy.
 
-We predicted responses to vary across conditions depending on the source of the confederate's failure. In the Broken Toy condition, it is only possible to effectively help the confederate play music by targeting the other toy. In the Broken Button condition, however, the toys are identical. Each toy has one functional button and one inert button. Once the confederate presses the top button on her toy, you can infer that the bottom button will be functional. It is therefore possible to help her by targeting her own toy (the "confederate's toy"). However, the "other toy" also has a functional button. Targeting this toy can then also address the confederate's goal of playing music. Because children in this condition could help the confederate by targeting at either toy, but children in the Broken Toy condition could help only by targeting the other toy, we predicted that children would be more likely to target the "other toy" in the Broken Toy condition than in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward the "other toy" in the Broken Toy condition than in the Broken Button condition (84% % vs. 41%; two-tailed Fisher’s Exact Test, p = 610^{-4}). This replicates the finding from Experiment 1, and suggests that the red and yellow visual markers from Experiment 1 are not necessarily in order to observe responses that vary depending on the source of failure.
+We  predicted responses to vary across conditions depending on the source of the confederate's failure. In the Broken Toy condition, it is only possible to effectively help the confederate play music by targeting the other toy. In the Broken Button condition, however, the toys are identical. Each toy has one functional button and one inert button. Once the confederate presses the top button on her toy, you can infer that the bottom button will be functional. It is therefore possible to help her by targeting her own toy (the "confederate's toy"). However, the "other toy" also has a functional button. Targeting this toy can then also address the confederate's goal of playing music. Because children in this condition could help the confederate by targeting at either toy, but children in the Broken Toy condition could help only by targeting the other toy, we predicted that children would be more likely to target the "other toy" in the Broken Toy condition than in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward the "other toy" in the Broken Toy condition than in the Broken Button condition (84% % vs. 41%; two-tailed Fisher’s Exact Test, p = 6 &times; 10<sup>-4</sup>). This replicates the finding from Experiment 1, and suggests that the red and yellow visual markers from Experiment 1 are not necessarily in order to observe responses that vary depending on the source of failure. 
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-11-1.png)
+![plot of chunk unnamed-chunk-27](figure/unnamed-chunk-27-1.png)
 
-    ## # A tibble: 1 x 6
-    ##   num_bb num_bt num_total perc_total p_value_bt p_value_bb
-    ##    <int>  <int>     <int>      <dbl>      <dbl>      <dbl>
-    ## 1     13     27        40      0.625          0      0.377
+```
+## # A tibble: 1 x 6
+##   num_bb num_bt num_total perc_total p_value_bt p_value_bb
+##    <int>  <int>     <int>      <dbl>      <dbl>      <dbl>
+## 1     13     27        40      0.625          0      0.377
+```
 
-We also looked at responses within each condition. As predicted, children in the Broken Toy condition were more likely to target the "other toy" than the "confederate's toy" (27/32; two-tailed binomial test, p &lt; 0.001). Therefore, children appear to be reasoning that the confederate has the inert toy based on the her actions and their prior knowledge about the functionality of the two toys.
+We also looked at responses within each condition. As predicted, children in the Broken Toy condition were more likely to target the "other toy" than the "confederate's toy" (27/32; two-tailed binomial test, p < 0.001). Therefore, children appear to be reasoning that the confederate has the inert toy based on the her actions and their prior knowledge about the functionality of the two toys.  
 
-We did not have a directed prediction for the Broken Button condition because, as described earlier, targeting either toy can be helpful. Children in the Broken Button condition showed no preference for either toy (13/32; two-tailed binomial test, p = 0.377).
+We did not have a directed prediction for the Broken Button condition because, as described earlier, targeting either toy can be helpful. Children in the Broken Button condition showed no preference for either toy (13/32; two-tailed binomial test, p = 0.377). 
 
-Again, as a secondary measure, we looked at the success of children's helping behaviors. Successful behaviors again included only those that aided the confederate in her goal of playing music. In the Broken Toy condition, children could successfully help only if they targeted the other toy. In the Broken Button condition, children could successfully help if they targeted the bottom button on either toy. We found no difference in the success of helping behavior across the two conditions (84% in Broken Toy vs. 72 in Broken Button; two-tailed Fisher’s Exact Test, p = 0.365). We then collapsed across conditions and found that children were more likely to successfully help than to unsuccessfully help (50/64; two-tailed binomial test, p &lt; 0.001). Thus, not only were children varying their responses based on the source of the confederate's failure, they targeted their responses in a way that could help fulfill her goal of playing music.
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-13-1.png)
 
-As another secondary analysis, we investigated how often children in each condition exhibited the "correct" response. In the Broken Toy condition, "correct" responses are those that target the other toy. In the Broken Button condition, "correct" responses are those that target the confederate's toy. We found no significant difference across conditions (84% in Broken Toy vs. 59% in Broken Button; two-tailed Fisher’s Exact Test, p = 0.05). We then collapsed across conditions to test if children were more likely to respond "correctly" or "incorrectly" versus the alternative. Children were more likely to respond "correctly" than "incorrectly" (46/64; two-tailed binomial test, p &lt; 0.001)
+Again, as a secondary measure, we looked at the success of children's helping behaviors. Successful behaviors again included only those that aided the confederate in her goal of playing music. In the Broken Toy condition, children could successfully help only if they targeted the other toy. In the Broken Button condition, children could successfully help if they targeted the bottom button on either toy. We found no difference in the success of helping behavior across the two conditions (84% in Broken Toy vs. 72 in Broken Button; two-tailed Fisher’s Exact Test, p = 0.365). We then collapsed across conditions and found that children were more likely to successfully help than to unsuccessfully help (50/64; two-tailed binomial test, p < 0.001). Thus, not only were children varying their responses based on the source of the confederate's failure, they targeted their responses in a way that could help fulfill her goal of playing music. 
 
-Finally, as an exploratory measure, we again looked at how often children targeted a non-obvious, bottom button. Children in the Broken Button condition were significantly more likely to target a bottom button than in the Broken Toy coniditon (72% vs. 3%; two-tailed Fisher's exact test, p &lt; 0.001), indicating that children were using prior knowledge about the toys' functionality when responding to the confederate. Children were also more likely to target a non-obvious bottom button than an obvious top button in the Broken Button condition (23/32; two-tailed binomial test, p = 0.02) and children in the Broken Toy condition were more likely to target an obvious button than a non-obvious button (1/32; two-tailed binomial test, p &lt; 0.001).
+![plot of chunk unnamed-chunk-29](figure/unnamed-chunk-29-1.png)
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-15-1.png)
+As another secondary analysis, we investigated how often children in each condition exhibited the "correct" response. In the Broken Toy condition, "correct" responses are those that target the other toy. In the Broken Button condition, "correct" responses are those that target the confederate's toy. We found no significant difference across conditions (84% in Broken Toy vs. 59% in Broken Button; two-tailed Fisher’s Exact Test, p = 0.05). We then collapsed across conditions to test if children were more likely to respond "correctly" or "incorrectly" versus the alternative. Children were more likely to respond "correctly" than "incorrectly" (46/64; two-tailed binomial test, p < 0.001)
 
-Discussion
-==========
 
-\[transition to modified experiment--put somewhere\]
-----------------------------------------------------
 
-It is not clear exactly what the confederate's goal are from her actions. Again, the confederate chooses a toy and expresses that she is interested in playing music. She then asks the child to show her. She may have a "specific" goal of playing music with her chosen toy, or a "general" goal of playing music with either toy. If she holds the specific goal, you can help her by showing her how to produce music on her chosen toy. However, since the toys are identical, you can also demonstrate to her how to operate her own toy on the "other toy." If she has the "general" goal of playing music regardless of toy, then showing her on either toy helps her achieve her goal.
+
+Finally, as an exploratory measure, we again looked at how often children targeted a non-obvious, bottom button. Children in the Broken Button condition were significantly more likely to target a bottom button than in the Broken Toy coniditon (72% vs. 3%; two-tailed Fisher's exact test, p < 0.001), indicating that children were using prior knowledge about the toys' functionality when responding to the confederate. Children were also more likely to target a non-obvious bottom button than an obvious top button in the Broken Button condition (23/32; two-tailed binomial test, p = 0.02) and children in the Broken Toy condition were more likely to target an obvious button than a non-obvious button (1/32; two-tailed binomial test, p < 0.001). 
+
+![plot of chunk unnamed-chunk-31](figure/unnamed-chunk-31-1.png)
+
+
+# Discussion
+
+## [transition to modified experiment--put somewhere]
+It is not clear exactly what the confederate's goal are from her actions. Again, the confederate chooses a toy and expresses that she is interested in playing music. She then asks the child to show her. She may have a "specific" goal of playing music with her chosen toy, or a "general" goal of playing music with either toy. If she holds the specific goal, you can help her by showing her how to produce music on her chosen toy. However, since the toys are identical, you can also demonstrate to her how to operate her own toy on the "other toy." If she has the "general" goal of playing music regardless of toy, then showing her on either toy helps her achieve her goal. 
 
 Children show no preference for either toy in the Broken Button condition, in contrast to Experiment 1, in which children in the Broken Button condition preferentially targeted the confederate's toy. There are several reasons why targeting the confederate's toy seems more appropriate in this condition. First, children have more information about the confederate's toy. The confederate presses a button on the top of the toy and it does nothing. If children remember how the toys work, they can infer that the bottom button on the confederate's toy must therefore be the functional button. They have no such information about other toy. In this experiment, the functional and non-functional sides are not marked and it is therefore not clear which button will produce music on the other toy. Therefore, if children want to maximize the chance of producing music, it makes sense to target the bottom button on the confederate's toy. Second, the confederate chooses one toy over another, both verbally by remarking, "Hmm, I think I'll play with this one," and by phyiscally kneeling down behind her chosen toy and pressing a button on that toy only. It seems reasonable to conclude that these actions indicate that she has a preference for one toy over another. However, children do not preferentially target the confederate's toy. Here are several possible explanations for this behavior.
 
-1.  Children are forgetting which toy the confederate acted upon and therefore do not have a preference for either toy since they are visually identical. This could explain the difference in behavior between children in Experiment 1 and this experiment because in Experiment 1 the other toys are on a tray and therefore visually marked. However, this is unlikely for several reasons. First, if children are forgetting which toy the confederate acted upon after she moves to the center of both toys and asks her question, children should also show no preference for either toy in the Broken Button condition, as the toys in that condition are also visually identical. \[have possible counterargument to this -- think about later\] Second, there are 25 children who offer help while the confederate is still kneeling at her toy, before she moves back to the center and asks for help. These children also do not show a preference for either toy--12 target the confederate's toy and 13 target the other toy.
 
-2.  Children have an aversion to the confederate's toy since they just saw the confederate act upon that toy and fail. However, if children are aversed to operating a toy upon which someone else just failed, we should see that aversion in the Broken Button condition in Experiment 1 as well.
 
-3.  Children do not think the confederate's gaol is to play music with her chosen toy. Instead, they think her goal is just to play music. We will call this the *general goal*, in contrast to the *specific goal* of playing music with a particular toy. Although the confederate does verbally indicate a choice and operate a single toy, she then moves so that she is back between the two toys before saying, "I really want to play music. Can you show me?" She also gestures with both arms towards both toys while doing so. Therefore, while the confederate is explicitly asking for music and stating her goal, she demonstrates an indifference towards either toy. Children may interpret these actions as overriding her earlier demonstrated preference for one toy over another and therefore attribute the general goal to the confederate. If the confederate has no toy preference, it is helpful to target either toy. this does not address, however, the fact that children have more information about the confederate's toy than the other toy. Even if children attribute the general goal to the confederate, it is still a better bet to flip over the confederate's toy (100% chance of music) than it is to try either button on the other toy (each has a 50% chance of music). It is possible that children are not taking this into consideration, or that they assume the toys are oriented identically (i.e., the top button on the other toy is also the inert button). It is unlikely that children think the toys are oriented identically, however. First, they have no reason to assume they are oriented identically--they are oriented differently during the training phase and neither the confederate or experimenter indicates that they are oriented in any particular way during the helping phase. Furthermore, if children assume the toys are oriented identically, children who target the other toy in this condition should preferentially target the bottom button, as the do the children who target the confederate's toy. However, of the 13 in the Broken Button condition who target the other toy, 5 target the bottom button and 8 target the top button. This is contrast to the 18 out of 19 who target the bottom button on the confederate's toy.
 
-4.  Children do attribute the specific goal to the confederate (i.e., they think she wants to play music with her chosen toy). However, because the toys are identical, they believe that demonstrating on either toy can help fulfull the confederate's goal. Under this theory, if a child targets the other toy, s/he thinks that the confederate wants to play music with her chosen toy, but believe they can show her the correct way to do so on the other toy, since the toys are visually and functionally identical. However, it then seems reasonable to expect that children who target the other toy will preferentially target the bottom button, as it is not informative to the confederate for the child to push the top button on the other toy if her goal is to play music on her own toy. The confederate does not appear to know that the bottom button exists, or that her own toy has a functional button. '
+1. Children are forgetting which toy the confederate acted upon and therefore do not have a preference for either toy since they are visually identical. This could explain the difference in behavior between children in Experiment 1 and this experiment because in Experiment 1 the other toys are on a tray and therefore visually marked. However, this is unlikely for several reasons. First, if children are forgetting which toy the confederate acted upon after she moves to the center of both toys and asks her question, children should also show no preference for either toy in the Broken Button condition, as the toys in that condition are also visually identical. [have possible counterargument to this -- think about later] Second, there are 25 children who offer help while the confederate is still kneeling at her toy, before she moves back to the center and asks for help. These children also do not show a preference for either toy--12 target the confederate's toy and 13 target the other toy. 
 
-It is possible that a combination of these explanations are occurring--i.e., some children are attributing the general goal to the confederate, some are attributing the specific goal, some forget which toy she acted upon, some are aversed to acting on the confederate's toy. It is also possible that multiple of these are in effect in one child. For example, a child could attribute the specific goal to the confederate and also have an aversion to the confederate's toy.
+2. Children have an aversion to the confederate's toy since they just saw the confederate act upon that toy and fail. However, if children are aversed to operating a toy upon which someone else just failed, we should see that aversion in the Broken Button condition in Experiment 1 as well. 
 
-It is not possible to determine whether children are attributing the specific or general goal to the confederate in this experiment.
 
-Experiment 3
-============
 
-In this experiment, we changed the structure of one toy in each pair to make the toys visually and functionally distinct. We believed this made it more likely that the confederate is expressing a preference for one toy over another when she makes her choice. It also eliminates the possibility of demonstrating how to operate the confederate's toy by acting on the other toy in the Broken Button condition.
+3. Children do not think the confederate's gaol is to play music with her chosen toy. Instead, they think her goal is just to play music. We will call this the *general goal*, in contrast to the *specific goal* of playing music with a particular toy. Although the confederate does verbally indicate a choice and operate a single toy, she then moves so that she is back between the two toys before saying, "I really want to play music. Can you show me?" She also gestures with both arms towards both toys while doing so. Therefore, while the confederate is explicitly asking for music and stating her goal, she demonstrates an indifference towards either toy. Children may interpret these actions as overriding her earlier demonstrated preference for one toy over another and therefore attribute the general goal to the confederate. If the confederate has no toy preference, it is helpful to target either toy. this does not address, however, the fact that children have more information about the confederate's toy than the other toy. Even if children attribute the general goal to the confederate, it is still a better bet to flip over the confederate's toy (100% chance of music) than it is to try either button on the other toy (each has a 50% chance of music). It is possible that children are not taking this into consideration, or that they assume the toys are oriented identically (i.e., the top button on the other toy is also the inert button). It is unlikely that children think the toys are oriented identically, however. First, they have no reason to assume they are oriented identically--they are oriented differently during the training phase and neither the confederate or experimenter indicates that they are oriented in any particular way during the helping phase. Furthermore, if children assume the toys are oriented identically, children who target the other toy in this condition should preferentially target the bottom button, as the do the children who target the confederate's toy. However, of the 13 in the Broken Button condition who target the other toy, 5 target the bottom button and 8 target the top button. This is contrast to the 18 out of 19 who target the bottom button on the confederate's toy.
 
-Methods
--------
+4. Children do attribute the specific goal to the confederate (i.e., they think she wants to play music with her chosen toy). However, because the toys are identical, they believe that demonstrating on either toy can help fulfull the confederate's goal. Under this theory, if a child targets the other toy, s/he thinks that the confederate wants to play music with her chosen toy, but believe they can show her the correct way to do so on the other toy, since the toys are visually and functionally identical. However, it then seems reasonable to expect that children who target the other toy will preferentially target the bottom button, as it is not informative to the confederate for the child to push the top button on the other toy if her goal is to play music on her own toy. The confederate  does not appear to know that the bottom button exists, or that her own toy has a functional button. '
+
+It is possible that a combination of these explanations are occurring--i.e., some children are attributing the general goal to the confederate, some are attributing the specific goal, some forget which toy she acted upon, some are aversed to acting on the confederate's toy. It is also possible that multiple of these are in effect in one child. For example, a child could attribute the specific goal to the confederate and also have an aversion to the confederate's toy. 
+
+It is not possible to determine whether children are attributing the specific or general goal to the confederate in this experiment. 
+
+
+# Experiment 3
+In this experiment, we changed the structure of one toy in each pair to make the toys visually and functionally distinct. We believed this made it more likely that the confederate is expressing a preference for one toy over another when she makes her choice. It also eliminates the possibility of demonstrating how to operate the confederate's toy by acting on the other toy in the Broken Button condition. 
+
+## Methods
 
 ### Participants
+
+
 
 We recruited 72 24- to 48-month-old participants (M(SD) = 2.96(0.52), 47% female). Of these children, 37 (M(SD) = 2.88(0.46)) were recruited from a museum in Palo Alto, CA and 35 of these participants (M(SD) = 3.04(0.56)) were recruited from a local preschool. An additional 19 children were excluded from analysis due to experimenter error (n = 1), parental or sibling interference (n = 4), the child responding too early (n = 7), the child having prior exposure to the experiment (n = 1), or lack of video recording (n = 1).
 
@@ -217,62 +250,70 @@ Again, the experiment consisted of a warm-up phase, play phase, and helping phas
 
 The play phase was also identical to the play phase in Experiment 2, except that each child saw one top-side toy and one top-bottom toy. Children were again assigned to either the Broken Button or Broken Toy condition. Each child in the Broken Button condition played two toys that each had one functional button and one inert button. Half of children in the Broken Toy condition played with a functional top-side toy and an inert top-bottom toy, and half played with a functional top-bottom toy and an inert top-side toy.
 
-The helping phase was identical to the helping phase in Experiment 2, except for the presence of one top-side toy. The experiment placed the top-side toys such that one button was on top and the other button faced the child. In the Broken Button condition, the top button was inert and the side button was functional. The helping phase then proceeded identically to the helping phase in Experiment 2.
+The helping phase was identical to the helping phase in Experiment 2, except for the presence of one top-side toy. The experiment placed the top-side toys such that one button was on top and the other button faced the child. In the Broken Button condition, the top button was inert and the side button was functional. The helping phase then proceeded identically to the helping phase in Experiment 2. 
 
-Again, we coded the target of each child's first behavior after the confederate's failure (i.e., her first button press). This target was either the confederate's toy or the other toy, and all children who responded fell into one of these two categories. As in the previous two experiments, we also coded responses as successful or unsuccessful. The criteria were the same as in Experiment 2 for both conditions.
+Again, we coded the target of each child's first behavior after the confederate's failure (i.e., her first button press). This target was either the confederate's toy or the other toy, and all children who responded fell into one of these two categories. As in the previous two experiments, we also coded responses as successful or unsuccessful. The criteria were the same as in Experiment 2 for both conditions. 
 
-Results
-=======
+# Results
 
 To verify that children did not express a bias for a particular toy type, side, confederate, or experimenter, we ran a logistic regression with all of the listed variables as predictors and an indicator variable representing whether or not children repsonded as predicted (i.e., targeted the confederate's toy in Broken Button or other toy in Broken Toy) as the response. None of the predictors were significant. See Table 2 for details.
 
-| Term                |  Estimate|       SE|  Z statistic|  p-value|
-|:--------------------|---------:|--------:|------------:|--------:|
-| Intercept           |     32.71|  5464.61|         0.01|     1.00|
-| toySideR            |      0.26|     0.65|         0.40|     0.69|
-| toyTypetop-side     |      0.71|     0.69|         1.03|     0.30|
-| experimenterSara    |    -14.95|  2870.19|        -0.01|     1.00|
-| experimenterSophie  |     17.41|  2870.19|         0.01|     1.00|
-| confederateFernanda |    -17.01|  4650.16|         0.00|     1.00|
-| confederateGrace    |    -17.20|  4650.16|         0.00|     1.00|
-| confederateNatalie  |    -16.75|  4650.16|         0.00|     1.00|
-| confederateSara     |    -33.19|  5464.61|        -0.01|     1.00|
-| confederateSophie   |    -16.34|  4650.16|         0.00|     1.00|
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-20-1.png)
+|Term                | Estimate|      SE| Z statistic| p-value|
+|:-------------------|--------:|-------:|-----------:|-------:|
+|Intercept           |    32.71| 5464.61|        0.01|    1.00|
+|toySideR            |     0.26|    0.65|        0.40|    0.69|
+|toyTypetop-side     |     0.71|    0.69|        1.03|    0.30|
+|experimenterSara    |   -14.95| 2870.19|       -0.01|    1.00|
+|experimenterSophie  |    17.41| 2870.19|        0.01|    1.00|
+|confederateFernanda |   -17.01| 4650.16|        0.00|    1.00|
+|confederateGrace    |   -17.20| 4650.16|        0.00|    1.00|
+|confederateNatalie  |   -16.75| 4650.16|        0.00|    1.00|
+|confederateSara     |   -33.19| 5464.61|       -0.01|    1.00|
+|confederateSophie   |   -16.34| 4650.16|        0.00|    1.00|
 
-Again, we predicted that responses would vary across conditions depending on the source of the confederate's failure, and that children in the Broken Toy condition would be more likely to target the "other toy" than children in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward the "other toy" in the Broken Toy condition than in the Broken Button condition (94% vs. 31%; two-tailed Fisher’s Exact Test, p &lt; 0.001). This replicates the findings in Experiment 1 and 2.
 
-As in the previous two experiments, we also predicted and found that children within the Broken Toy condition would be more likely to target the "other toy" than the "confederate's toy" (34/36; two-tailed binomial test, p &lt; 0.001).
+![plot of chunk unnamed-chunk-36](figure/unnamed-chunk-36-1.png)
+
+Again, we predicted that responses would vary across conditions depending on the source of the confederate's failure, and that children in the Broken Toy condition would be more likely to target the "other toy" than children in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward the "other toy" in the Broken Toy condition than in the Broken Button condition (94% vs. 31%; two-tailed Fisher’s Exact Test, p < 0.001). This replicates the findings in Experiment 1 and 2.
+
+As in the previous two experiments, we also predicted and found that children within the Broken Toy condition would be more likely to target the "other toy" than the "confederate's toy" (34/36; two-tailed binomial test, p < 0.001).
 
 In contrast to Experiment 2, we predicted that children within the Broken Button condition would preferentially target the "confederate's toy" over the "other toy." The two toys in this experiment are visually different. Therefore, in the Broken Button condition, children can no longer effectively help the confederate by demonstrating the correct action on the "other toy." Additionally, because the toys are visually distinct, it now appears more likely that the confederate expresses a preference for one type of toy over the other when she selects a toy to operate. If children interpret her choice as a preference for her chosen type of toy, then they may also think it is more likely that she holds the "specific" goal of playing music with her chosen toy, and not the "general" goal of playing music with either toy. As predicted, children in this condition were more likely to target the "confederate's toy" than the "other toy" (11/36; two-tailed binomial test, p = 0.029).
+
+
 
 As a secondary analysis, we investigated whether the proportion of children who behaved as predicted differed across conditions. Again, children in the Broken Toy condition behaved as predicted if they targeted the other toy. Children in the Broken Button condition behaved as predicted if they targeted the confederate's toy. Children were significantly more likely to behave as predicted in the Broken Toy condition than in the Broken Button condition (94% vs. 69%; two-tailed Fisher’s Exact Test, p = 0.012).
 
 Since we found a signficant difference across conditions, we then looked at children's tendencies to behave as predicted within each condition. These analyses are identical to the analyses run to test our predictions about response within each condition. Thus, both children in the Broken Toy condition and Broken Button condition were significantly more likely to behave as predicted than not.
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-22-1.png)
+![plot of chunk unnamed-chunk-38](figure/unnamed-chunk-38-1.png)
 
-As another secondary analysis, we again looked at the proportion of children who were helped successfully. Children could successfully help in the Broken Toy condition if they targeted the other toy. Children could successfully help in the Broken Button condition if they targeted the non-obvious (i.e., either the bottom or side) button of either the confederate's toy or the other toy. We found that children in the Broken Toy condition were significantly more likely to help successfully than children in the Broken Button condition (94% vs. 31%; two-tailed Fisher’s Exact Test, p = 0.046). Children in the Broken Toy condition were significantly more likely to help successfully than to help unsuccessfully (34/36; two-tailed binomial test, p &lt; 0.001). Children in the Broken Button condition were also significantly more likely to help successfully than to unsuccessfully (27/36; two-tailed binomial test, p = 0.004).
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-24-1.png)
 
-Finally, as an exploratory analysis, we looked at the tendency of children to target the non-obvious button on a toy. In this experiment, a non-obvious button could be a bottom or side button. Children were significantly more likely to target a non-obvious button in the Broken Button condition than in the Broken Toy condition (69% % vs. 69%; two-tailed Fisher’s Exact Test, p &lt; 0.001). Furthermore, children in the Broken Button condition were significantly more likely to target a non-obvious button than an obvious button (25/36; two-tailed binomial test, p = 0.029). Children in the Broken Toy condition were significantly more likely to target an obvious button than a non-obvious button (2/36; two-tailed binomial test, p &lt; 0.001).
+As another secondary analysis, we again looked at the proportion of children who were helped successfully. Children could successfully help in the Broken Toy condition if they targeted the other toy. Children could successfully help in the Broken Button condition if they targeted the non-obvious (i.e., either the bottom or side) button of either the confederate's toy or the other toy. We found that children in the Broken Toy condition were significantly more likely to help successfully than children in the Broken Button condition (94% vs. 31%; two-tailed Fisher’s Exact Test, p = 0.046). Children in the Broken Toy condition were significantly more likely to help successfully than to help unsuccessfully (34/36; two-tailed binomial test, p < 0.001). Children in the Broken Button condition were also significantly more likely to help successfully than to unsuccessfully (27/36; two-tailed binomial test, p = 0.004). 
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-26-1.png)
+![plot of chunk unnamed-chunk-40](figure/unnamed-chunk-40-1.png)
 
-![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-27-1.png)
 
-COMMENTS TO SELF
-================
 
-ARE CHILDREN REALLY HELPING?
-----------------------------
+Finally, as an exploratory analysis, we looked at the tendency of children to target the non-obvious button on a toy. In this experiment, a non-obvious button could be a bottom or side button. Children were significantly more likely to target a non-obvious button in the Broken Button condition than in the Broken Toy condition (69% % vs. 69%; two-tailed Fisher’s Exact Test, p < 0.001). Furthermore, children in the Broken Button condition were significantly more likely to target a non-obvious button than an obvious button (25/36; two-tailed binomial test, p = 0.029). Children in the Broken Toy condition were significantly more likely to target an obvious button than a non-obvious button (2/36; two-tailed binomial test, p < 0.001). 
 
-It is possible to argue that children are not really helping the confederate. Here, we address two possible counterarguments. First, it seems possible that children are behaving in the observed manner because they want to play music for themselves and are not really considering what the confederate wants. Most of the observed behavior discussed so far is consistent with this idea. If children want to play music for themselves, they would operate the other toy in the Broken Toy conditon. In the Broken Button condition, it makes the most sense to flip over the confederate's toy because children know the bottom or side button plays music (if they remember how the toys work). This does not, however, explain why children in the Broken Button condition in Experiment 2 showed no preference for either toy. One could argue that, because the toys were visually and functionally identical, children tended to forget which toy was which, or that they assumed the toys were oriented in the same direction. However, as argued earlier, we do not find either of these arguments very convincing, and instead argue that the observed differences in behavior between Experiment 2 and Experiment 3 are evidence that children are considering the confederate's goals when helping. Very little changes between Experiment 2 and Experiment 3 besides the appearance of the toys, but children in the Broken Button condition in Experiement 2 show no preference for either toy, while children in the same condition in Experiment 3 preferentially target the confederate's toy. The main difference between these two conditions is the appearance of the toys, but the appearance itself is unlikely to be the reason children prefer the confederate's toy, since we might then expect to see a similar pattern in the Broken Button condition. However, having visually distinct toys seems to change what the confederate's goal is, or at least limits the ways in which you can help her achieve her goal. \[something about choosing between identical toys = no preference; choosing between different ones = preference\] Therefore, it appears as if children are attending to the subtle visual change and incorporating that information when reasoning about the confederate's goal. Children would not have a reason to do this if they just wanted to play music for themselves.
+![plot of chunk unnamed-chunk-42](figure/unnamed-chunk-42-1.png)
 
-Second, we can look at the content of children's helping behaviors. This is a stronger argument for teh idea that children are acting for the confederate. \[insert social referencing stuff\]
 
-Another possible counteragument to the idea that children are helping the confederate, however, is that children are just answering a prompt. The confederate asks the child, either to help her or to show her, after stating that she likes music. Although this is often how people ask for help, it could also be interpreted as a command to the child or as "**Can** (i.e., are you capable of) helping me play music?". Children may also be more used to adults giving them commands than asking them for help.
+![plot of chunk unnamed-chunk-43](figure/unnamed-chunk-43-1.png)
 
-What's the difference between helping and answering a question? Sometimes helping involves answering a question. For example, if someone asks you to explain a concept from a class they are struggling in, we would tend to count that as helping. However, question answering is often not helping, such as when having a casual conversation or answering a question during a job interview. What's the difference between these two scenarios?
+
+# COMMENTS TO SELF
+## ARE CHILDREN REALLY HELPING?
+
+It is possible to argue that children are not really helping the confederate. Here, we address two possible counterarguments. First, it seems possible that children are behaving in the observed manner because they want to play music for themselves and are not really considering what the confederate wants. Most of the observed behavior discussed so far is consistent with this idea. If children want to play music for themselves, they would operate the other toy in the Broken Toy conditon. In the Broken Button condition, it makes the most sense to flip over the confederate's toy because children know the bottom or side button plays music (if they remember how the toys work). This does not, however, explain why children in the Broken Button condition in Experiment 2 showed no preference for either toy. One could argue that, because the toys were visually and functionally identical, children tended to forget which toy was which, or that they assumed the toys were oriented in the same direction. However, as argued earlier, we do not find either of these arguments very convincing, and instead argue that the observed differences in behavior between Experiment 2 and Experiment 3 are evidence that children are considering the confederate's goals when helping. Very little changes between Experiment 2 and Experiment 3 besides the appearance of the toys, but children in the Broken Button condition in Experiement 2 show no preference for either toy, while children in the same condition in Experiment 3 preferentially target the confederate's toy. The main difference between these two conditions is the appearance of the toys, but the appearance itself is unlikely to be the reason children prefer the confederate's toy, since we might then expect to see a similar pattern in the Broken Button condition. However, having visually distinct toys seems to change what the confederate's goal is, or at least limits the ways in which you can help her achieve her goal. [something about choosing between identical toys = no preference; choosing between different ones = preference] Therefore, it appears as if children are attending to the subtle visual change and incorporating that information when reasoning about the confederate's goal. Children would not have a reason to do this if they just wanted to play music for themselves.
+
+Second, we can look at the content of children's helping behaviors. This is a stronger argument for teh idea that children are acting for the confederate. [insert social referencing stuff]
+
+Another possible counteragument to the idea that children are helping the confederate, however, is that children are just answering a prompt. The confederate asks the child, either to help her or to show her, after stating that she likes music. Although this is often how people ask for help, it could also be interpreted as a command to the child or as "**Can** (i.e., are you capable of) helping me play music?". Children may also be more used to adults giving them commands than asking them for help. 
+
+What's the difference between helping and answering a question? Sometimes helping involves answering a question. For example, if someone asks you to explain a concept from a class they are struggling in, we would tend to count that as helping. However, question answering is often not helping, such as when having a casual conversation or answering a question during a job interview. What's the difference between these two scenarios? 
+
+
