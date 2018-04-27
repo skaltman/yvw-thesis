@@ -175,6 +175,19 @@ three_toy_tidy %>%
 
 ### Discussion
 
+These results suggest that 2- and 3-year-olds were able to use prior knowledge to infer the likely cause of another's failure and effective help that person achieve a goal. When the likely cause of the confederate's failure was the toy itself (Broken Toy condition), children helped by changing the toy, but when the likely cuase was the confederate's action on the toy (Broken Button condition), children helped by changing her action on that toy. Thus, children did not help in a uniform way across conditions; they responded to the likely cause of the confederate's failure. 
+
+The only way to address the source of the confederate's failure in the Broken Toy condition was to target a new toy. However, in the Broken Button condition, there were multiple ways to fulfill the confederate's goal. Children needed to correct her action, by showing her that she needed to act on a yellow button instead of a red one, but they could do so on either the confederate's own toy or on a new toy. Each toy was equally like to have a functional yellow button, but children in this condition were more likely to show the confederate the correct action on the toy that she had previously chosen. It is possible that children are more inclined to approach a toy upon which someone has already chosen to act. However, it is also possible that children thought that the confederate's goal was to play music with her chosen toy, rather than to play music generally. 
+
+```{r}
+three_toy_tidy %>% 
+  filter(condition == "Broken Button") %>% 
+  count(flip, )
+```
+
+
+Furthermore, although some (`r three_between_response$num_bb` / `r summary_three_toy$num_bb`) children in the Broken Button condition targeted the toys on the tray, 
+
 However, the Broken Button condition does not require children to make an inference about the source of the confederate's failure. Because of the toys color-coding, in the Broken Button condition, all possible helpful actions are marked in yellow. Therefore, children could just remember that yellow produces music, instead of inferring that the source of the confederate's failure. This is not the case, however, in the Broken Toy condition. Both the confederate's failed action and all helpful actions are marked in yellow. Children need to target a yellow button on a *new* toy and cannot simply target a particular color. To eliminate this alternative explanation in the Broken Button condition as well as the asymmetry between the two conditions, we designed a second experiment with two identical toys. 
 
 # Experiment 2
