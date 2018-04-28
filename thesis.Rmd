@@ -181,16 +181,16 @@ The only way to address the source of the confederate's failure in the Broken To
 
 Furthermore, the children in the Broken Button condition that targeted the toys on tray (`r three_between_response$num_bb` / `r summary_three_toy$num_bb`) all targeted a bottom button on a toy. This indicates that, even though they did change the toy, they did not think that her toy alone was the problem, as they changed the action taken on the toy in addition to the identity of the toy.
 
+We did find an age-related trend in terms of "correctness." However, this does not necessarily suggest that 2-year-olds are less capable of performing this task than 3-year-olds. Instead, it is possible that 2-year-olds are more likely to help by targeting the toys on the tray in this condition, which, as explained earlier, is still helpful. 2-year-olds may have a stronger aversion to acting on a toy that someone has already failed to work, or may interpret the confederate's goal differently than 3-year-olds. 
 ```{r}
 three_toy_tidy %>% 
-  filter(condition == "Broken Button") %>% 
-  count(ageBucket, firstChoice)
+  filter(condition == "Broken Toy") %>% 
+  count(flip, firstChoice)
 ```
 
+Interestingly, none of children in the Broken Toy condition who successfully helped the confederate (i.e., targeted a yellow button on a toy on the tray) provided exhaustive information about the toys by also showing the confederate the non-obvious red buttons. This suggests that children noticed that the confederate's goal was only to play music---not to learn the full structure of the toys. Our finding is therefore consistent with prior research suggesting that 4- to 5-year-olds adjust the amount of information they provide to a social partner depending on whether her goal is learn how a toy works or to just see what the toy does (Gweon, Chu, & Schulz, 2014). 
 
-We did find an age-related trend in terms of "correctness." However, this does not necessarily suggest that 2-year-olds are less capable of performing this task than 3-year-olds. Instead, it is possible that 2-year-olds are more likely to help by targeting the toys on the tray in this condition, which, as explained earlier, is still helpful. 2-year-olds may have a stronger aversion to acting on a toy that someone has already failed to work, or may interpret the confederate's goal differently than 3-year-olds. 
-
-However, the Broken Button condition does not require children to make an inference about the source of the confederate's failure. Because of the toys color-coding, in the Broken Button condition, all possible helpful actions are marked in yellow. Therefore, children could just remember that yellow produces music, instead of inferring that the source of the confederate's failure. This is not the case, however, in the Broken Toy condition. Both the confederate's failed action and all helpful actions are marked in yellow. Children need to target a yellow button on a *new* toy and cannot simply target a particular color. To eliminate this alternative explanation in the Broken Button condition as well as the asymmetry between the two conditions, we designed a second experiment with two identical toys. 
+Our results suggest that 2- and 3-year-olds can infer the cause of someone's failed action and use that inference to help the person achieve her goal. However, the Broken Button condition does not actually require that chidlren infer the source of the confederate's failure. Because of how the toys are color-coded, the confederate's mistake is marked in red and all possible helpful actions are marked in yellow. Therefore, children in this condition could just remember that yellow produces music, instead of inferring that the confederate's action on the toy is the source of her failure. This is not the case, however, in the Broken Toy condition. Both the confederate's failed action and all helpful actions are marked in yellow. Children need to target a yellow button on a *new* toy and cannot simply target a particular color. To eliminate this alternative explanation in the Broken Button condition as well as the asymmetry between the two conditions, we designed a second experiment with two identical toys. 
 
 # Experiment 2
 
