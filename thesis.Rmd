@@ -400,18 +400,15 @@ If the confederate has no toy preference, it is helpful to target either toy. Th
 
 4. Children do attribute the specific goal to the confederate (i.e., they think she wants to play music with her chosen toy). However, because the toys are identical, they believe that demonstrating on either toy can help fulfull the confederate's goal. Under this theory, if a child targets the other toy, s/he thinks that the confederate wants to play music with her chosen toy, but believe they can show her the correct way to do so on the other toy, since the toys are visually and functionally identical. However, it then seems reasonable to expect that children who target the other toy will preferentially target the bottom button, as it is not informative to the confederate for the child to push the top button on the other toy if her goal is to play music on her own toy. The confederate  does not appear to know that the bottom button exists, or that her own toy has a functional button. As explained earlier, however, this is not the case. 
 
-It is possible that a combination of these explanations are occurring--i.e., some children are attributing the general goal to the confederate, some are attributing the specific goal, some forget which toy she acted upon, some are aversed to acting on the confederate's toy. It is also possible that multiple of these are in effect in one child. For example, a child could attribute the specific goal to the confederate and also have an aversion to the confederate's toy. 
+It is possible that a combination of these explanations are occurring---i.e., some children are attributing the general goal to the confederate, some are attributing the specific goal, some forget which toy she acted upon, some are aversed to acting on the confederate's toy. It is also possible that multiple of these are in effect in one child. For example, a child could attribute the specific goal to the confederate and also have an aversion to the confederate's toy. 
 
-Thus, it is unclear what children thought the confederate's goal was in this experiment, as well as why children in the Broken Button condition demonstrated no preference for either toy. We designed a third experiment in which the confederate's goal was more explicitly to play music with her chosen toy.
+Thus, it is unclear what children thought of confederate's goal in this experiment, and subsequently why children in the Broken Button condition demonstrated no preference for either toy. In a third experiment, we made it clearer that the confederate's goal wasto play with her chosen toy, as well as eliminated the possibility of demonstrating how to operate one toy by acting on another. 
 
-what is the connection? in experiment 2 it's helpful to do things at either toy. so we can't really reason about what children are doing. in experiment 3, we have a directed prediction. the signal is clearer, can reason more clearly about what's going on. 
-
-
-This eliminates several of the previously discussed reasons why children in Experiment 2 could reasonably target either toy in the Broken Button condition. If children preferentially target the confederate's toy in this new experiment, we would have a clearer idea of how they were thinking about the confederate's goal and what consistitues effective help. [FIX]
-
+maybe insert something about how in the broken toy condition children override the confederate's preference and cite that paternalism article.
 
 # Experiment 3
-In this experiment, we changed the structure of one toy in each pair to make the toys visually and functionally distinct. We believed this made it more likely that the confederate is expressing a preference for one toy over another when she makes her choice. It also eliminates the possibility of demonstrating how to operate the confederate's toy by acting on the other toy in the Broken Button condition. 
+
+In the third experiment, we changed the structure of one toy in each pair to make the toys visually and functionally distinct. This eliminated the possibility of demonstrating how to operate the confederate's toy by acting on the other toy. Additionally, when the confederate makes a choice between the two toys, it is now likelier that she is indicating her preference for one toy type over another, and thus likelier that she holds the specific goal.
 
 ## Methods
 
@@ -420,8 +417,10 @@ In this experiment, we changed the structure of one toy in each pair to make the
 ```{r}
 # currently are 38 kids in broken button
 # I removed the last two kids 
-summary_modified <- summary_tibble(modified_tidy %>% 
-                                     filter(n != 109, n != 110))
+summary_modified <- 
+  modified_tidy %>% 
+  filter(n != 109, n != 110) %>% 
+  summary_tibble()
 
 num_excluded <- 
   modified %>% 
@@ -574,6 +573,9 @@ modified_tidy %>%
   guides(fill = "none")
 ```
 
+# Discussion
+
+The results from this experiment again replicate our main finding from Experiment 1 that children's responses to the confederate's request vary depending on the likely source of her failure. 
 
 # COMMENTS TO SELF
 ## ARE CHILDREN REALLY HELPING?
