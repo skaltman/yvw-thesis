@@ -15,10 +15,56 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 source('thesis_code.R')
 ```
 
-# Introduction
+# Introduction--just notes
+
+children are willing to help from a young age
+  - tomasello 2009
+
+one year olds will help in straightforward situations in which there's really only one action to take
+  - warnekan and tomasello 2006
+  - will do so in a variety of situations: cupboard door if hands are full, dropped marker
+  - children are not only willing to help, but able to figure out what the adult wanted and provide assistance that helped him meet his goal
+  - these situations are simple, and get at the motivation to help
+  
+older children are motivated to help and can figure out how to help in more complicated situations
+  - this often involves reasoning about what the other person's goal is -- you need to figure out exactly what it is that they want
+  - liszkowski carpenter and tomasello
+  - buttleman, carpenter and tomasello
+  +more
+  
+children can reason about these goals in relatively complex situations
+- martin and olson -- children will help an experimenter even if her verbal requests conflicted with the goal she wanted to fulfill
+
+these studies involve children having to figure out what the other person's goal is, and then they use that 
+explain why our task is more complicated than much of the literature just talked about
+- children have to recall knowledge about the toys, take that knoweldge and the result of the confederate's action into account, then think about how to address the source of her failure in order to meet her goal
+
+more complex process that requires integrating many sources of information
+
+as adults, we often engage in this type of helping.
+- for example, if we see someone struggling to project slides, have to reason about what they want (project slides? learn how the system works? play audio from their laptop?). we then have to use prior knowledge about the system to infer what they are doing wrong from their actions (wrong cord? laptop broken?). we then also need to be motivated to help (do we want this person to succeed? do we like helping? are we confident enough in our knowledge to help them?)
+
+Previous work by Gweon and Schulz (2011) suggests that children as young as 16 months are capable of inferring the causes of their *own* failed actions and helping themselves accordingly. In the study, children either witnessed that a toy sometimes worked and sometimes did not, regardless of who operated the toy, or that the toy worked for some agents but not others. Children were then given the opportunity to try the toys for themselves, but the toys never activated. Children who witnessed that toy functionality did not depend on the agent were more likely to reach for a new toy, suggesting that they attributed their failure to the toy itself. In contrast, children who witnessed that toy functionality did depend on the agent were more likely to hand the toy off to their parent. This suggests that they attributed their failure to themselves, and thus needed someone else to operate the toy in order to make it activate. 
 
 
+frame as "responding" instead of helping?
 
+two interpretations
+- children are helping the confederate achieve a goal
+- children are figuring out why she is failing and then producing music
+  - this then makes it more like 
+  
+  even if we go with the second, can disucss as sort of a "precursor" to the first---indicate taht teh reasoning is there even if the motivation is not
+  
+developmental trends
+- 2 year olds more likely to help when adult is  very clear about goal (pointing, asking) 
+  - brownell svetlova nichols 2009
+  - svetlova, nichols, brownell 2010
+  - so motivation exists but still developing ability to figure out what someone's goals are from more subtle cues
+
+goal attribution
+- meltzoff 1995
+  - at 18 months cna figure out goal from actions even if those actions are incomplete
 
 # Experiment 1
 
