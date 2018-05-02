@@ -167,11 +167,6 @@ We predicted responses to vary across conditions depending on the source of the 
 
 ![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-12-1.png)
 
-    ## # A tibble: 1 x 6
-    ##   num_bb num_bt num_total perc_total p_value_bt p_value_bb
-    ##    <int>  <int>     <int>      <dbl>      <dbl>      <dbl>
-    ## 1     13     27        40      0.625          0      0.377
-
 We also looked at responses within each condition. As predicted, children in the Broken Toy condition were more likely to target the "other toy" than the "confederate's toy" (27/32; two-tailed binomial test, p &lt; 0.001). Therefore, children appear to be reasoning that the confederate has the inert toy based on the her actions and their prior knowledge about the functionality of the two toys.
 
 We did not have a directed prediction for the Broken Button condition because, as described earlier, targeting either toy can be helpful. Children in the Broken Button condition showed no preference for either toy (13/32; two-tailed binomial test, p = 0.377).
@@ -289,6 +284,17 @@ Discussion
 ==========
 
 The results from this experiment again replicate our main finding from Experiment 1 that children's responses to the confederate's request vary depending on the likely source of her failure.
+
+In contrast to the previous experiment, children in the Broken Button condition preferentially targeted the confederate's toy. The results of this experiment cannot disentangle the various explanations for the behavior of children in the Broken Button condition in Experiment 2. However, they do indicate that children are likely attributing the specific goal to the confederate in this experiment, and thus are sensitive to information about the confederate's goal.
+
+In the Broken Toy condition, children still preferentially target the other toy, even though the toys are now visually distinct. This indicates that children are still willing to override the confederate's choice of toy if they realize her choice is incompatible with her goal, even though her actions make it likely that she has a preference for one toy type over another.
+
+General Discussion
+==================
+
+In all three experiments, children responded differently depending on the likely source of the confederate's failure. This suggests that 2- and 3-year-olds can recruit prior knowledge to reason about the likely cause of another's failure and to effectively help.
+
+![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-29-1.png)![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-29-2.png)
 
 COMMENTS TO SELF
 ================

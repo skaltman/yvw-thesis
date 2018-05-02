@@ -328,42 +328,73 @@ proportion_by_condition_plot <- function(data, variable, variable_option_1, colo
     coord_fixed(ratio = 2/1)
 }
 
-plot_responses <- function(data) {
+plot_responses <- function(data, title_prefix = "") {
   proportion_by_condition_plot(data, 
                                firstChoice, 
                                "Confederate's toy", 
                                response_colors, 
-                               "Response by condition", 
+                               str_c(title_prefix, " Response by condition"), 
                                "Target toy of first response", 
                                c("Other toy", "Confederate's toy"))
 }
 
-plot_helpfulness <- function(data) {
+plot_helpfulness <- function(data, title_prefix = "") {
   proportion_by_condition_plot(data, 
                                helpfulCategory, 
                                "Helpful", 
                                helpfulness_colors, 
-                               "Success of helping behavior by condition", 
+                               str_c(title_prefix, " Success of helping behavior by condition"), 
                                "Success of helping behavior", 
                                c("Unsuccessful", "Successful"))
 }
 
-plot_flip <- function(data) {
+plot_flip <- function(data, title_prefix = "") {
   proportion_by_condition_plot(data,
                                flip,
                                TRUE,
                                flip_colors,
-                               "Button type targeted by condition",
+                               str_c(title_prefix, " Button type targeted by condition"),
                                "Target button of first response",
                                c("Obvious", "Non-obvious"))
 }
 
-plot_predicted <- function(data) {
+plot_predicted <- function(data, title_prefix = "") {
   proportion_by_condition_plot(data, 
                                as_predicted, 
                                1, 
                                predicted_colors, 
-                               "", 
+                               str_c(title_prefix, " Target matches prediction by condition"), 
                                "Target toy matches prediction", 
                                c("No", "Yes"))
 }
+
+#----------------------------------------------------------------------------------
+# CROSS EXPERIMENT ANALYSIS
+
+shared_vars <- c("videoName", 
+                 "n",
+                 "condition",
+                 "age",
+                 "gender",
+                 "firstChoice",
+                 "firstBehaviorCode",
+                 "helpfulCategory"
+)
+
+combined <-
+    rbind(
+      three_toy_tidy %>% select(shared_vars),
+      two_toy_tidy %>% select(shared_vars),
+      modified_tidy %>% select(shared_vars)
+    )
+
+all_twos <-
+  combined %>% 
+  filter(age %/% 1 == 2)
+
+all_threes <-
+  combined %>% 
+  filter(age %/% 1 == 3)
+
+
+  
