@@ -396,5 +396,54 @@ all_threes <-
   combined %>% 
   filter(age %/% 1 == 3)
 
+#----------------------------------------------------------------------------------
+# AGE AS PREDICTOR GLMS
+
+choice_glm <- function(data) {
+  glm(firstChoice ~ age + condition, 
+      data = 
+        data %>% 
+        mutate(firstChoice = firstChoice == "Other toy")
+      )  %>% 
+    tidy()
+}
+
+
+correctness_glm <- function(data) {
+  glm(firstChoiceCorrect ~ age, family = "binomial", 
+      data = 
+        data %>% 
+        mutate(firstChoiceCorrect = as.integer(firstChoiceCorrect))) %>% 
+    tidy()
+}
+
+helpfulness_glm <- function(data) {
+  glm(helpfulCategory ~ age, family = "binomial", 
+      data = 
+        data %>% 
+        mutate(helpfulCategory = helpfulCategory == "Helpful")) %>% 
+    tidy()
+}
+
+flip_glm <- function(data) {
+  glm(flip ~ age, family = "binomial", data = data) %>% 
+    tidy()
+}
+
+get_age_p_value <- function(glm_tibble) {
+  glm_tibble %>% 
+    filter(term == "age") %>% 
+    pull(p.value)
+}
+
+create_p_value_tibble <- function(data) {
+  tibble(
+    choice = get_age_p_value(choice_glm(data)),
+    correctness = get_age_p_value(correctness_glm(data)),
+    helpfulness = get_age_p_value(helpfulness_glm(data)),
+    flip = get_age_p_value(flip_glm(data))
+  )
+}
+
 
   

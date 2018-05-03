@@ -695,78 +695,9 @@ What's the difference between helping and answering a question? Sometimes helpin
 
 
 ```{r}
-# this is messy--fix
-# does age predict choice when you control for condition?
-# no
-glm(firstChoice ~ age + condition, family = "binomial", 
-    data = 
-      two_toy_tidy %>% 
-      mutate(firstChoice = firstChoice == "Other toy")) %>% 
-  summary()
-
-# no
-glm(firstChoice ~ age + condition, family = "binomial", 
-    data = 
-      modified_tidy %>% 
-      mutate(firstChoice = firstChoice == "Other toy")) %>% 
-  summary()
-
-# does age predict helpfulness
-# no
-glm(helpfulCategory ~ age, family = "binomial", 
-    data = 
-      two_toy_tidy %>% 
-      mutate(helpfulCategory = helpfulCategory == "Helpful")) %>% 
-  summary()
-
-# no
-glm(helpfulCategory ~ age, family = "binomial", 
-    data = 
-      modified_tidy %>% 
-      mutate(helpfulCategory = helpfulCategory == "Helpful")) %>% 
-  summary()
-
-# flip
-# no
-glm(flip ~ age, family = "binomial", data = two_toy_tidy ) %>% 
-  summary()
-
-# no
-glm(flip ~ age, family = "binomial", data = modified_tidy ) %>% 
-  summary()
-
-# three toy
-glm(firstChoiceCorrect ~ age, family = "binomial", 
-    data = 
-      three_toy_tidy %>% 
-      mutate(firstChoice = firstChoice == "Other toy")) %>% 
-  summary()
-
-# no
-glm(helpfulCategory ~ age + condition, family = "binomial", 
-    data = 
-      three_toy_tidy %>% 
-      mutate(helpfulCategory = helpfulCategory == "Helpful")) %>% 
-  summary()
-
-#flip
-glm(flip ~ age, family = "binomial", data = three_toy_tidy) %>% 
-  summary()
-
-#correctness
-
-# two toy
-# no age does not predict
-glm(firstChoiceCorrect ~ age, family = "binomial", data = two_toy_tidy) %>% 
-  summary()
-
-# also no in modified
-glm(firstChoiceCorrect ~ age, family = "binomial", 
-    data = modified_tidy %>% 
-      mutate(firstChoiceCorrect = as.integer(firstChoiceCorrect))
-    ) %>% 
-  summary()
-
+age_ps_three_toy <- create_p_value_tibble(three_toy_tidy)
+age_ps_two_toy <- create_p_value_tibble(two_toy_tidy)
+age_ps_modified <- create_p_value_tibble(modified_tidy)
 #this means that the only place where age predicts anything is in three toy correctness (it's not even that significant and what happens if you correct for mutliple comparison?)
 ```
 
