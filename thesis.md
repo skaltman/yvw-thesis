@@ -3,8 +3,34 @@ Untitled
 Sara Altman
 2/13/2018
 
-Introduction
-============
+Introduction--just notes
+========================
+
+children are willing to help from a young age - tomasello 2009
+
+one year olds will help in straightforward situations in which there's really only one action to take - warnekan and tomasello 2006 - will do so in a variety of situations: cupboard door if hands are full, dropped marker - children are not only willing to help, but able to figure out what the adult wanted and provide assistance that helped him meet his goal - these situations are simple, and get at the motivation to help
+
+older children are motivated to help and can figure out how to help in more complicated situations - this often involves reasoning about what the other person's goal is -- you need to figure out exactly what it is that they want - liszkowski carpenter and tomasello - buttleman, carpenter and tomasello +more
+
+children can reason about these goals in relatively complex situations - martin and olson -- children will help an experimenter even if her verbal requests conflicted with the goal she wanted to fulfill
+
+these studies involve children having to figure out what the other person's goal is, and then they use that explain why our task is more complicated than much of the literature just talked about - children have to recall knowledge about the toys, take that knoweldge and the result of the confederate's action into account, then think about how to address the source of her failure in order to meet her goal
+
+more complex process that requires integrating many sources of information
+
+as adults, we often engage in this type of helping. - for example, if we see someone struggling to project slides, have to reason about what they want (project slides? learn how the system works? play audio from their laptop?). we then have to use prior knowledge about the system to infer what they are doing wrong from their actions (wrong cord? laptop broken?). we then also need to be motivated to help (do we want this person to succeed? do we like helping? are we confident enough in our knowledge to help them?)
+
+Previous work by Gweon and Schulz (2011) suggests that children as young as 16 months are capable of inferring the causes of their *own* failed actions and helping themselves accordingly. In the study, children either witnessed that a toy sometimes worked and sometimes did not, regardless of who operated the toy, or that the toy worked for some agents but not others. Children were then given the opportunity to try the toys for themselves, but the toys never activated. Children who witnessed that toy functionality did not depend on the agent were more likely to reach for a new toy, suggesting that they attributed their failure to the toy itself. In contrast, children who witnessed that toy functionality did depend on the agent were more likely to hand the toy off to their parent. This suggests that they attributed their failure to themselves, and thus needed someone else to operate the toy in order to make it activate.
+
+frame as "responding" instead of helping?
+
+two interpretations - children are helping the confederate achieve a goal - children are figuring out why she is failing and then producing music - this then makes it more like
+
+even if we go with the second, can disucss as sort of a "precursor" to the first---indicate taht teh reasoning is there even if the motivation is not
+
+developmental trends - 2 year olds more likely to help when adult is very clear about goal (pointing, asking) - brownell svetlova nichols 2009 - svetlova, nichols, brownell 2010 - so motivation exists but still developing ability to figure out what someone's goals are from more subtle cues
+
+goal attribution - meltzoff 1995 - at 18 months cna figure out goal from actions even if those actions are incomplete
 
 Experiment 1
 ============
@@ -190,11 +216,21 @@ However, children showed no preference for either toy in the Broken Button condi
 
 Here, we discuss several possible explanations of why children in the Broken Button condition demonstrated no preference for either toy.
 
-1.  Children forgot which toy the confederate acted upon and therefore did not have a preference for either visually and functionally identical toy. This could explain the different in behavior between children in the Broken Button condition in Experiment 1 and children in the Broken Button condition in this experiment, as children could remember which toy was the confederate's by looking at which toy was not on the tray. However, this explanation is unlikely for several reasons. First, if children forgot which toy the confederate acted upon (after she moves to the center of both toys and asks her question), they should have also shown no preference for either toy in the Broken Toy condition. \[possible counterargument---the training is actually different. In the Broken Button training, children learn about 2 functionally identical toys. they have no real reason to distinguish between the toy, or assume that they will need to keep track of what happens to one or anohter. However, in the Broken Toy condition, the toys are not functionally identical. they do different things, and so you might want to keep track of which one is the working one. --- this could also tie into a discussion of experiment 3 results\] Second, there are 25 children who offer help while the confederate is still kneeling at her toy, before she moves back to the center and asks for help. These children also do not show a preference for either toy--12 target the confederate's toy and 13 target the other toy.
+![](thesis_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-17-1.png)
 
-2.  Children attributed the specific goal to the confederate, or thought it more reasonable to target her own toy, but had an aversion to the confederate's toy that counteracted this inclination. For example, they might be wary to approach a toy that an adult just failed to activate. However, if children in this experiment were aversed to operating a toy upon which an adult just failed, we should see that aversion in the Broken Button condition in Experiment 1 as well.
+It is possible that some children in the Broken Button condition forgot which toy was the confederate's toy. In Experiment 1, it was more obvious which toy was the confederate's toy because it was the only toy not on the tray. Although children in the Broken Toy condition appeared not to forget which toy was which, it is possible that the difference between the two toys was more salient in the Broken Toy condition because the toys were also functionally distinct.
 
-3.  Children did not think that the confederate's goal as to play music with her chosen toy (the *specific* goal). Instead, they believed that her goal was just to play music, regardless of toy (the *general* goal). The confederate's only verbal statement of her goal comes when she says, "I really want music!" and when she prompts the child to "show her", she gestures towards both toys. Therefore, during the period in which the confederate explicitly states her goal and prompts the child, she does not express a preference for either toy. She expressed her preference earlier, when she tried the toy, but perhaps children see her subsequent behavior as overriding this preference and thus think that she holds the general goal.
+A related explanation is that children interpreted the confederate's actions as her choosing randomly between two identical toys, and not as an expression of her preference for one toy over another. Thus, her goal was not to play music with her chosen toy (a *specific* goal), but instead to play music generally (a *general* goal). It then fulfills her goal to play music on either toy. Furthermore, the confederate's only verbal statement of her goal comes when she says, "I really want music!" and when she prompts the child to "show her", she gestures towards both toys. Therefore, during the period in which the confederate explicitly states her goal and prompts the child, she does not express a preference for either toy. She expressed her preference earlier, when she tried the toy, but perhaps children see her subsequent behavior as overriding this preference and thus think that she holds the general goal. The predicted behavior of children in the Broken Toy condition is the same regardless of which goal the children thought the confederate held, as you can only produce music on the other toy.
+
+Note that it is also possible to be helpful at either toy even if the confederate holds the *specific* goal. Since the toys are identical, showing the confederate how to produce music on one toy can also inform the confederate how to produce music on her toy.
+
+There were also 14 children who offered help while the confederate was still kneeling at her toy, before she moved back to the center and asked for help.
+
+It is also possible that some children thought the confederate preferred her own toy, but had an aversion to the confederate's toy.
+
+Of the 13 children in the Broken Button condition who targeted the other toy, only 5 flipped or indicated that the confederate should flip the toy over. These children were therefore included in the unsuccessfully helpful category. However, the children did not know which button was on top, and so probably tried the obvious one first to see if it would work. When it did not produce music, 11/13 of these children tried again, mostly (10/11) by flipping over the other toy. Thus, even though children who targeted the top button on the other toy were counted as unhelpful, they were able to integrate prior knowledge about how the toys worked and respond appropriately to their own failure.
+
+\[ending point of things making sense\]
 
     If the confederate has no toy preference, it is helpful to target either toy. This does not address, however, the fact that children have more information about the confederate's toy than the other toy. Even if children attribute the general goal to the confederate, targeting the bottom button on the confederate's toy has a 100% chance of music, whereas either button on the other toy has only a 50% chance of music. It is possible that children are not taking this into consideration, or that they assume the toys are oriented identically (i.e., the top button on the other toy is also the inert button). It is unlikely that children think the toys are oriented identically, however. First, they have no reason to assume this, as the the toys are oriented differently during the training phase and neither the confederate nor experimenter indicates that they are oriented in any particular way during the helping phase. Furthermore, if children assume the toys are oriented identically, children who target the other toy in this condition should preferentially target the bottom button, as do the children who target the confederate's toy. However, of the 13 in the Broken Button condition who target the other toy, 5 target the bottom button and 8 target the top button. This is contrast to the 18 out of 19 who target the bottom button on the confederate's toy.
 
@@ -224,9 +260,9 @@ We randomly assigned children to one of two conditions: the Broken Toy condition
 
 ### Stimuli
 
-We constructed three pairs of toys. One toy in each pair looked identical to the toys constructed in Experiment 2 (*top-bottom toys*). The other three toys had a button on the top and on an adjacent side (*top-side toys*), instead of on the top and bottom, but were otherwise identical to the toys in Experiment 2. The toys in one pair each had one functional button and one inert button. For the other two pairs of toys, one toy had two functional buttons and the other had two inert buttons. In one of these pairs, the functional toy was a top-bottom toy; in the other pair, the functional toy was a top-side toy. See Figure 11.
+We constructed three pairs of toys. One toy in each pair looked identical to the toys constructed in Experiment 2 (*top-bottom toys*). The other three toys had a button on the top and on an adjacent side (*top-side toys*), instead of on the top and bottom, but were otherwise identical to the toys in Experiment 2. The toys in one pair each had one functional button and one inert button. For the other two pairs of toys, one toy had two functional buttons and the other had two inert buttons. In one of these pairs, the functional toy was a top-bottom toy; in the other pair, the functional toy was a top-side toy. See Figure 12.
 
-![Figure 11](images/modified-toy-schematic.png)
+![Figure 12](images/modified-toy-schematic.png)
 
 ### Procedure
 
