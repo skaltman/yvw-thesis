@@ -694,3 +694,79 @@ Another possible counteragument to the idea that children are helping the confed
 What's the difference between helping and answering a question? Sometimes helping involves answering a question. For example, if someone asks you to explain a concept from a class they are struggling in, we would tend to count that as helping. However, question answering is often not helping, such as when having a casual conversation or answering a question during a job interview. What's the difference between these two scenarios? 
 
 
+```{r}
+# this is messy--fix
+# does age predict choice when you control for condition?
+# no
+glm(firstChoice ~ age + condition, family = "binomial", 
+    data = 
+      two_toy_tidy %>% 
+      mutate(firstChoice = firstChoice == "Other toy")) %>% 
+  summary()
+
+# no
+glm(firstChoice ~ age + condition, family = "binomial", 
+    data = 
+      modified_tidy %>% 
+      mutate(firstChoice = firstChoice == "Other toy")) %>% 
+  summary()
+
+# does age predict helpfulness
+# no
+glm(helpfulCategory ~ age, family = "binomial", 
+    data = 
+      two_toy_tidy %>% 
+      mutate(helpfulCategory = helpfulCategory == "Helpful")) %>% 
+  summary()
+
+# no
+glm(helpfulCategory ~ age, family = "binomial", 
+    data = 
+      modified_tidy %>% 
+      mutate(helpfulCategory = helpfulCategory == "Helpful")) %>% 
+  summary()
+
+# flip
+# no
+glm(flip ~ age, family = "binomial", data = two_toy_tidy ) %>% 
+  summary()
+
+# no
+glm(flip ~ age, family = "binomial", data = modified_tidy ) %>% 
+  summary()
+
+# three toy
+glm(firstChoiceCorrect ~ age, family = "binomial", 
+    data = 
+      three_toy_tidy %>% 
+      mutate(firstChoice = firstChoice == "Other toy")) %>% 
+  summary()
+
+# no
+glm(helpfulCategory ~ age + condition, family = "binomial", 
+    data = 
+      three_toy_tidy %>% 
+      mutate(helpfulCategory = helpfulCategory == "Helpful")) %>% 
+  summary()
+
+#flip
+glm(flip ~ age, family = "binomial", data = three_toy_tidy) %>% 
+  summary()
+
+#correctness
+
+# two toy
+# no age does not predict
+glm(firstChoiceCorrect ~ age, family = "binomial", data = two_toy_tidy) %>% 
+  summary()
+
+# also no in modified
+glm(firstChoiceCorrect ~ age, family = "binomial", 
+    data = modified_tidy %>% 
+      mutate(firstChoiceCorrect = as.integer(firstChoiceCorrect))
+    ) %>% 
+  summary()
+
+#this means that the only place where age predicts anything is in three toy correctness (it's not even that significant and what happens if you correct for mutliple comparison?)
+```
+
