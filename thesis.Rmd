@@ -15,7 +15,88 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 source('thesis_code.R')
 ```
 
-# Introduction--just notes
+# Introduction---mostly notes at the moment
+
+Humans, both as adults and as children, routinely help others. Adults help strangers, family, and people in-between. They will hold open doors for people whose hands are full, cook food for people who are hungry, donate money to people who ask for it, and give directions to tourists. All these situations require us to think about the other person, as helping someone requires an understanding of what that her is, and what stands in the way of her achieving that goal (Warneken and Tomasello, 2006). Those goals can be action-based (i.e., opening a door), or more abstract (i.e., learning algebra), and the obstacles can stem from the person's own abilities (i.e., strength), from the physical world, or from other people. Helping is therefore a complicated cognitive skill. It requires an understanding that others have goals, the ability to determine, often form little evidence, what those goals are, and the understanding that various types of obstacles can prevent them from achieving those goals. Helping effectively also requires that you understand how to remove or alleviate the obstacles to your social partner's goals, which can require you to have prior experience with the situation (i.e., knowledge of algebra) or particular skills (i.e., atypical strength). 
+
+
+Helping is a complicated skill that requires both sufficient motivation to help and various social-cognitive abilities that allow you to help effectively.
+
+Much of the literature on prosocial behavior has focused on why and when humans help others, but helping is as much a complicated skill as it is a particular emotional stance toward your social partner. Being motivated to help someone is only half the battle. Helping really is not that helpful if it is ineffective, but we know that when adults and children help, they are often effectively helpful. They produce an action that helps us meet our goals. 
+
+1. Development of the motivation to help
+
+Humans are motivated to help from a relatively young age. During the first year of life, children will point out the location of an object someone is searching for, pick up dropped objects, and show others an easier way to use a toy (Liszkowski, Carpenter, Striano, & Tomasello, 2009; Warnekan & Tomasello, 2006). 
+
+There is evidence that children's propensity to help and the types of situations in which children will help changes during the second and third years of life. One-year-olds not only are less likely to help overall than two-year-olds, but also, in contrast to two-year-olds, do not help reliably in situations in which they are required to respond to a partner's emotional distress (Svetlova, Nichols, and Brownell, 2010). One-year-olds may also require more communication from their social partner in order to help than two-year-olds (Svetlova, Nichols, and Brownell). Increased requests for help and scaffolding from a social partner can also increase one-year-olds likeliness of helping (Svetlova, Nicholds, & Brownell; Spinrad & Stifter, 2006).
+
+Familiarity also likely to influences the likelihood that a child will help. One-year-olds are more likely to respond proscially in familiar situations or when their social partner demonstrates a familiar emotion (Zahn-Waxler, Radke-Yarrow et al., 1992). 
+
+It is not clear why humans help others, or if humans ever behave truly altruistically (i.e., act for another )
+
+
+Development between 1 and 2
+- Svetlova, Nichols, and Brown 2010
+  - "at the end of the second year of life when toddlers' helping behavior expands to include empathic as well as instrumental helping"
+  - 18 month olds helped instrumentally
+  - "18-month-olds' helping required significantly greater communicative support and scaffolding from an adult than that of 30-month-olds, whose prosocial behavior was more autonomous and demonstrated greater social understanding."
+  - "propensity of respond prosocially grows signficicantly between 18 and 30 months of age"
+
+
+Svetlova, Nichols, and Brownell (2010) investigated the behavior of 18- and 30-month-olds in three different contexts: instrumental, empathic, and altruistic. The instrumental contexts required children to perform some action to help their social partner, the empathic contexts requried chidren to respond to their partner's emotional distress, and the altruistic contexts required children to incur a cost in order to help the partner. The 30-month-olds helped more often and more quickly than the 18-month-olds in all contexts, suggesting that the motivation to help continues to develop during the third year of life. 
+
+There is evidence that toddlers' propesnity to behave prosocially depends on context and prior social experience. 
+- Svetlova, Nichols, and Brownell (2010) found that two-year-olds are more likely to help in instrumental or em
+
+
+Svetlova, Nichols, and Brownell
+- Toddlers are more likely to respond positively to a peer's distress, for example, if they were responsible for the peer's distress (Demetriou and Hay, 2004). Furthermore, engaging in reciprocal play can lead 1- and 2-year-olds to be more likely to behave altruistically toward their social partner (Cortes Barragan and Dweck, 2014).  
+
+Todders may like helping
+- studies where they forgo reward, or seem to ignore cost
+- but maybe they just like helping and get enjoyment out of it
+
+2. Goal attribution
+early goal attribution
+- Infants as young as five months see an adult's repeated reach for an object as goal-directed (Woodward, 1998). 
+- Will even attribute goals to inanimate objects with specific characteristics (Csibra, 2008)
+- thus the behavior of an agent is used to infer a goal
+- Meltzoff, 1995---infants can infer intentions for incomplete actions and do that action themselves
+- Possible that it's easier to understand someone's goal when you have experience with that type of thing yourself (Sommerville, Woodward, Needham, 2005)
+
+Goal attribution often involves reasoning about someone's preference. 
+- Spaepen and Spelke 2006 --- specifics about reaching studies
+- Kushnir, Xu, and Wellman (2010) --- infants consider statistical information when attributing a goal
+- Baillargeon, Scott, He, et al. (2014) --- lit review including stuff on goal attribution
+
+3. Helping in complex situations
+- Understanding who is the best person to ask for help (Paulus and Moore, 2011)
+- 
+
+ 
+Demetriou and Hay 2004
+Hay 2006
+
+
+Helping another person often involves providing information to that person that can help her accomplish her goals. 
+
+sometimes it is clear what information to provide. however, sometimes it is more complicated, and you have to decide what information or how much information the other person requires to fulfill her goal. 
+- gricean maxims?
+- seems that children do take this into account
+- will adjust the amount of information they provide depending on someone else's goals 
+
+depends on goals
+- Knudsen Liszkowski 2012
+
+and also the amount of knowledge the person already has
+
+this often involves taking into account what knowledge that person already has
+- will point out information only if they think the person doesn't know it 
+- amount of information provided will depend on the context that the person already has 
+  - Gweon, Shafto, Schulz 2014
+
+
+- helping often involves sharing information with another person. sometimes, it is clear what information to provide. but sometimes it's not, and we need to decide which peice of information best suites our social partner's goal. 
 
 children are willing to help from a young age
   - tomasello 2009
@@ -62,9 +143,6 @@ developmental trends
   - svetlova, nichols, brownell 2010
   - so motivation exists but still developing ability to figure out what someone's goals are from more subtle cues
 
-goal attribution
-- meltzoff 1995
-  - at 18 months cna figure out goal from actions even if those actions are incomplete
 
 # Experiment 1
 
