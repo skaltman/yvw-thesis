@@ -35,39 +35,19 @@ Young children appear more or less likely to help appropriately depending on the
 
 ## Reasoning about others' goals
 
-Children start to understand goal-directed actions at a very young age. At 9 months, children can distinguish between situations in which an adult does not want to give them a toy and situations in which she is unable to do so (Behne, Carpenter, Call, & Tomasello, 2005). Luo and Baillargeon (2005) found that 5-month-olds expect inanimate objects to continue choosing to move towards objects that they have chosen in the past. 
-Furthermore, 6.5-month-olds who watched inanimate objects repeatedly move around obstacles to reach a destination expected those objects to move efficeintly toward the destinate once the obstacles were removed, sugggesting both that they understand motion as goal-directed and that they expect agents to achieve goals efficiently (Csibra, 2008). 
+Children start to understand goal-directed actions at a very young age. Children as young as five months will view an adult's repeated reach for one type of object over another as goal-directed, and expect that adult to continue reaching for that type of object (Woodward, 1998). 
+
+
+At 5 months, children expect inanimate objects to continue moving towards objects that they have moved towards in the past (Luo & Baillargeon, 2005). They also 
+
+
+- 6.5-month-olds who watched inanimate objects repeatedly move around obstacles to reach a destination expected those objects to move efficeintly toward the destinate once the obstacles were removed, sugggesting both that they understand motion as goal-directed and that they expect agents to achieve goals efficiently (Csibra, 2008). 
+
+
+-At 9 months, children can distinguish between situations in which an adult does not want to give them a toy and situations in which she is unable to do so (Behne, Carpenter, Call, & Tomasello, 2005). 
+
+
 By 18-months, children can infer the intentions of others even from incomplete actions (Meltzoff, 1995). This skill is particularly crucial when helping others, as people in need of help typically fall short of their intended action, and it is thus necessary to infer a goal without witnessing the person accomplish that goal first. 
-
-
-
-1. Development of the motivation to help
-
-Humans are motivated to help from a relatively young age. During the first year of life, children will point out the location of an object someone is searching for, pick up dropped objects, and show others an easier way to use a toy (Liszkowski, Carpenter, Striano, & Tomasello, 2009; Warnekan & Tomasello, 2006). 
-
-Familiarity also likely to influences the likelihood that a child will help. One-year-olds are more likely to respond proscially in familiar situations or when their social partner demonstrates a familiar emotion (Zahn-Waxler, Radke-Yarrow et al., 1992). 
-
-
-Development between 1 and 2
-- Svetlova, Nichols, and Brown 2010
-  - "at the end of the second year of life when toddlers' helping behavior expands to include empathic as well as instrumental helping"
-  - 18 month olds helped instrumentally
-  - "18-month-olds' helping required significantly greater communicative support and scaffolding from an adult than that of 30-month-olds, whose prosocial behavior was more autonomous and demonstrated greater social understanding."
-  - "propensity of respond prosocially grows signficicantly between 18 and 30 months of age"
-
-
-Svetlova, Nichols, and Brownell (2010) investigated the behavior of 18- and 30-month-olds in three different contexts: instrumental, empathic, and altruistic. The instrumental contexts required children to perform some action to help their social partner, the empathic contexts requried chidren to respond to their partner's emotional distress, and the altruistic contexts required children to incur a cost in order to help the partner. The 30-month-olds helped more often and more quickly than the 18-month-olds in all contexts, suggesting that the motivation to help continues to develop during the third year of life. 
-
-There is evidence that toddlers' propesnity to behave prosocially depends on context and prior social experience. 
-- Svetlova, Nichols, and Brownell (2010) found that two-year-olds are more likely to help in instrumental or em
-
-
-Svetlova, Nichols, and Brownell
-- Toddlers are more likely to respond positively to a peer's distress, for example, if they were responsible for the peer's distress (Demetriou and Hay, 2004). Furthermore, engaging in reciprocal play can lead 1- and 2-year-olds to be more likely to behave altruistically toward their social partner (Cortes Barragan and Dweck, 2014).  
-
-Todders may like helping
-- studies where they forgo reward, or seem to ignore cost
-- but maybe they just like helping and get enjoyment out of it
 
 2. Goal attribution
 early goal attribution
@@ -77,10 +57,26 @@ early goal attribution
 - Meltzoff, 1995---infants can infer intentions for incomplete actions and do that action themselves
 - Possible that it's easier to understand someone's goal when you have experience with that type of thing yourself (Sommerville, Woodward, Needham, 2005)
 
+
 Goal attribution often involves reasoning about someone's preference. 
 - Spaepen and Spelke 2006 --- specifics about reaching studies
 - Kushnir, Xu, and Wellman (2010) --- infants consider statistical information when attributing a goal
 - Baillargeon, Scott, He, et al. (2014) --- lit review including stuff on goal attribution
+
+
+
+
+
+
+
+Svetlova, Nichols, and Brownell
+- Toddlers are more likely to respond positively to a peer's distress, for example, if they were responsible for the peer's distress (Demetriou and Hay, 2004). Furthermore, engaging in reciprocal play can lead 1- and 2-year-olds to be more likely to behave altruistically toward their social partner (Cortes Barragan and Dweck, 2014).  
+
+Todders may like helping
+- studies where they forgo reward, or seem to ignore cost
+- but maybe they just like helping and get enjoyment out of it
+
+
 
 3. Helping in complex situations
 - Understanding who is the best person to ask for help (Paulus and Moore, 2011)
