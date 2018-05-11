@@ -36,12 +36,11 @@ There is evidence that children's propensity to help and the types of situations
 
 Young children appear more or less likely to help appropriately depending on the specifics of the situation, as different situations require different cognitive and social skills, as well as different motivations (Thompson & Newton, 2013). Instrumental helping, which requires the helper to perform some action to fulfill the partner's goals, requires the ability to understand others' goals and determine the correct actions to take to fulfill those goals. Sharing and responding to emotional distress may be more difficult. Sharing requires incurring an immediate cost and responding to emotional distress requires reasoning about the emotions of others, as well as what actions would positively affect those emotions. Informing, as mentioned previously, requires the helper to reason about the differences in knowledge between herself and her partner. Children first help consistently in instrumental tasks (Svetlova et al., 2010; Schachner, Newton, Thompson, & Goodman-Wilson, 2018). Both the 18- and 30-month-olds in Svetlova et al.'s (2010) study helped appropriately more often in situations that involved action-based helping than in situations that involved responding to emotional distress or giving up something of their own (e.g., a favorite toy). However, a majority (87%) of the 30-month-olds helped appropriately in response to emotional distress, whereas only 13% of the 18-month-olds did so. 
 
-The 18-month-olds in Warneken and Tomasello's (2006) study also demonstrated considerable variability in helping behavior depending on the specifics of the task. Some of the tasks involved instrumental helping (e.g., fetching out-of-reach objects for the experiment, removing physical objects), but others involved informing the experimenter about the correct way to use an object once the child observed her using it incorrectly. In these tasks, children had to observe the experimenter's actions and infer that they had knowledge that she did not that she could use to fulfill her goals. For  
+The 18-month-olds in Warneken and Tomasello's (2006) study also demonstrated considerable variability in helping behavior depending on the specifics of the task. Some of the tasks involved instrumental helping (e.g., fetching out-of-reach objects for the experiment, removing physical objects), but others involved informing the experimenter about the correct way to use an object once the child observed her using it incorrectly. In these tasks, children had to observe the experimenter's actions and infer that they had knowledge that she did not that she could use to fulfill her goals. Fewer children helped in these types of tasks than in the ones that required instrumental helping. 
 
 ## Reasoning about others' goals
 
-Children start to understand goal-directed actions at a very young age. Children as young as five months will view both adult's and inanimate objects' repeated choice of one object over another as goal-directed, and expect the agent to continue choosing that object (Woodward, 1998; Luo & Baillargeon, 2005). 6.5-month-olds who watched inanimate objects repeatedly move around obstacles to reach a destination expected those objects to move efficeintly toward the destinate once the obstacles were removed, sugggesting both that they understand motion as goal-directed and that they expect agents to achieve goals efficiently (Csibra, 2008). At 9 months, children can distinguish between situations in which an adult does not want to give them a toy and situations in which she is unable to do so (Behne, Carpenter, Call, & Tomasello, 2005). By 18-months, children can infer the intentions of others even from incomplete actions (Meltzoff, 1995). This skill is particularl
-y crucial when helping others, as people in need of help typically fall short of their intended action, and it is thus necessary to infer a goal without witnessing the person accomplish that goal first. 
+Children start to understand goal-directed actions at a very young age. Children as young as five months will view both adult's and inanimate objects' repeated choice of one object over another as goal-directed, and expect the agent to continue choosing that object (Woodward, 1998; Luo & Baillargeon, 2005). 6.5-month-olds who watched inanimate objects repeatedly move around obstacles to reach a destination expected those objects to move efficeintly toward the destinate once the obstacles were removed, sugggesting both that they understand motion as goal-directed and that they expect agents to achieve goals efficiently (Csibra, 2008). At 9 months, children can distinguish between situations in which an adult does not want to give them a toy and situations in which she is unable to do so (Behne, Carpenter, Call, & Tomasello, 2005). By 18-months, children can infer the intentions of others even from incomplete actions (Meltzoff, 1995). This skill is particularly crucial when helping others, as people in need of help typically fall short of their intended action, and it is thus necessary to infer a goal without witnessing the person accomplish that goal first. 
 
 It is possible that it is easier for children to understand another's goal when you have experience with the actions required to complete that goal youself (Sommerville, Woodward, Needham, 2005). This suggests that children may have a more difficult time helping in tasks in which they are unfamiliar with the  actions involved, not only because they do not know how to help, but also because they may be unsure of the other person's goal. 
 
@@ -736,6 +735,48 @@ In the Broken Toy condition, children still preferentially target the other toy,
 
 In all three experiments, children responded differently depending on the likely source of the confederate's failure. This suggests that 2- and 3-year-olds can recruit prior knowledge to reason about the likely cause of another's failure and to effectively help. 
 
+There are two broad questions about how to categorize children's behavior in these experiments. First, are children really helping the confederate, or are they merely acting to produce music for themselves? Second, are children helping the confederate or are they informing her?
+
+```{r}
+three_toy_sr %>% 
+  format_sr_data(original_data = three_toy_tidy) %>% 
+  plot_social_referencing(title_prefix = "Experiment 1: ")
+
+two_toy_sr %>% 
+  format_sr_data(original_data = two_toy_tidy) %>% 
+  plot_social_referencing(title_prefix = "Experiment 2: ")
+
+three_toy_num_zero <-
+  three_toy_sr %>% 
+  count(sum_0 = sum == 0) %>% 
+  filter(sum_0) %>% 
+  pull(n)
+
+two_toy_num_zero <-
+  two_toy_sr %>% 
+  count(sum_0 = sum == 0) %>% 
+  filter(sum_0) %>% 
+  pull(n)
+
+three_toy_geq_1 <-
+  three_toy_sr %>%  
+  count(sum_geq_1 = sum >= 1) %>% 
+  filter(sum_geq_1) %>% 
+  pull(n)
+
+two_toy_geq_1 <-
+  two_toy_sr %>% 
+  count(sum_geq_1 = sum >= 1)
+```
+
+To address the first question, we can look at the specifics of what children do in response to the confederate's requests. To investigate children's behavior beyond their choice of toy and toy side, we coded for the presence of various social referencing behaviors. These behaviors included orienting the toy towards the confederate by handing it to her, pushing it towards her, etc.; orienting themselves so that they were facing the confederate, pointing towards a toy, looking at the confederate after making their choice (and before she responded to their choice), and verbally instructing the confederate to take some action on the toy. If children are just producing music for themselves, we would not expect many children to show these behaviors. However, only `r three_toy_num_zero` children out of `r summary_three_toy$num_participants` in Experiment 1, and only `r two_toy_num_zero` children out of `r summary_two_toy$num_participants` in Experiment 2 showed none of these behaviors. In fact, `r 
+
+Figure `r fig_num_counter` and Figure `r fig_num_counter + 1`. 
+
+
+
+
+
 - difference between bing kids and jmz kids 
 
 ```{r}
@@ -747,10 +788,13 @@ all_threes %>%
 ```
 
 
-```{r}
-modified_tidy %>% 
-  filter(l)
-```
+Differences between helping and informing.
+
+- distinction between children thinking that the confederate wants to play music herself or that she wants to know how to play music. 
+- informing would involve showing her how to play music for herself
+- helping would typically involve playing the music for the confederate
+- often not a clear distinction between the toy. By doing something yourself, you sometimes do inform. And by informing, you help. 
+- can look at the specific behaviors of children within these experiments --- are they activating the toys themselves? or are they indicating how the confederate should act upon the toy? furthermore, what do the children who help early do? 
 
 
 
@@ -775,15 +819,4 @@ age_ps_modified <- create_p_value_tibble(modified_tidy)
 #this means that the only place where age predicts anything is in three toy correctness (it's not even that significant and what happens if you correct for mutliple comparison?)
 ```
 
-### Social referencing
-
-```{r}
-three_toy_sr %>% 
-  format_sr_data(original_data = three_toy_tidy) %>% 
-  plot_social_referencing()
-
-two_toy_sr %>% 
-  format_sr_data(original_data = two_toy_tidy) %>% 
-  plot_social_referencing()
-```
 

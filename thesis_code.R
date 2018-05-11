@@ -87,6 +87,8 @@ format_data <- function(data) {
 
 format_sr_data <- function(data, original_data) {
   data %>% 
+    filter_at(vars(orient_body, orient_toy, gaze, point, verbal), 
+              all_vars(!is.na(.))) %>% 
     left_join(original_data %>% select(videoName, condition, age), 
               by = "videoName") %>% 
     group_by(condition) %>% 
@@ -406,10 +408,16 @@ plot_predicted <- function(data, title_prefix = "") {
 }
 
 plot_social_referencing <- function(data, title_prefix = "") {
+  fig_num_counter <<- fig_num_counter + 1
+  
   data %>% 
-    mutate(
-      behavior = str_to_title(str_replace_all(behavior, "_", "\n")),
-      behavior = fct_reorder(behavior, percentage)
+    mutate(behavior = str_to_title(str_replace_all(behavior, "_", "\n")),
+           behavior = fct_relevel(behavior, 
+                                  "Orient\nToy", 
+                                  "Orient\nBody", 
+                                  "Point", 
+                                  "Gaze",
+                                  "Verbal")
     ) %>% 
     ggplot(aes(behavior, percentage)) +
     geom_col() +
@@ -417,8 +425,10 @@ plot_social_referencing <- function(data, title_prefix = "") {
     theme_minimal() +
     # theme(axis.text.x = element_text(angle = 45)) +
     labs(x = "Behavior",
-         y = "Percentage of children") +
-    coord_cartesian(ylim = c(0, 1))
+         y = "Percentage of children",
+         title = str_c(title_prefix, "Social referencing behavior"),
+         caption = str_c("Figure", fig_num_counter, sep = " ")) +
+    coord_cartesian(ylim = c(0, 1)) 
 }
 
 #----------------------------------------------------------------------------------
