@@ -738,14 +738,6 @@ In all three experiments, children responded differently depending on the likely
 There are two broad questions about how to categorize children's behavior in these experiments. First, are children really helping the confederate, or are they merely acting to produce music for themselves? Second, are children helping the confederate or are they informing her?
 
 ```{r}
-three_toy_sr %>% 
-  format_sr_data(original_data = three_toy_tidy) %>% 
-  plot_social_referencing(title_prefix = "Experiment 1: ")
-
-two_toy_sr %>% 
-  format_sr_data(original_data = two_toy_tidy) %>% 
-  plot_social_referencing(title_prefix = "Experiment 2: ")
-
 three_toy_num_zero <-
   three_toy_sr %>% 
   count(sum_0 = sum == 0) %>% 
@@ -767,15 +759,74 @@ three_toy_geq_1 <-
 two_toy_geq_1 <-
   two_toy_sr %>% 
   count(sum_geq_1 = sum >= 1)
+
+three_toy_two <-
+  three_toy_sr %>%  
+  count(two = sum == 2) %>% 
+  filter(two) %>% 
+  pull(n) 
+
+two_toy_two <-
+  two_toy_sr %>% 
+  count(two = sum == 2) %>% 
+  filter(two) %>% 
+  pull(n)
+
+three_toy_point <-
+  three_toy_sr %>% 
+  count(point) %>% 
+  filter(point == 1) %>% 
+  pull(n)
+
+two_toy_point <-
+  two_toy_sr %>% 
+  count(point) %>% 
+  filter(point == 1) %>% 
+  pull(n)
+
+three_toy_verbal <-
+  three_toy_sr %>% 
+  count(verbal) %>% 
+  filter(verbal == 1) %>% 
+  pull(n)
+
+two_toy_verbal <-
+  two_toy_sr %>% 
+  count(verbal) %>% 
+  filter(verbal == 1) %>% 
+  pull(n)
+
+three_toy_verbal_point <-
+  three_toy_sr %>% 
+  count(verbal_point = verbal & point) %>% 
+  filter(verbal_point) %>% 
+  pull(n)
+
+two_toy_verbal_point <-
+  two_toy_sr %>% 
+  count(verbal_point = verbal & point) %>% 
+  filter(verbal_point) %>% 
+  pull(n)
 ```
 
-To address the first question, we can look at the specifics of what children do in response to the confederate's requests. To investigate children's behavior beyond their choice of toy and toy side, we coded for the presence of various social referencing behaviors. These behaviors included orienting the toy towards the confederate by handing it to her, pushing it towards her, etc.; orienting themselves so that they were facing the confederate, pointing towards a toy, looking at the confederate after making their choice (and before she responded to their choice), and verbally instructing the confederate to take some action on the toy. If children are just producing music for themselves, we would not expect many children to show these behaviors. However, only `r three_toy_num_zero` children out of `r summary_three_toy$num_participants` in Experiment 1, and only `r two_toy_num_zero` children out of `r summary_two_toy$num_participants` in Experiment 2 showed none of these behaviors. In fact, `r 
+To address the first question, we can look at the specifics of what children do in response to the confederate's requests. To investigate children's behavior beyond their choice of toy and toy side, we coded for the presence of various social referencing behaviors. These behaviors included orienting the toy towards the confederate by handing it to her, pushing it towards her, etc.; orienting themselves so that they were facing the confederate, pointing towards a toy, looking at the confederate after making their choice (and before she responded to their choice), and verbally instructing the confederate to take some action on the toy. If children are just producing music for themselves, we would not expect many children to show these behaviors. However, only `r three_toy_num_zero` children out of `r summary_three_toy$num_participants` in Experiment 1, and only `r two_toy_num_zero` children out of `r summary_two_toy$num_participants` in Experiment 2 showed none of these behaviors. In fact, `r three_toy_geq_1/summary_three_toy$num_participants %>% round(2)` children in Experiment 1 and `r two_toy_geq_1/summary_two_toy$num_participants %>% round(2)` in Experiment 2 performed at least one of the listed behaviors, and `r three_toy_two/summary_three_toy$num_participants %>% round(2)` children in Experiment 1 and `r two_toy_two/summary_two_toy$num_participants %>% round(2)` in Experiment 2 showed two of the behaviors.  Figure `r fig_num_counter` and Figure `r fig_num_counter + 1` show the distribution of these behaviors by condition. 
 
-Figure `r fig_num_counter` and Figure `r fig_num_counter + 1`. 
-
-
+If children were only playing music for their own sake, and were not thinking about the confederate's goals, we would not expect children to verbally instruct or gesture to her what to do. We also would expect children to operate the toy and not engage with the confederate by, for example, looking at her expectantly or orienting themselves and the toy such that they were facing her. The behavior of children thus indicates that children are considering the confederate during the helping phase of the experiment. 
 
 
+```{r}
+three_toy_sr %>% 
+  format_sr_data(original_data = three_toy_tidy) %>% 
+  plot_social_referencing(title_prefix = "Experiment 1: ")
+
+two_toy_sr %>% 
+  format_sr_data(original_data = two_toy_tidy) %>% 
+  plot_social_referencing(title_prefix = "Experiment 2: ")
+```
+
+Are children helping or are they informing? As discussed in the introduction, the distinction between informing and helping is not always clear, but the main difference between a situation that requires informing and one that requires helping is that, when informing, you need to reason about what you know that the other person does not. In the experiments discussed here, it is not clear if the confederate wants to know *how* to play music, which would require the child to inform her, or if she just wants the child to play music for her, which would only require instrumental helping. Furthermore, behavior that looks like instrumental helping (i.e., pressing a button on a particular toy) can also inform the confederate about how she can play music herself. Many children pointed, verbally instructed the confederate, or both, which suggests that they are informing the confederate about how to play music with toys. Interestingly, children tended not to fully explain the workings of all toys, which is consistent with research finding that 4- to 5-year-olds provide less information if their social partner wants to simply see what a toy does than if she wants to know how a toy works (Gweon, Chu, & Schulz, 2014). 
+
+- false belief tie in
 
 - difference between bing kids and jmz kids 
 
