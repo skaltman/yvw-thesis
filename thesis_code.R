@@ -17,6 +17,8 @@ two_toy_sheet <- "Data"
 modified_path <- "~/Dropbox/YouVWorld/TwoToys/new_version_data/YouVWorld_modified_toy_updated.xlsx"
 modified_sheet <- "Data"
 
+sr_path <- "~/Dropbox/YouVWorld/allExperimentsAnalysis/data/YouVWorld_SocialReferenceData.xlsx"
+
 # COLORS FOR PLOTS
 response_colors <- c("#dc322f", "#268bd2")
 helpfulness_colors <- c("#dddddd", "#addd8e")
@@ -50,6 +52,14 @@ two_toy <-
 modified <- 
   read_xlsx(path = modified_path, 
             sheet = modified_sheet)
+
+three_toy_sr <- 
+  read_xlsx(path = sr_path, sheet = "three-toy") %>% 
+  rename_all(funs(str_replace_all(., " ", "_")))
+
+two_toy_sr <-
+  read_xlsx(path = sr_path, sheet = "two-toy") %>% 
+  rename_all(funs(str_replace_all(., " ", "_")))
 #----------------------------------------------------------------------------------
 # FORMAT DATA FUNCTION -- MAKES SURE ALL DATA FRAMES HAVE SAME VARIABLE NAMES, ETC.
 
@@ -73,6 +83,33 @@ format_data <- function(data) {
            firstChoiceNum = as.integer(firstChoice == "Confederate's toy"),
            flip = str_detect(firstBehaviorCode, "flip"),
            age = as.double(age)) 
+}
+
+format_sr_data <- function(data, original_data) {
+  data %>% 
+    left_join(original_data %>% select(videoName, condition, age), 
+              by = "videoName") %>% 
+    group_by(condition) %>% 
+    mutate(condition_count = n()) %>%
+    mutate_at(vars(verbal, gaze, point, contains("orient")), funs(as.numeric)) %>% 
+    ungroup() %>% 
+    gather(key = "behavior", 
+           value = "demonstrates", 
+           verbal, 
+           gaze, 
+           point, 
+           orient_body, 
+           orient_toy) %>% 
+    select(videoName,
+           age,
+           condition,
+           behavior,
+           demonstrates,
+           condition_count) %>% 
+    group_by(condition, condition_count, behavior) %>% 
+    summarise(num_demonstrates = sum(demonstrates)) %>% 
+    ungroup() %>% 
+    mutate(percentage = num_demonstrates / condition_count)
 }
 
 #----------------------------------------------------------------------------------
@@ -366,6 +403,22 @@ plot_predicted <- function(data, title_prefix = "") {
                                str_c(title_prefix, " Target matches prediction by condition"), 
                                "Target toy matches prediction", 
                                c("No", "Yes"))
+}
+
+plot_social_referencing <- function(data, title_prefix = "") {
+  data %>% 
+    mutate(
+      behavior = str_to_title(str_replace_all(behavior, "_", "\n")),
+      behavior = fct_reorder(behavior, percentage)
+    ) %>% 
+    ggplot(aes(behavior, percentage)) +
+    geom_col() +
+    facet_grid(~ condition) +
+    theme_minimal() +
+    # theme(axis.text.x = element_text(angle = 45)) +
+    labs(x = "Behavior",
+         y = "Percentage of children") +
+    coord_cartesian(ylim = c(0, 1))
 }
 
 #----------------------------------------------------------------------------------

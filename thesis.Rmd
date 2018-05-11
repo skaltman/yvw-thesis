@@ -23,6 +23,9 @@ Helping involves the helper giving something to her social partner, but what the
 
 Much has been written about altruism in humans (Warnekan & Tomasello, 2009; Tomasello, 2009), but helping is not necessarily altruistic. Regardless of whether the helper is rewarded for her help, she had to harness the various cognitive skills discussed earlier. Therefore, the research discussed in this thesis investigates the cognitive skills involved in helping without dwelling on the exact motivations of the children involved. We wanted to know how children help when they are motivated, for whatever reason, to do so, and thus took various steps to motivate children to help. 
 
+- if they were in a situation in which they needed to help someone, they could use these skills to do so
+- informing when other's actually know things and when they are just feigning ignorance. adult
+
 [...]
 
 ## Development of the motivation to help
@@ -33,39 +36,21 @@ There is evidence that children's propensity to help and the types of situations
 
 Young children appear more or less likely to help appropriately depending on the specifics of the situation, as different situations require different cognitive and social skills, as well as different motivations (Thompson & Newton, 2013). Instrumental helping, which requires the helper to perform some action to fulfill the partner's goals, requires the ability to understand others' goals and determine the correct actions to take to fulfill those goals. Sharing and responding to emotional distress may be more difficult. Sharing requires incurring an immediate cost and responding to emotional distress requires reasoning about the emotions of others, as well as what actions would positively affect those emotions. Informing, as mentioned previously, requires the helper to reason about the differences in knowledge between herself and her partner. Children first help consistently in instrumental tasks (Svetlova et al., 2010; Schachner, Newton, Thompson, & Goodman-Wilson, 2018). Both the 18- and 30-month-olds in Svetlova et al.'s (2010) study helped appropriately more often in situations that involved action-based helping than in situations that involved responding to emotional distress or giving up something of their own (e.g., a favorite toy). However, a majority (87%) of the 30-month-olds helped appropriately in response to emotional distress, whereas only 13% of the 18-month-olds did so. 
 
+The 18-month-olds in Warneken and Tomasello's (2006) study also demonstrated considerable variability in helping behavior depending on the specifics of the task. Some of the tasks involved instrumental helping (e.g., fetching out-of-reach objects for the experiment, removing physical objects), but others involved informing the experimenter about the correct way to use an object once the child observed her using it incorrectly. In these tasks, children had to observe the experimenter's actions and infer that they had knowledge that she did not that she could use to fulfill her goals. For  
+
 ## Reasoning about others' goals
 
-Children start to understand goal-directed actions at a very young age. Children as young as five months will view an adult's repeated reach for one type of object over another as goal-directed, and expect that adult to continue reaching for that type of object (Woodward, 1998). 
+Children start to understand goal-directed actions at a very young age. Children as young as five months will view both adult's and inanimate objects' repeated choice of one object over another as goal-directed, and expect the agent to continue choosing that object (Woodward, 1998; Luo & Baillargeon, 2005). 6.5-month-olds who watched inanimate objects repeatedly move around obstacles to reach a destination expected those objects to move efficeintly toward the destinate once the obstacles were removed, sugggesting both that they understand motion as goal-directed and that they expect agents to achieve goals efficiently (Csibra, 2008). At 9 months, children can distinguish between situations in which an adult does not want to give them a toy and situations in which she is unable to do so (Behne, Carpenter, Call, & Tomasello, 2005). By 18-months, children can infer the intentions of others even from incomplete actions (Meltzoff, 1995). This skill is particularl
+y crucial when helping others, as people in need of help typically fall short of their intended action, and it is thus necessary to infer a goal without witnessing the person accomplish that goal first. 
 
+It is possible that it is easier for children to understand another's goal when you have experience with the actions required to complete that goal youself (Sommerville, Woodward, Needham, 2005). This suggests that children may have a more difficult time helping in tasks in which they are unfamiliar with the  actions involved, not only because they do not know how to help, but also because they may be unsure of the other person's goal. 
 
-At 5 months, children expect inanimate objects to continue moving towards objects that they have moved towards in the past (Luo & Baillargeon, 2005). They also 
-
-
-- 6.5-month-olds who watched inanimate objects repeatedly move around obstacles to reach a destination expected those objects to move efficeintly toward the destinate once the obstacles were removed, sugggesting both that they understand motion as goal-directed and that they expect agents to achieve goals efficiently (Csibra, 2008). 
-
-
--At 9 months, children can distinguish between situations in which an adult does not want to give them a toy and situations in which she is unable to do so (Behne, Carpenter, Call, & Tomasello, 2005). 
-
-
-By 18-months, children can infer the intentions of others even from incomplete actions (Meltzoff, 1995). This skill is particularly crucial when helping others, as people in need of help typically fall short of their intended action, and it is thus necessary to infer a goal without witnessing the person accomplish that goal first. 
-
-2. Goal attribution
-early goal attribution
-- Infants as young as five months see an adult's repeated reach for an object as goal-directed (Woodward, 1998). 
-- Will even attribute goals to inanimate objects with specific characteristics (Csibra, 2008)
-- thus the behavior of an agent is used to infer a goal
-- Meltzoff, 1995---infants can infer intentions for incomplete actions and do that action themselves
-- Possible that it's easier to understand someone's goal when you have experience with that type of thing yourself (Sommerville, Woodward, Needham, 2005)
 
 
 Goal attribution often involves reasoning about someone's preference. 
 - Spaepen and Spelke 2006 --- specifics about reaching studies
 - Kushnir, Xu, and Wellman (2010) --- infants consider statistical information when attributing a goal
 - Baillargeon, Scott, He, et al. (2014) --- lit review including stuff on goal attribution
-
-
-
-
 
 
 
@@ -295,8 +280,6 @@ three_within_flip <-
   within_condition_flip(digits = 6)
 ```
 
-[note: im really note sure that this is helpful to include]
-
 As a second exploratory analysis, we investigated how often children targeted on a non-obvious (i.e., bottom) button as a second exploratory analysis. This is similar to the helpfulness analysis discussed previously in that we are interested in the content of children's helping behavior beyond which toy they choose to target. In the Broken Button condition, children who target a bottom button were also coded as "helpful" and thus the two codes are identical. However, in the Broken Toy condition, children can only be helpful if they target a top (i.e., yellow) button on a toy on the tray. Thus, children could be unhelpful in multiple ways. They could target a red button on a toy on the tray or confederate's toy, but they could also target the yellow button on the confederate's toy. The two codes
 are therefore not identical in this condition. 
 
@@ -347,7 +330,6 @@ num_excluded <-
                    `video`) %>% 
   rename(pre_failure_help = `pre-failure_help`)
 ```
-
 
 We recruited `r summary_two_toy$num_participants` 24- to 48-month-old participants (M(SD) = `r summary_two_toy$mean_age`, `r summary_two_toy$perc_female`% female) from a local preschool. An additional `r num_excluded$total` children were excluded from analysis due to experimenter error (n = `r num_excluded$experimenter_error`), the child responding too early (n = `r num_excluded$pre_failure_help`), the child having prior exposure to the experiment (n = `r num_excluded$played_before`), or lack of video recording (n = `r num_excluded$video`).
 
@@ -746,7 +728,7 @@ modified_tidy %>%
 
 The results from this experiment again replicate our main finding from Experiment 1 that children's responses to the confederate's request vary depending on the likely source of her failure. 
 
-In contrast to the previous experiment, children in the Broken Button condition preferentially targeted the confederate's toy. The results of this experiment cannot disentangle the various explanations for the behavior of children in the Broken Button condition in Experiment 2. However, they do indicate that children are likely attributing the specific goal to the confederate in this experiment, and thus are sensitive to information about the confederate's goal.
+In contrast to the previous experiment, children in the Broken Button condition preferentially targeted the confederate's toy. The results of this experiment cannot disentangle the various explanations for the behavior of children in the Broken Button condition in Experiment 2. However, they do indicate that children are likely attributing the specific goal to the confederate in this experiment, and thus are sensitive to information about the confederate's goal. However, it is also possible that children think it is more informative to target the confederate's toy. Indicating that the confederate should act on the other toy, or acting on it for her, might suggest that her own toy is broken, which is not the case. This is especially true if the toys are distinct  ecause, if the toys are identical, this inference is less likely. However, it is really only important that the confederate not think her own toy is broken if she actually has a preference for that toy. Therefore, these explanations are not mutually exclusive. A child might target the confederate's toy because she thinks that the confederate has a preference for that toy, and if she targeted the other toy, the confederate might mistakenly infer that her own toy is not functional. 
 
 In the Broken Toy condition, children still preferentially target the other toy, even though the toys are now visually distinct. This indicates that children are still willing to override the confederate's choice of toy if they realize her choice is incompatible with her goal, even though her actions make it likely that she has a preference for one toy type over another. 
 
@@ -754,12 +736,20 @@ In the Broken Toy condition, children still preferentially target the other toy,
 
 In all three experiments, children responded differently depending on the likely source of the confederate's failure. This suggests that 2- and 3-year-olds can recruit prior knowledge to reason about the likely cause of another's failure and to effectively help. 
 
+- difference between bing kids and jmz kids 
+
 ```{r}
 all_twos %>% 
   plot_responses()
 
 all_threes %>% 
   plot_responses(title_prefix = "All threes")
+```
+
+
+```{r}
+modified_tidy %>% 
+  filter(l)
 ```
 
 
@@ -783,5 +773,17 @@ age_ps_three_toy <- create_p_value_tibble(three_toy_tidy)
 age_ps_two_toy <- create_p_value_tibble(two_toy_tidy)
 age_ps_modified <- create_p_value_tibble(modified_tidy)
 #this means that the only place where age predicts anything is in three toy correctness (it's not even that significant and what happens if you correct for mutliple comparison?)
+```
+
+### Social referencing
+
+```{r}
+three_toy_sr %>% 
+  format_sr_data(original_data = three_toy_tidy) %>% 
+  plot_social_referencing()
+
+two_toy_sr %>% 
+  format_sr_data(original_data = two_toy_tidy) %>% 
+  plot_social_referencing()
 ```
 
