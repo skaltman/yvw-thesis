@@ -44,13 +44,23 @@ Children start to understand goal-directed actions at a very young age. Children
 
 It is possible that it is easier for children to understand another's goal when you have experience with the actions required to complete that goal youself (Sommerville, Woodward, Needham, 2005). This suggests that children may have a more difficult time helping in tasks in which they are unfamiliar with the  actions involved, not only because they do not know how to help, but also because they may be unsure of the other person's goal. 
 
+Goal attribution often involves reasoning about the preferences of others. Agents sometimes choose objects at random because they have no preference for any one object over another. However, choices are sometimes indicative of a preference for a specific object or object type. It is important to distinguish between these two scenarios when helping someone with an object, as it is often necessary to know if they need help with a specific object (i.e., they need to open *their own* car door) or if any object of a certain type will do (i.e., they need *any* AA battery). Spaepen and Spelke (2007) explored how 12-month-olds reasoned about the goal behind an agent's reach; specifically how narrowly defined a goal infants would attribute to the reacher. Their results suggest that infants use course features, or global category membership, when attributing goals (e.g., a truck versus a doll), but not finer grain information (e.g., a red pickup truck versus an orange dump truck). Furtheremore, infants in their experiments did not use spatiotemporal information to construct a more detailed goal, and instead relied on general categories. 
 
+[sentence needed]
 
-Goal attribution often involves reasoning about someone's preference. 
-- Spaepen and Spelke 2006 --- specifics about reaching studies
-- Kushnir, Xu, and Wellman (2010) --- infants consider statistical information when attributing a goal
-- Baillargeon, Scott, He, et al. (2014) --- lit review including stuff on goal attribution
+Children as young as 20 months also interpret violations of random sampling as evidence that an agent prefers one type of object over another (Kushnir, Xu, & Wellman, 2010). Together, these studies suggest that infants use information about both the object an agent chooses itself and the environment from which the agent chooses the object when attributing a goal to an agent. 
 
+## Helping in complex situations
+
+There is evidence that by, age two, children can reason flexibly about how to help, and have complex representations about helping scenarios. 
+
+There are various other considerations one might need to take into account in helping scenarios. One such consideration involves what kind of actions you or others can take to help the person in need. Paulus and Moore (2010) found that 3.5-year-olds take the phyiscal capabilities of actors into account when reasoning about who someone might ask for help. They found no evidence that the younger children in the study, who were 2.5, were capable of this type of reasoning, although it is unclear if children at this age would perform better if they were they person seeking help. 
+
+As mentioned earlier, helping, and specifically, informing, often requires reasoning about the beliefs of others. In Buttelman, Carpenter, and Tomasello (2009), toddlers learned how to operate two boxes with locks and then watched an experimenter put a toy in one of the boxes, but did not lock it. In one condition, the "False Belief" condition, the experimenter then left the room and a second experimenter moved the toy into the second box. In the other condition, the "True Belief" condition, the first experimenter remained in the room the entire time. The first experimenter also locked both boxes. After the toy was moved, the second experimenter then kneeled down by the box that he had originally placed the toy in and tried to open it. Children could then approach either box. Children in the False Belief condition tended to open the box containing the toy, but children in the True Belief condition tended to open the box that the experimenter was actively trying to open, indicating that children attributed different goals to the experimenter depending on whether he had seen the toy move to the second box. 
+
+Buttelman, Carpenter, and Tomasello argue that this suggests that children in the study understand that, in the False Belief condition, the experimenter has the false belief that his toy is in the original box. However, a leaner interpretation is that the children simply attribute ignorance to the experimenter (i.e., he does not know where his toy is), and thus he chooses randomly between the two boxes. The authors argue that this is an implausible explanation because children need to realize that the experimenter possesses "cognitive context driving his behavior" (Buttleman, Carpenter, and Tomasello, 2009, p. 341). However, it is possible that children in the False Belief condition think that the experimenter possesses no belief about where the toy is, but understand that he possesses the goal of retrieving his toy. 
+
+In this study, children needed to reason about what they knew that the experimenter did not. In the False Belief condition, children possessed two pieces of knowledge that the experimenter did not: how to open the locked boxes and the location of the toy. In the True Belief condition, the experimenter knew the location of the toy but did not know how to open the locked boxes. Therefore, this suggests that young toddlers are not only sensitive to differences in knowledge between themselves and their social partner when deciding how to help, but are also able to use the specific, pertinent beliefs that they hold about objects to guide their helping behavior. 
 
 
 Svetlova, Nichols, and Brownell
@@ -824,9 +834,12 @@ two_toy_sr %>%
   plot_social_referencing(title_prefix = "Experiment 2: ")
 ```
 
+It thus seems as if children are both reasoning about the causal system of the toys and acting in consideration of the confederate's goals. It is possible that they also want to play music for themselves, and that motivation furthere pushes them to produce music with the toys. To further understand the motivations in play, a possible follow-up study might involve toys with two functions, one more exciting for the child than another (e.g., moving lights and music), and a confederate that requests the less interesting function. This would potentially require children to set aside their own preferences when helping the confederate. Children as young as 14-months will offer another person what she wants even if that desire conflicts with the child's own preference (Repacholi & Gopnik, 1997). It would be interesting to explore if children are able to use this ability ... 
+
+
 Are children helping or are they informing? As discussed in the introduction, the distinction between informing and helping is not always clear, but the main difference between a situation that requires informing and one that requires helping is that, when informing, you need to reason about what you know that the other person does not. In the experiments discussed here, it is not clear if the confederate wants to know *how* to play music, which would require the child to inform her, or if she just wants the child to play music for her, which would only require instrumental helping. Furthermore, behavior that looks like instrumental helping (i.e., pressing a button on a particular toy) can also inform the confederate about how she can play music herself. Many children pointed, verbally instructed the confederate, or both, which suggests that they are informing the confederate about how to play music with toys. Interestingly, children tended not to fully explain the workings of all toys, which is consistent with research finding that 4- to 5-year-olds provide less information if their social partner wants to simply see what a toy does than if she wants to know how a toy works (Gweon, Chu, & Schulz, 2014). 
 
-- false belief tie in
+Is it possible that children are not reasoning about the knowledge of the confederate?
 
 - difference between bing kids and jmz kids 
 
