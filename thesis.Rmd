@@ -3,7 +3,7 @@ title: "Untitled"
 author: "Sara Altman"
 date: "2/13/2018"
 output: 
-  github_document
+  pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 source('thesis_code.R')
 ```
 
-# Introduction---mostly notes at the moment
+# Introduction
 
 Humans, both as adults and as children, routinely help others. Adults help strangers, family, and people in-between. They will hold open doors for people whose hands are full, cook food for people who are hungry, donate money to people who ask for it, and give directions to tourists. All these situations require us to think about the other person, as helping someone requires an understanding of what that her is, and what stands in the way of her achieving that goal (Warneken and Tomasello, 2006). Those goals can be action-based (e.g., opening a door), or more abstract (e.g., learning algebra), and the obstacles can stem from the person's own abilities (e.g., strength), from the physical world, or from other people. Helping is therefore a complicated cognitive skill. It requires an understanding that others have goals, the ability to determine, often from ambiguous evidence, what those goals are, and the understanding that various types of obstacles can prevent them from achieving those goals. Helping effectively also requires that you understand how to remove or alleviate the obstacles to your social partner's goals, which can require you to have prior experience with the situation (e.g., knowledge of algebra) or particular skills (e.g., atypical strength). 
 
@@ -23,10 +23,7 @@ Helping involves the helper giving something to her social partner, but what the
 
 Much has been written about altruism in humans (Warnekan & Tomasello, 2009; Tomasello, 2009), but helping is not necessarily altruistic. Regardless of whether the helper is rewarded for her help, she had to harness the various cognitive skills discussed earlier. Therefore, the research discussed in this thesis investigates the cognitive skills involved in helping without dwelling on the exact motivations of the children involved. We wanted to know how children help when they are motivated, for whatever reason, to do so, and thus took various steps to motivate children to help. 
 
-- if they were in a situation in which they needed to help someone, they could use these skills to do so
-- informing when other's actually know things and when they are just feigning ignorance. adult
-
-[...]
+[transition]
 
 ## Development of the motivation to help
 
@@ -62,89 +59,13 @@ Buttelman, Carpenter, and Tomasello argue that this suggests that children in th
 
 In this study, children needed to reason about what they knew that the experimenter did not. In the False Belief condition, children possessed two pieces of knowledge that the experimenter did not: how to open the locked boxes and the location of the toy. In the True Belief condition, the experimenter knew the location of the toy but did not know how to open the locked boxes. Therefore, this suggests that young toddlers are not only sensitive to differences in knowledge between themselves and their social partner when deciding how to help, but are also able to use the specific, pertinent beliefs that they hold about objects to guide their helping behavior. 
 
-
-Svetlova, Nichols, and Brownell
-- Toddlers are more likely to respond positively to a peer's distress, for example, if they were responsible for the peer's distress (Demetriou and Hay, 2004). Furthermore, engaging in reciprocal play can lead 1- and 2-year-olds to be more likely to behave altruistically toward their social partner (Cortes Barragan and Dweck, 2014).  
-
-Todders may like helping
-- studies where they forgo reward, or seem to ignore cost
-- but maybe they just like helping and get enjoyment out of it
-
-
-
-3. Helping in complex situations
-- Understanding who is the best person to ask for help (Paulus and Moore, 2011)
-- 
-
- 
-Demetriou and Hay 2004
-Hay 2006
-
-
-Helping another person often involves providing information to that person that can help her accomplish her goals. 
-
-sometimes it is clear what information to provide. however, sometimes it is more complicated, and you have to decide what information or how much information the other person requires to fulfill her goal. 
-- gricean maxims?
-- seems that children do take this into account
-- will adjust the amount of information they provide depending on someone else's goals 
-
-depends on goals
-- Knudsen Liszkowski 2012
-
-and also the amount of knowledge the person already has
-
-this often involves taking into account what knowledge that person already has
-- will point out information only if they think the person doesn't know it 
-- amount of information provided will depend on the context that the person already has 
-  - Gweon, Shafto, Schulz 2014
-
-
-- helping often involves sharing information with another person. sometimes, it is clear what information to provide. but sometimes it's not, and we need to decide which peice of information best suites our social partner's goal. 
-
-children are willing to help from a young age
-  - tomasello 2009
-
-one year olds will help in straightforward situations in which there's really only one action to take
-  - warnekan and tomasello 2006
-  - will do so in a variety of situations: cupboard door if hands are full, dropped marker
-  - children are not only willing to help, but able to figure out what the adult wanted and provide assistance that helped him meet his goal
-  - these situations are simple, and get at the motivation to help
+It is also sometimes necessary to override a preference in order to effectively help someone achieve her goal. For example, if someone indicates that she would like to use a particular computer, but you know that computer is broken, it makes sense to help her with a different computer. This can require realizing that someone's goals can be hierarchical: she ideally wants to use a specific computer, but, if that is not possible, any reasonable computer can fulfill her broader goal. Martin and Olson (2013) found that three-year-olds would override an adult's verbal request if her requests were incompatible with her ultimate goal.
   
-older children are motivated to help and can figure out how to help in more complicated situations
-  - this often involves reasoning about what the other person's goal is -- you need to figure out exactly what it is that they want
-  - liszkowski carpenter and tomasello
-  - buttleman, carpenter and tomasello
-  +more
-  
-children can reason about these goals in relatively complex situations
-- martin and olson -- children will help an experimenter even if her verbal requests conflicted with the goal she wanted to fulfill
-
-these studies involve children having to figure out what the other person's goal is, and then they use that 
-explain why our task is more complicated than much of the literature just talked about
-- children have to recall knowledge about the toys, take that knoweldge and the result of the confederate's action into account, then think about how to address the source of her failure in order to meet her goal
-
-more complex process that requires integrating many sources of information
-
-as adults, we often engage in this type of helping.
-- for example, if we see someone struggling to project slides, have to reason about what they want (project slides? learn how the system works? play audio from their laptop?). we then have to use prior knowledge about the system to infer what they are doing wrong from their actions (wrong cord? laptop broken?). we then also need to be motivated to help (do we want this person to succeed? do we like helping? are we confident enough in our knowledge to help them?)
-
-Previous work by Gweon and Schulz (2011) suggests that children as young as 16 months are capable of inferring the causes of their *own* failed actions and helping themselves accordingly. In the study, children either witnessed that a toy sometimes worked and sometimes did not, regardless of who operated the toy, or that the toy worked for some agents but not others. Children were then given the opportunity to try the toys for themselves, but the toys never activated. Children who witnessed that toy functionality did not depend on the agent were more likely to reach for a new toy, suggesting that they attributed their failure to the toy itself. In contrast, children who witnessed that toy functionality did depend on the agent were more likely to hand the toy off to their parent. This suggests that they attributed their failure to themselves, and thus needed someone else to operate the toy in order to make it activate. 
+### Causal reasoning
+Gopnik, Sobel, Schulz, and Glymour (2001)
 
 
-frame as "responding" instead of helping?
-
-two interpretations
-- children are helping the confederate achieve a goal
-- children are figuring out why she is failing and then producing music
-  - this then makes it more like 
-  
-  even if we go with the second, can disucss as sort of a "precursor" to the first---indicate taht teh reasoning is there even if the motivation is not
-  
-developmental trends
-- 2 year olds more likely to help when adult is  very clear about goal (pointing, asking) 
-  - brownell svetlova nichols 2009
-  - svetlova, nichols, brownell 2010
-  - so motivation exists but still developing ability to figure out what someone's goals are from more subtle cues
+Can young children recruit causal reasoning skills in helping scenarios? Previous work by Gweon and Schulz (2011) suggests that children as young as 16 months are capable of inferring the causes of their *own* failed actions and helping themselves accordingly. In the study, children either witnessed that a toy sometimes worked and sometimes did not, regardless of who operated the toy, or that the toy worked for some agents but not others. Children were then given the opportunity to try the toys for themselves, but the toys never activated. Children who witnessed that toy functionality did not depend on the agent were more likely to reach for a new toy, suggesting that they attributed their failure to the toy itself. In contrast, children who witnessed that toy functionality did depend on the agent were more likely to hand the toy off to their parent. This suggests that they attributed their failure to themselves, and thus needed someone else to operate the toy in order to make it activate. 
 
 
 # Experiment 1
@@ -170,14 +91,16 @@ num_excluded <-
 We recruited fifty-two 24- to 48-month-olds (M(SD) = `r summary_three_toy$mean_age`(`r summary_three_toy$sd_age`)yrs, `r summary_three_toy$perc_female`% female) from a museum in Palo Alto, CA. An additional `r num_excluded$total` children were excluded from analysis due to parental interference (n = `r num_excluded$parent`), experimenter error (n = `r num_excluded$exp`), shyness (n = `r num_excluded$withdrew`), or lack of video recording (n = `r num_excluded$audio`). We randomly assigned children to one of two conditions: the Broken Toy condition (n = `r summary_three_toy$num_bt`; M(SD) = `r round(summary_three_toy$mean_age_bt, 2)`(`r summary_three_toy$sd_age_bt`)yrs) or the Broken Button condition (n = `r summary_three_toy$num_bb`; M(SD) = `r summary_three_toy$mean_age_bb`(`r summary_three_toy$sd_age_bb`)yrs).
 
 ### Stimuli
-We constructed three identical-looking toys. One side of each toy was covered in yellow felt and had a yellow button in the center. The opposite side was covered in red felt and had a red button in the center. The yellow button on two toys played music, while the yellow button on the third toy was inert. All red buttons were inert. The toys were placed on a white plastic tray and covered with grey felt. See Figure `r fig_num_counter+1` for a schematic of the toys.
+We constructed three identical-looking toys. One side of each toy was covered in yellow felt and had a yellow button in the center. The opposite side was covered in red felt and had a red button in the center. The yellow button on two toys played music, while the yellow button on the third toy was inert. All red buttons were inert. The toys were placed on a white plastic tray and covered with grey felt. See Figure 1 for a schematic of the toys.
 
-![](images/three-toy-schematic.png)
+```{r, fig.cap = "Figure 1"}
+knitr::include_graphics("images/three-toy-schematic.png")
+```
 
 ### Procedure
 The experiment began with a *warm-up phase* in which a confederate and experimenter engaged the child in reciprocal games (e.g., rolling a ball back and forth through a tube) in order to help the child feel comfortable with the researchers, and promote general helping behavior (see Cortes Barragan & Dweck, 2014). After approximately 5 minutes of warm-up, the confederate excused herself from the room, explaining that she had work to do.
 
-Then, the child gained experience with the toys during the *play phase*. The experimenter behaved as if she were exploring the toys for the first time. She took one toy out at a time and showed it to the child. In the Broken Toy condition, the toys were oriented such that the yellow side was on top. She noticed the yellow button, pressed it, and reacted positively to the music that played. She also encouraged the child to press the yellow button and again reacted positively, saying, “Music! The yellow side plays music!”. She then turned the toy around in her hands until she discovered the red button on the opposite side, and expressed mild surprise, as if she did not expect it to be there. She pressed the red button and also encouraged the child to do so, acting perplexed and disappointed that it did not play music. The experimenter then took the second toy out, which she and the child explored in the same way (i.e., the experimenter pressed each button, and then encouraged the child to do so). This second toy was always the broken toy. This process was repeated with the third toy, which functioned the same as the first (i.e., the yellow button played music, but the red button did nothing). The child and experimenter then explored each toy again, taking turns pressing the buttons. The Broken Button condition proceeded identically except that the toys were placed with the red side up, such that the red button was discovered first, and then the yellow. By the end of the play phase, all children experienced that pressing the yellow buttons on two of the toys played music (and one was inert), and that none of the red buttons played music. See Figure `r fig_num_counter` for a schematic of the play phase.
+Then, the child gained experience with the toys during the *play phase*. The experimenter behaved as if she were exploring the toys for the first time. She took one toy out at a time and showed it to the child. In the Broken Toy condition, the toys were oriented such that the yellow side was on top. She noticed the yellow button, pressed it, and reacted positively to the music that played. She also encouraged the child to press the yellow button and again reacted positively, saying, “Music! The yellow side plays music!”. She then turned the toy around in her hands until she discovered the red button on the opposite side, and expressed mild surprise, as if she did not expect it to be there. She pressed the red button and also encouraged the child to do so, acting perplexed and disappointed that it did not play music. The experimenter then took the second toy out, which she and the child explored in the same way (i.e., the experimenter pressed each button, and then encouraged the child to do so). This second toy was always the broken toy. This process was repeated with the third toy, which functioned the same as the first (i.e., the yellow button played music, but the red button did nothing). The child and experimenter then explored each toy again, taking turns pressing the buttons. The Broken Button condition proceeded identically except that the toys were placed with the red side up, such that the red button was discovered first, and then the yellow. By the end of the play phase, all children experienced that pressing the yellow buttons on two of the toys played music (and one was inert), and that none of the red buttons played music. See Figure 2 for a schematic of the play phase.
  
 ![Order in which children saw and pressed the buttons in each of the conditions. Children explored both buttons on a toy before moving onto the next toy. In the Broken Toy condition, children encountered the yellow button on each toy before the red button. In the Broken Button condition, children encountered the red button on each toy before the yellow button.](images/three-toy-play-phase.png)
 
@@ -225,7 +148,7 @@ Children in both conditions saw the same set of toys and watched the confederate
 
 We predicted responses to vary across conditions depending on the source of the confederate’s failure. In the Broken Toy condition, the confederate presses a yellow button. From this action alone, you can infer that she has the inert toy, since yellow buttons produce music on all toys except one. The source of her failure is therefore the toy itself. Her action (pressing a yellow button) would have produced music if she had chosen another toy. The child can thus only help the confederate achieve her goal of playing music by targeting a new toy from the tray.
 
-In the Broken Button condition, however, it is only possible to infer that the confederate is taking the wrong action on a toy (i.e., pressing a red button instead of a yellow one). Each toy has an inert red button, so the confederate's action provides no information about which type of toy (functional or inert) she has chosen. Therefore, in this condition, children could help the confederate by approaching her toy, as toy may have a functional yellow button on the bottom. We thus predicted that more children would approach the “toys on the tray” in the Broken Toy condition than in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward a toy on the tray in the Broken Toy condition than in the Broken Button condition (`r three_between_response$perc_bt`% vs. `r three_between_response$perc_bb`%; two-tailed Fisher’s Exact Test, p = `r three_between_response$p_value`).
+In the Broken Button condition, however, it is only possible to infer that the confederate is taking the wrong action on a toy (i.e., pressing a red button instead of a yellow one). Each toy has an inert red button, so the confederate's action provides no information about which type of toy (functional or inert) she has chosen. Therefore, in this condition, children could help the confederate by approaching her toy, as toy may have a functional yellow button on the bottom. We predicted that more children would approach the “toys on the tray” in the Broken Toy condition than in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward a toy on the tray in the Broken Toy condition than in the Broken Button condition (`r three_between_response$perc_bt`% vs. `r three_between_response$perc_bb`%; two-tailed Fisher’s Exact Test, p = `r three_between_response$p_value`).
 
 ```{r}
 three_toy_tidy %>% 
@@ -234,10 +157,10 @@ three_toy_tidy %>%
 
 We then looked at children’s responses within each condition. In the Broken Toy condition, children could not help fulfill the confederate's goal of producing music by acting on the confederate's toy. We thus predicted that children in this condition would preferentially direct their help toward a toy on the tray. As predicted, children were more likely to approach the “toys on the tray” than the “confederate’s toy” (`r three_within_response$num_bt`/`r summary_three_toy$num_bt`; two-tailed binomial test, p = `r three_within_response$p_value_bt`).
 
-In the Broken Button condition, however, it is not clear which toy the confederate has chosen. There is a 33% chance that any toy is the inert toy, and thus all toys are equally likely to be capable of producing music. It is therefore reasonable to target any toy. However, there are several reasons to expect that children would prefer the confederate's toy in this condition. First, children may be inclined to approach the toy just acted upon by the confederate. Second, children may conclude that the confederate's goal is not just to play music, but to play music specifically with her chosen toy. Thus, we expected that children would show a mild preference for the confederate’s toy. The majority of children in the Broken Button condition did approach the "confederate's toy" (`r summary_three_toy$num_bb - three_within_response$num_bb`/`r summary_three_toy$num_bb`; two-tailed binomial test, p = `r three_within_response$p_value_bb`). See Figure `r fig_num_counter - 1` for a summary of children’s first responses.
+In the Broken Button condition, however, it is not clear which toy the confederate has chosen. There is a 33% chance that any toy is the inert toy, and thus all toys are equally likely to be capable of producing music. It is therefore reasonable to target any toy. However, there are several reasons to expect that children would prefer the confederate's toy in this condition. First, children may be inclined to approach the toy just acted upon by the confederate. Second, children may conclude that the confederate's goal is not just to play music, but to play music specifically with her chosen toy. Thus, we expected that children would show a preference for the confederate’s toy. The majority of children in the Broken Button condition did approach the "confederate's toy" (`r summary_three_toy$num_bb - three_within_response$num_bb`/`r summary_three_toy$num_bb`; two-tailed binomial test, p = `r three_within_response$p_value_bb`). See Figure `r fig_num_counter` for a summary of children’s first responses.
 
-As a secondary measure, we looked at the success of children's helping responses. We considered response successful if the child acted in way that could fulfill the confederate's goal of playing music. In the Broken Toy condition, a behavior could be successful only if it involved approaching the "toys on the tray." In the Broken Button condition, successful behaviors involved revealing a yellow button on any of the toys. It is plausible that helping successfully is more difficult in the Broken Button condition, as it involves revealing a non-obvious button. However, children can be helpful at either toy in the Broken Button condition and there are therefore more ways to offer successful help. All children in the Broken Button condition included in this analysis helped successfully (`r three_between_help$num_bb`/`r summary_three_toy$num_bb - 1`). One child in the Broken Button condition was dropped from this analysis because the camera angle prevented visual access to the content of her helping behavior. Children in the Broken Button condition were more likely to help successfully than children in the Broken Button condition (`r three_between_help$perc_bt`% in Broken Toy vs. `r three_between_help$perc_bb`% in Broken Button; two-tailed Fisher’s Exact Test, p = `r three_between_help$p_value`). Children tended to help successfully overall; within each condition, children were more likely to help successfully than unsuccessfully (Broken Toy: `r three_within_help$num_bt`/`r summary_three_toy$num_bt`, two-tailed binomial test, p = `r three_within_help$p_value_bt`; Broken Button: `r three_within_help$num_bb`/`r summary_three_toy$num_bb - 1`, two-tailed binomial test, p = `r three_within_help$p_value_bb`). 
-
+As a secondary measure, we looked at the success of children's helping responses. We considered a response successful if the child acted in a way that could fulfill the confederate's goal of playing music. In the Broken Toy condition, a behavior could be successful only if it involved approaching the "toys on the tray." In the Broken Button condition, successful behaviors involved revealing a yellow button on any of the toys. 
+In the Broken Button condition, helping involved the more complex action of revealing a non-obvious button, but it was also possible to successfully help by targeting either toy. All children in the Broken Button condition included in this analysis helped successfully (`r three_between_help$num_bb`/`r summary_three_toy$num_bb - 1`). One child in the Broken Button condition was dropped from this analysis because the camera angle prevented visual access to the content of her helping behavior. Children in the Broken Button condition were more likely to help successfully than children in the Broken Button condition (`r three_between_help$perc_bt`% in Broken Toy vs. `r three_between_help$perc_bb`% in Broken Button; two-tailed Fisher’s Exact Test, p = `r three_between_help$p_value`). Within each condition, children were more likely to help successfully than unsuccessfully (Broken Toy: `r three_within_help$num_bt`/`r summary_three_toy$num_bt`, two-tailed binomial test, p = `r three_within_help$p_value_bt`; Broken Button: `r three_within_help$num_bb`/`r summary_three_toy$num_bb - 1`, two-tailed binomial test, p < .001).
 
 ```{r}
 three_toy_tidy %>% 
@@ -275,8 +198,7 @@ condition_stats <-
 As an exploratory analysis, we coded children’s first responses as “correct” (Broken Toy: “toys on tray”; Broken Button: “confederate’s toy”) or “incorrect”. We fit a generalized linear model with correctness as the outcome variable, condition as a categorical predictor variable, and age as a continuous predictor variable. This analysis revealed that age is a significant predictor of "correctness" ($\beta$ = `r age_stats$Estimate`, p = `r age_stats$p_value`), but that condition is not ($\beta$ = `r condition_stats$Estimate`, p = `r condition_stats$p_value`). For details, see Table `r fig_num_counter+1`.
 
 ```{r}
-caption_figure()
-knitr::kable(glm_fit, caption = fig_num_counter)
+knitr::kable(glm_fit, caption = str_c("Figure ", caption_figure()))
 ```
 
 ```{r}
@@ -420,11 +342,13 @@ glm_control %>%
 
 Children in each condition saw identical-looking toys and watched the confederate perform the same set of actions. We manipulated the cause of the confederate's failure by varying the functionality of the toy chosen by the confederate. In the Broken Toy condition, one toy is fully inert and one plays music. Thus, the confederate is not operating her toy incorrectly-she has chosen a broken toy. The source of her failure is her choice of toy. However, in the Broken Button condition, each toy is capable of making music. The confederate did not choose the wrong toy since both toys are identical. Instead, her failure is due to her incorrect operation of her chosen toy.
 
-We  predicted responses to vary across conditions depending on the source of the confederate's failure. In the Broken Toy condition, it is only possible to effectively help the confederate play music by targeting the other toy. In the Broken Button condition, however, the toys are identical. Each toy has one functional button and one inert button. Once the confederate presses the top button on her toy, you can infer that the bottom button will be functional. It is therefore possible to help her by targeting her own toy (the "confederate's toy"). However, the "other toy" also has a functional button. Targeting this toy can then also address the confederate's goal of playing music. Because children in this condition could help the confederate by targeting at either toy, but children in the Broken Toy condition could help only by targeting the other toy, we predicted that children would be more likely to target the "other toy" in the Broken Toy condition than in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward the "other toy" in the Broken Toy condition than in the Broken Button condition (`r two_between_response$perc_bt`% % vs. `r two_between_response$perc_bb`%; two-tailed Fisher’s Exact Test, p = `r two_between_response$p_value`). This replicates the finding from Experiment 1, and suggests that the red and yellow visual markers from Experiment 1 are not necessarily in order to observe responses that vary depending on the source of failure. 
+We  predicted responses to vary across conditions depending on the source of the confederate's failure. In the Broken Toy condition, it is only possible to effectively help the confederate play music by targeting the other toy. In the Broken Button condition, however, the toys are identical. Each toy has one functional button and one inert button. Once the confederate presses the top button on her toy, you can infer that the bottom button will be functional. It is therefore possible to help her by targeting her own toy (the "confederate's toy"). However, the "other toy" also has a functional button. Targeting this toy can then also address the confederate's goal of playing music. Because children in this condition could help the confederate by targeting at either toy, but children in the Broken Toy condition could help only by targeting the other toy, we predicted that children would be more likely to target the "other toy" in the Broken Toy condition than in the Broken Button condition. As predicted, children were significantly more likely to direct their help toward the "other toy" in the Broken Toy condition than in the Broken Button condition (`r two_between_response$perc_bt`% % vs. `r two_between_response$perc_bb`%; two-tailed Fisher’s Exact Test, p < .001`). This replicates the finding from Experiment 1, and suggests that the red and yellow visual markers from Experiment 1 are not necessarily in order to observe responses that vary depending on the source of failure. 
 
 ```{r}
 two_toy_tidy %>% 
   plot_responses("Experiment 2:")
+
+two_between_response$p_value
 ```
 
 We also looked at responses within each condition. As predicted, children in the Broken Toy condition were more likely to target the "other toy" than the "confederate's toy" (`r two_within_response$num_bt`/`r summary_two_toy$num_bt`; two-tailed binomial test, p < 0.001). Therefore, children appear to be reasoning that the confederate has the inert toy based on the her actions and their prior knowledge about the functionality of the two toys.  
@@ -749,99 +673,169 @@ There are two broad questions about how to categorize children's behavior in the
 
 ```{r}
 three_toy_num_zero <-
-  three_toy_sr %>% 
-  count(sum_0 = sum == 0) %>% 
-  filter(sum_0) %>% 
+  three_toy_sr %>%
+  count(sum_0 = sum == 0) %>%
+  filter(sum_0) %>%
   pull(n)
 
 two_toy_num_zero <-
-  two_toy_sr %>% 
-  count(sum_0 = sum == 0) %>% 
-  filter(sum_0) %>% 
+  two_toy_sr %>%
+  count(sum_0 = sum == 0) %>%
+  filter(sum_0) %>%
   pull(n)
 
 three_toy_geq_1 <-
-  three_toy_sr %>%  
-  count(sum_geq_1 = sum >= 1) %>% 
-  filter(sum_geq_1) %>% 
+  three_toy_sr %>%
+  count(sum_geq_1 = sum >= 1) %>%
+  filter(sum_geq_1) %>%
   pull(n)
 
 two_toy_geq_1 <-
-  two_toy_sr %>% 
-  count(sum_geq_1 = sum >= 1)
+  two_toy_sr %>%
+  count(sum_geq_1 = sum >= 1) %>% 
+  pull(n)
 
 three_toy_two <-
-  three_toy_sr %>%  
-  count(two = sum == 2) %>% 
-  filter(two) %>% 
-  pull(n) 
+  three_toy_sr %>%
+  count(two = sum == 2) %>%
+  filter(two) %>%
+  pull(n)
 
 two_toy_two <-
-  two_toy_sr %>% 
-  count(two = sum == 2) %>% 
-  filter(two) %>% 
+  two_toy_sr %>%
+  count(two = sum == 2) %>%
+  filter(two) %>%
   pull(n)
 
 three_toy_point <-
-  three_toy_sr %>% 
-  count(point) %>% 
-  filter(point == 1) %>% 
+  three_toy_sr %>%
+  count(point) %>%
+  filter(point == 1) %>%
   pull(n)
 
 two_toy_point <-
-  two_toy_sr %>% 
-  count(point) %>% 
-  filter(point == 1) %>% 
+  two_toy_sr %>%
+  count(point) %>%
+  filter(point == 1) %>%
   pull(n)
 
 three_toy_verbal <-
-  three_toy_sr %>% 
-  count(verbal) %>% 
-  filter(verbal == 1) %>% 
+  three_toy_sr %>%
+  count(verbal) %>%
+  filter(verbal == 1) %>%
   pull(n)
 
 two_toy_verbal <-
-  two_toy_sr %>% 
-  count(verbal) %>% 
-  filter(verbal == 1) %>% 
+  two_toy_sr %>%
+  count(verbal) %>%
+  filter(verbal == 1) %>%
   pull(n)
 
 three_toy_verbal_point <-
-  three_toy_sr %>% 
-  count(verbal_point = verbal & point) %>% 
-  filter(verbal_point) %>% 
+  three_toy_sr %>%
+  count(verbal_point = verbal & point) %>%
+  filter(verbal_point) %>%
   pull(n)
 
 two_toy_verbal_point <-
-  two_toy_sr %>% 
-  count(verbal_point = verbal & point) %>% 
-  filter(verbal_point) %>% 
-  pull(n)
+  two_toy_sr %>%
+  count(verbal_point = verbal & point) %>%
+  filter(verbal_point) %>%
+  pull(n)  
 ```
 
 To address the first question, we can look at the specifics of what children do in response to the confederate's requests. To investigate children's behavior beyond their choice of toy and toy side, we coded for the presence of various social referencing behaviors. These behaviors included orienting the toy towards the confederate by handing it to her, pushing it towards her, etc.; orienting themselves so that they were facing the confederate, pointing towards a toy, looking at the confederate after making their choice (and before she responded to their choice), and verbally instructing the confederate to take some action on the toy. If children are just producing music for themselves, we would not expect many children to show these behaviors. However, only `r three_toy_num_zero` children out of `r summary_three_toy$num_participants` in Experiment 1, and only `r two_toy_num_zero` children out of `r summary_two_toy$num_participants` in Experiment 2 showed none of these behaviors. In fact, `r three_toy_geq_1/summary_three_toy$num_participants %>% round(2)` children in Experiment 1 and `r two_toy_geq_1/summary_two_toy$num_participants %>% round(2)` in Experiment 2 performed at least one of the listed behaviors, and `r three_toy_two/summary_three_toy$num_participants %>% round(2)` children in Experiment 1 and `r two_toy_two/summary_two_toy$num_participants %>% round(2)` in Experiment 2 showed two of the behaviors.  Figure `r fig_num_counter` and Figure `r fig_num_counter + 1` show the distribution of these behaviors by condition. 
 
 If children were only playing music for their own sake, and were not thinking about the confederate's goals, we would not expect children to verbally instruct or gesture to her what to do. We also would expect children to operate the toy and not engage with the confederate by, for example, looking at her expectantly or orienting themselves and the toy such that they were facing her. The behavior of children thus indicates that children are considering the confederate during the helping phase of the experiment. 
 
-
 ```{r}
-three_toy_sr %>% 
-  format_sr_data(original_data = three_toy_tidy) %>% 
+three_toy_sr_perc <-
+  three_toy_sr %>% 
+  format_sr_data(original_data = three_toy_tidy) 
+
+two_toy_sr_perc <-
+  two_toy_sr %>% 
+  format_sr_data(original_data = two_toy_tidy)
+
+three_toy_sr_perc %>% 
   plot_social_referencing(title_prefix = "Experiment 1: ")
 
-two_toy_sr %>% 
-  format_sr_data(original_data = two_toy_tidy) %>% 
+two_toy_sr_perc %>% 
   plot_social_referencing(title_prefix = "Experiment 2: ")
+
+informative_behaviors <-
+  three_toy_sr %>% 
+  select(verbal, point) %>% 
+  bind_rows(two_toy_sr %>% select(verbal, point)) %>%  
+  mutate(v_p = verbal & point,
+         only_v = verbal & !point,
+         only_p = !verbal & point) %>% 
+  summarise_all(funs(sum), na.rm = TRUE) %>% 
+  mutate(unique_informers = v_p + only_v + only_p)
+
+total_kids <-
+  combined %>% 
+  filter(experiment != 3) %>% 
+  nrow()
+
+three_toy %>% 
+  select(condition, contains("first"), contains("second")) %>% 
+  filter(firstChoice == secondChoice,
+         str_detect(secondBehaviorCode, "flip"),
+         condition == "person")
+
+num_two_choices <- 
+  three_toy %>% 
+  select(condition, secondChoice, HelpfulCategory) %>% 
+  mutate(exp = 1) %>% 
+  rbind(two_toy %>% 
+          select(condition,
+                 secondChoice = `2ndChoice`,
+                 HelpfulCategory) %>% 
+          mutate(exp = 2),
+        modified %>% 
+          select(condition,
+                 secondChoice = `2ndChoice`,
+                 HelpfulCategory) %>% 
+          mutate(exp = 3)) %>% 
+  filter(HelpfulCategory == "helpful") %>% 
+  count(secondChoice) %>% 
+  spread(secondChoice, n) %>% 
+  mutate(noChoice = `NA` + `<NA>`,
+         total = confed + noChoice + toy + tray,
+         twoChoices = total - noChoice)
+
+num_two_choices_unhelpful <- 
+  three_toy %>% 
+  select(condition, secondChoice, HelpfulCategory) %>% 
+  mutate(exp = 1) %>% 
+  rbind(two_toy %>% 
+          select(condition,
+                 secondChoice = `2ndChoice`,
+                 HelpfulCategory) %>% 
+          mutate(exp = 2),
+        modified %>% 
+          select(condition,
+                 secondChoice = `2ndChoice`,
+                 HelpfulCategory) %>% 
+          mutate(exp = 3)) %>% 
+  filter(HelpfulCategory == "unhelpful") %>% 
+  count(secondChoice) %>% 
+  spread(secondChoice, n) %>% 
+  mutate(noChoice = `NA` + `<NA>`,
+         total = confed + noChoice + toy + tray,
+         twoChoices = total - noChoice)
 ```
 
 It thus seems as if children are both reasoning about the causal system of the toys and acting in consideration of the confederate's goals. It is possible that they also want to play music for themselves, and that motivation furthere pushes them to produce music with the toys. To further understand the motivations in play, a possible follow-up study might involve toys with two functions, one more exciting for the child than another (e.g., moving lights and music), and a confederate that requests the less interesting function. This would potentially require children to set aside their own preferences when helping the confederate. Children as young as 14-months will offer another person what she wants even if that desire conflicts with the child's own preference (Repacholi & Gopnik, 1997). It would be interesting to explore if children are able to use this ability ... 
 
+Are children reasoning about the beliefs of the confederate? In contrast to the experiment in Buttelman, Carpenter, and Tomasello (2009), children did not need to reason about the confederate's beliefs in order to effectively help. They only needed to determine the cause of the confederate's failure and address that cause. For children to inform the confederate, they would need to reason about what information they possessed that the confederate could use in pursuit of her goal (i.e., which toy/button produced music). Furthermore, it is not actually clear if the confederate wants the child to inform her *how* to play music, or just wants the child to produce music for her. If she possesses the latter goal, instrumental helping is sufficient. 
 
-Are children helping or are they informing? As discussed in the introduction, the distinction between informing and helping is not always clear, but the main difference between a situation that requires informing and one that requires helping is that, when informing, you need to reason about what you know that the other person does not. In the experiments discussed here, it is not clear if the confederate wants to know *how* to play music, which would require the child to inform her, or if she just wants the child to play music for her, which would only require instrumental helping. Furthermore, behavior that looks like instrumental helping (i.e., pressing a button on a particular toy) can also inform the confederate about how she can play music herself. Many children pointed, verbally instructed the confederate, or both, which suggests that they are informing the confederate about how to play music with toys. Interestingly, children tended not to fully explain the workings of all toys, which is consistent with research finding that 4- to 5-year-olds provide less information if their social partner wants to simply see what a toy does than if she wants to know how a toy works (Gweon, Chu, & Schulz, 2014). 
+The distinction between helping and informing in these experiments is also not clear. Children can inform the confederate by instrumentally helping---pushing a functional button tells the confederate how to produce music with the toys. Thus, when children instrumentally help, it is unclear if they are informing or just helping. However, many children produced behaviors that are more clearly informative and cannot be construed as instrumental help. Out of `r total_kids` in experiments 1 and 2, `r informative_behaviors$unique_informers` (`r informative_behaviors$unique_informers/total_kids %>% round(0)`%) pointed or provided verbal instructions to the confederate, suggesting that they were informing her. The verbal instructions tended to include things like, "other side" or "that one plays music," and the pointing was often directed at the other toy. These are informing behaviors; children are providign information for the confederate in fulfillment of her goals, and are not completing the necessary action themselves. This suggests that some children in our experiments were reasoning about the confederate knowledge, as well as the gap between their own knowledge and that of the confederate. Interestingly, children tended not to fully explain the workings of all toys. Across all three experiments, children tended to only demonstrate or indicate one action; out of the `r num_two_choices$total` children from all experiments whose first response was successfully helpful, only `r num_two_choices$twoChoices` (`r num_two_choices$twoChoices/num_two_choices$total %>% round(0)`%). Of the `r num_two_choices_unhelpful$total` children whose first response was not successful in fulfilling the confederate's goal, `r num_two_choices_unhelpful$twoChoices / num_two_choices_unhelpful$total %>% round(0)`%`, but many might have been reacting to their initial failure to produce music and not intending to show the confederate more information. This consistent with research by Gweon, Chu, and Schulz (2014) that found that 4- to 5-year-olds provide less information if their social partner wants to simply see what a toy does than if she wants to know how a toy works.
 
-Is it possible that children are not reasoning about the knowledge of the confederate?
+Even if children are reasoning about the beliefs of the confederate, they are not necessarily attributing a false belief to her. As in Buttelman, Carpenter, and Tomasello (2009), children can successfully help the confederate by attributing ignorance about which toy/button is functional to her. It is not necessary to think that she falsely believes that her toy and button combination is functional---and this may also not make as much sense as attributing ignorance. In contrast to the experimenter in the other study, the confederate here has no prior experience with either toy, and thus has no reason to expect that her toy/button choice will play music. 
 
-- difference between bing kids and jmz kids 
+Although reasoning about the beliefs of a person in need of help is essential when informing, this does not necessarily imply that children are informing the confederate. Are children helping or are they informing? As discussed in the introduction, the distinction between informing and helping is not always clear, but the main difference between a situation that requires informing and one that requires helping is that, when informing, you need to reason about what you know that the other person does not. In the experiments discussed here, it is not clear if the confederate wants to know *how* to play music, which would require the child to inform her, or if she just wants the child to play music for her, which would only require instrumental helping. Furthermore, behavior that looks like instrumental helping (i.e., pressing a button on a particular toy) can also inform the confederate about how she can play music herself. Many children pointed, verbally instructed the confederate, or both, which suggests that they are informing the confederate about how to play music with toys.  
 
 ```{r}
 all_twos %>% 
@@ -850,15 +844,6 @@ all_twos %>%
 all_threes %>% 
   plot_responses(title_prefix = "All threes")
 ```
-
-
-Differences between helping and informing.
-
-- distinction between children thinking that the confederate wants to play music herself or that she wants to know how to play music. 
-- informing would involve showing her how to play music for herself
-- helping would typically involve playing the music for the confederate
-- often not a clear distinction between the toy. By doing something yourself, you sometimes do inform. And by informing, you help. 
-- can look at the specific behaviors of children within these experiments --- are they activating the toys themselves? or are they indicating how the confederate should act upon the toy? furthermore, what do the children who help early do? 
 
 
 
@@ -877,9 +862,9 @@ What's the difference between helping and answering a question? Sometimes helpin
 
 
 ```{r}
-age_ps_three_toy <- create_p_value_tibble(three_toy_tidy)
-age_ps_two_toy <- create_p_value_tibble(two_toy_tidy)
-age_ps_modified <- create_p_value_tibble(modified_tidy)
+#age_ps_three_toy <- create_p_value_tibble(three_toy_tidy)
+#age_ps_two_toy <- create_p_value_tibble(two_toy_tidy)
+#age_ps_modified <- create_p_value_tibble(modified_tidy)
 #this means that the only place where age predicts anything is in three toy correctness (it's not even that significant and what happens if you correct for mutliple comparison?)
 ```
 

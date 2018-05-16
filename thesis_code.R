@@ -446,9 +446,9 @@ shared_vars <- c("videoName",
 
 combined <-
     rbind(
-      three_toy_tidy %>% select(shared_vars),
-      two_toy_tidy %>% select(shared_vars),
-      modified_tidy %>% select(shared_vars)
+      three_toy_tidy %>% select(shared_vars) %>% mutate(experiment = 1),
+      two_toy_tidy %>% select(shared_vars) %>% mutate(experiment = 2),
+      modified_tidy %>% select(shared_vars) %>% mutate(experiment = 3)
     )
 
 all_twos <-
