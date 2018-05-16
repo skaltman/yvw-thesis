@@ -93,9 +93,7 @@ We recruited fifty-two 24- to 48-month-olds (M(SD) = `r summary_three_toy$mean_a
 ### Stimuli
 We constructed three identical-looking toys. One side of each toy was covered in yellow felt and had a yellow button in the center. The opposite side was covered in red felt and had a red button in the center. The yellow button on two toys played music, while the yellow button on the third toy was inert. All red buttons were inert. The toys were placed on a white plastic tray and covered with grey felt. See Figure 1 for a schematic of the toys.
 
-```{r, fig.cap = "Figure 1"}
-knitr::include_graphics("images/three-toy-schematic.png")
-```
+![Schematic of toys used in Experiment 1](images/three-toy-schematic.png)
 
 ### Procedure
 The experiment began with a *warm-up phase* in which a confederate and experimenter engaged the child in reciprocal games (e.g., rolling a ball back and forth through a tube) in order to help the child feel comfortable with the researchers, and promote general helping behavior (see Cortes Barragan & Dweck, 2014). After approximately 5 minutes of warm-up, the confederate excused herself from the room, explaining that she had work to do.
