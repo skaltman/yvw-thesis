@@ -4,6 +4,7 @@ library(tidyverse)
 library(langcog)
 library(broom)
 library(knitr)
+library(citr)
 
 #----------------------------------------------------------------------------------
 # PARAMETERS
@@ -468,7 +469,8 @@ choice_glm <- function(data) {
         data %>% 
         mutate(firstChoice = firstChoice == "Other toy")
       )  %>% 
-    tidy()
+    tidy() %>% 
+    mutate(response = "First response")
 }
 
 
@@ -477,7 +479,8 @@ correctness_glm <- function(data) {
       data = 
         data %>% 
         mutate(firstChoiceCorrect = as.integer(firstChoiceCorrect))) %>% 
-    tidy()
+    tidy() %>% 
+    mutate(response = "Correctness")
 }
 
 helpfulness_glm <- function(data) {
@@ -485,18 +488,43 @@ helpfulness_glm <- function(data) {
       data = 
         data %>% 
         mutate(helpfulCategory = helpfulCategory == "Helpful")) %>% 
-    tidy()
+    tidy() %>% 
+    mutate(response = "Helpfulness")
 }
 
 flip_glm <- function(data) {
   glm(flip ~ age, family = "binomial", data = data) %>% 
-    tidy()
+    tidy() %>% 
+    mutate(response = "Targets non-obvious button")
 }
 
 get_age_p_value <- function(glm_tibble) {
   glm_tibble %>% 
     filter(term == "age") %>% 
     pull(p.value)
+}
+
+tidy_all_glms <- function(data) {
+  choice_glm(data) %>%
+    rbind(correctness_glm(data)) %>% 
+    rbind(helpfulness_glm(data)) %>% 
+    rbind(flip_glm(data)) %>% 
+    mutate(term = 
+             term %>% 
+             str_replace_all("[:punct:]", "") %>% 
+             str_to_title()) %>% 
+    mutate_if(is.numeric, funs(round), digits = 2) %>% 
+    rename_all(str_to_title) %>% 
+    rename(SE = Std.error,
+           p_value = P.value)
+}
+
+create_glm_tibble <- function(data1, data2, data3) {
+  tidy_all_glms(data1) %>% 
+    mutate(Exp = 1) %>% 
+    rbind(tidy_all_glms(data2) %>% mutate(Exp = 2)) %>% 
+    rbind(tidy_all_glms(data3) %>% mutate(Exp = 3)) %>% 
+    select(Experiment = Exp, everything())
 }
 
 create_p_value_tibble <- function(data) {
