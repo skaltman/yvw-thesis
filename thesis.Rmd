@@ -856,7 +856,11 @@ age_ps_modified <- create_p_value_tibble(modified_tidy)
 #this means that the only place where age predicts anything is in three toy correctness (it's not even that significant and what happens if you correct for mutliple comparison?)
 ```
 
-With the exception between "correctness" in Experiment 1, age did not predict children's behavior on any of the main metrics we investigated. We ran logistic regressions with each metric (first response, correctness, helpfulness, and targets non-obvious button) as a response and age as a predictor for each (age was the sole predictor for all models except the ones with first response as the response, which also included condition to account for any age differences between the two conditions). See Table Y for details. 
+With the exception between "correctness" in Experiment 1, age did not predict children's behavior on any of the main metrics we investigated. We ran logistic regressions with each metric (first response, correctness, helpfulness, and targets non-obvious button) as a response and age as a predictor for each (age was the sole predictor for all models except the ones with first response as the response, which also included condition to account for any age differences between the two conditions). See Table Y for details. We thus did not find a developmental trend, and our results suggest that no significant develop in the skills required in our task occurs between the second and fourth birthdays. [maybe connect back to discussion about false beliefs---if false beliefs were necessary, or children were reasoning about them, would likely see a developmental trend]
+
+In light of this lack of a developmental trend, we designed a version of our task for one-year-olds. We designed toys functionally identical to those used in Experiment 2, but, instead of involving a confederate, trained parents to request help from their children because the one-year-olds were often reluctant to appraoch a stranger. This work is still ongoing, but preliminary results suggest that the one-year-olds behavior differs from that of the two- and three-year-olds, regarding both the toys they target and the manner in which they engage with the person in need of help. 
+
+[should I say anything more?]
 
 ```{r}
 kable_glm_table <- function(response, all_glms) {
