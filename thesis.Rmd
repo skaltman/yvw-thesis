@@ -1,7 +1,7 @@
 ---
 title: "Untitled"
 author: "Sara Altman"
-date: "2/13/2018"
+date: ""
 
 bibliography:
   yvw-bib.bib
@@ -131,7 +131,7 @@ We were interested in children’s first response after the confederate’s fail
 
 We also looked at the consequence of children’s first helping responses. We coded whether the behavior was “successful" or “unsuccessful” in achieving the confederate’s goal of playing music. In the Broken Toy condition, we coded a child’s first response as “successful” if the child pressed the yellow button on a toy from the tray or directed the confederate to press it (e.g., telling her to do so, pointing, or handing her a toy yellow side up). “Unsuccessful” responses included pressing or directing the confederate to press the red button on any toy or the yellow button on the confederate’s toy. In the Broken Button condition, we coded a behavior as “successful” if a child flipped and pressed the yellow button or directed the confederate to do so (e.g., telling her to press it, flipping a toy and handing it to the confederate or pointing to a yellow side). Therefore, in the Broken Button condition, children could respond successfully regardless of which toy they targeted. In the Broken Toy condition, however, children could only respond successfully if they targeted the toys on the tray. A researcher blind to the hypotheses coded these transcriptions for reliability and agreement was 100%.
 
-# Results
+## Results
 
 ```{r response-3-toy}
 # Response: Between condition differences -- Fisher's exact test
@@ -233,20 +233,17 @@ three_toy_tidy %>%
   plot_flip("Experiment 1:")
 ```
 
+## Discussion
 
-### Discussion
-
-[all of the individual discussions are not done, because I decided to write the general discussion first and then come back to the individual ones, as I kept writing context for the individual ones that I later decided was better to talk about in the context of all experiments]
-
-These results suggest that 2- and 3-year-olds were able to use prior knowledge to infer the likely cause of another's failure and effective help that person achieve a goal. When the likely cause of the confederate's failure was the toy itself (Broken Toy condition), children helped by changing the toy, but when the likely cause was the confederate's action on the toy (Broken Button condition), children helped by changing her action on that toy. Thus, children did not help in a uniform way across conditions; they responded to the likely cause of the confederate's failure. 
+These results suggest that 2- and 3-year-olds were able to use prior knowledge to use prior knowledge to infer the likely cause of another agent's failure and then effectively help the agent achieve her goal. When the likely cause of the confederate's failure was the toy itself (Broken Toy condition), children helped by changing the toy, but when the likely cause was the confederate's action on the toy (Broken Button condition), children helped by changing her action on that toy. Thus, children did not help in a uniform way across conditions; they responded to the likely cause of the confederate's failure. 
 
 The only way to address the source of the confederate's failure in the Broken Toy condition was to target a new toy. However, in the Broken Button condition, there were multiple ways to fulfill the confederate's goal. Children needed to correct her action, by showing her that she needed to act on a yellow button instead of a red one, but they could do so on either the confederate's own toy or on a new toy. Each toy was equally like to have a functional yellow button, but children in this condition were more likely to show the confederate the correct action on the toy that she had previously chosen. It is possible that children are more inclined to approach a toy upon which someone has already chosen to act. However, it is also possible that children thought that the confederate's goal was to play music with her chosen toy, rather than to play music generally. 
 
-Furthermore, the children in the Broken Button condition that targeted the toys on tray (`r three_between_response$num_bb` / `r summary_three_toy$num_bb`) all targeted a bottom button on a toy. This indicates that, even though they did change the toy, they did not think that her toy alone was the problem, as they changed the action taken on the toy in addition to the identity of the toy.
+Of the `r three_between_response$num_bb` out of `r summary_three_toy$num_bb` children in the Broken Button condition who targeted the toys on the tray, all targeted a bottom button. Thus, even though children changed the toy, they did not attribute the source of the confederate's failure solely to the toy itself, as they also changed the action taken on the toy. In contrast, none of the `r three_between_response$num_bt` in the Broken Toy condition who targeted the toys on the tray targeted a bottom button.
 
 We did find an age-related trend in terms of "correctness." However, this does not necessarily suggest that 2-year-olds are less capable of performing this task than 3-year-olds. Instead, it is possible that 2-year-olds are more likely to help by targeting the toys on the tray in this condition, which, as explained earlier, is still helpful. 2-year-olds may have a stronger aversion to acting on a toy that someone has already failed to work, or may interpret the confederate's goal differently than 3-year-olds. 
 
-Our results suggest that 2- and 3-year-olds can infer the cause of someone's failed action and use that inference to help the person achieve her goal. However, the Broken Button condition does not actually require that children infer the source of the confederate's failure. Because of how the toys are color-coded, the confederate's mistake is marked in red and all possible helpful actions are marked in yellow. Therefore, children in this condition could just remember that yellow produces music, instead of inferring that the confederate's action on the toy is the source of her failure. This is not the case, however, in the Broken Toy condition. Both the confederate's failed action and all helpful actions are marked in yellow. Children need to target a yellow button on a *new* toy and cannot simply target a particular color. To eliminate this alternative explanation in the Broken Button condition as well as the asymmetry between the two conditions, we designed a second experiment with two identical toys. 
+One issue with the design of this experiment is that the Broken Button condition actually does not require children to infer the soruce of the confederate's failure. The confederate's mistake is marked in red and all possible helpful actions are marked in yellow because of how the toys are color-coded. Therefore, children in this condition can help effectively by remembering that yellow produces music, and do not need to infer that the confederate's  action on the toy is the source of her failure. This is not the case in the Broken Toy condition. Both the confederate's failed action and all helpful actions are marked in yellow. Children need to target a yellow button on a *new* toy and cannot simply target a particular color. To eliminate this alternative explanation in the Broken Button condition as well as the asymmetry between the two conditions, we designed a second experiment with two identical toys. 
 
 # Experiment 2
 
@@ -304,7 +301,7 @@ As in Experiment 1, the key dependent measure was the target of the child's firs
 
 The consequence of each child's first response was also coded. We coded a response as "successful" if the behavior helped the confederate play music, and "unsuccessful" otherwise. In the Broken Toy condition, we coded a response as "successful" if the child pressed a button on the other toy or indicated (by pointing or verbally instructing) that the confederate should do so. We coded a response as "unsuccessful" if the target of the child's first behavior was the confederate's toy. In the Broken button condition, we coded a response as "successful" if the child flipped and pressed the bottom button on either of the two toys, or indicated (by pointing or verbally instructing) that the confederate should flip and press a bottom button. Unsuccessful behaviors involved acting on a top button or indicating that the confederate should act on a top button.
 
-# Results
+## Results
 ```{r}
 # Response: Between condition differences -- Fisher's exact test
 two_between_response <- 
@@ -411,15 +408,13 @@ two_toy_tidy %>%
   plot_flip("Experiment 2:")
 ```
 
-# Discussion
+## Discussion
 
-[I actually probably wouldn't read this discussion---it's all over the place and things got out of order because I kept rewriting sections. it currently doesn't make much sense]
+In this experiment, 2- and 3-year-old children were again able to infer the likely cause of anther individual's failure and offer appropriate help. We replicated our main finding from Experiment 1---children's responses varied with the likely cause of the confederate's failure. We also replicated the finding that children in the Broken Toy condition were more likely to target a new toy than to target the confederate's toy. This suggests that children are able to infer the cause of the confederate's failure without the aid of visual markers. 
 
-In this experiment, 2- and 3-year-old children were again able to infer the likely cause of anther individual's failure and offer appropriate help. We replicated our main finding from Experiment 1---children's responses varied with the likely cause of the confederate's failure. We also replicated the finding that children in the Broken Toy condition were more likely to target a new toy than to target the confederate's toy.
+In contrast to Experiment 1, children showed no preference for either toy in the Broken Button condition. In both experiments, it is possible to fulfill the confederate's goal of playing music by helping at either toy. However, the specificity of the confederate's goal is actually unclear: does she just want to play music in general (the *general* goal), or does she want to play music with her chosen toy (the *specific* goal)? She does explicitly choose a toy, but, when she asks the child to "show her", she does not reiterate this preference. If she just wants to play music and has no toy preference, than helping at either toy is equally helpful. If she wants help with her chosen toy, then it more directly fulfills her goal to help her with that toy. However, because the toys are visually and functionally identical in this condition, it is also possible to show her how her own toy works by showing her how to operate the other toy.  
 
-In contrast to Experiment 1, children showed no preference for either toy in the Broken Button condition. In both experiments, it is possible to fulfill the confederate's goal of playing music by helping at either toy. However, the specificity of the confederate's goal is actually unclear: does she just want to play music in general (the *general* goal), or does she want to play music with her chosen toy (the *specific* goal)? If she just wants to play music and has no toy preference, than helping at either toy is equally helpful. If she wants help with her chosen toy, then it more clearly fulfills her goal to help her with that toy. However, because the toys are visually and functional identical in this condition, it is also possible to show her how her own toy works by targeting the other toy. 
-
-We believe it is most likely that children are not distinguishing between the two toys in this condition, and this likely leads to them not attributing a toy preference to the confederate, and therefore not preferentially targeting either toy. In the Broken Toy condition, although the toys are visually identical, they are functionally distinct, which may make the distinction between the confederate's toy and the other toy more salient. This is consistent with prior research suggesting that young toddlers view a repeated choice between two objects as a preference if the two objects are visually or functionally distinct, but will not view a repeated choice between two identical objects as an expression of a side preference (CITE THINGS HERE).
+A likely explanation for children's behavior in this condition is that they are not distinguishing between the two toys in this condition. If they are not distinguishing between the two toys, they may then not interpret the confederate's actions as indicating a preference for one toy over another, which in turn would imply that she possesses the general goal and they can help her by targeting either toy. This is consistent with prior research suggesting that young toddlers view a repeated choice between two objects as a preference if the two objects belong to differnet global categories, but will not view a repeated choice between two identical objects as an expression of a side preference [@Spaepen2007].
 
 Regardless of the confederate's goal, it would be more expedient to target the confederate's toy, since children have more information about this toy. They do not know which button (functional or inert) is which on the other toy, but they can infer that the functional button is on the bottom of the confederate's toy. Children do not appear to be taking this into account. Although it is possible that they are not inferring that the bottom button must play music, it seems more likely that they are not motivated to help in the most efficient way possible. They may not care about maximizing the probability of playing music on a single button press, as there is nothing to indicate that they can only press one button or offer one piece of help.  
 
@@ -441,20 +436,6 @@ three_between_response
 ```
 
 The percentages of children in the Broken Button condition who targeted the other toy in this experiment and in Experiment 1 were not significantly different (`r two_between_response$perc_bb`% vs. `r three_between_response$perc_bb`%; two-tailed Fisher’s Exact Test, p = `r p_value_three_two_bb`). Therefore, we cannot compare the two experiments to determine what differences may have led to children in this experiment failing to express a preference. 
-
-There are several reasons why we might expect children to target the confederate's toy in this condition. First, children have more information about the confederate's toy and should choose the confederate's toy if they wish to maximize the probability of producing music on a single button push. Children witnessed the confederate press a button on the top of her toy and the toy fail to activate. If a child remembered how the toys worked, she could then infer that the bottom button on the confederate's toy must be the functional button. They have no such information about other toy. In this experiment, the functional and non-functional sides are not marked and it is therefore not clear which button will produce music on the other toy. Therefore, if children want to maximize the chance of producing music, it makes sense to target the bottom button on the confederate's toy. Second, the confederate chooses one toy over another, by both verbally by remarking, "Hmm, I think I'll play with this one," and by kneeling down behind her chosen toy and pressing a button on that toy only. It therefore is reasonable to conclude that these actions indicate that she has a preference for one toy over another. 
-
-Here, we discuss several possible explanations of why children in the Broken Button condition demonstrated no preference for either toy.
-
-It is possible that some children in the Broken Button condition forgot which toy was the confederate's toy. In Experiment 1, it was more obvious which toy was the confederate's toy because it was the only toy not on the tray. Although children in the Broken Toy condition appeared not to forget which toy was which, it is possible that the difference between the two toys was more salient in the Broken Toy condition because the toys were also functionally distinct. 
-
-A related explanation is that children interpreted the confederate's actions as her choosing randomly between two identical toys, and not as an expression of her preference for one toy over another. Thus, her goal was not to play music with her chosen toy (a *specific* goal), but instead to play music generally (a *general* goal). It then fulfills her goal to play music on either toy. Furthermore, the confederate's only verbal statement of her goal comes when she says, "I really want music!" and when she prompts the child to "show her", she gestures towards both toys. Therefore, during the period in which the confederate explicitly states her goal and prompts the child, she does not express a preference for either toy. She expressed her preference earlier, when she tried the toy, but perhaps children see her subsequent behavior as overriding this preference and thus think that she holds the general goal. The predicted behavior of children in the Broken Toy condition is the same regardless of which goal the children thought the confederate held, as you can only produce music on the other toy.
-
-Note that it is also possible to be helpful at either toy even if the confederate holds the *specific* goal. Since the toys are identical, showing the confederate how to produce music on one toy can also inform the confederate how to produce music on her toy. It is possible that some children attributed the specific goal to the confederate and decided to inform her how to operate her own toy on the other toy. 
-
-[what do children do at the other toy?]
-
-It is also possible that some children thought the confederate preferred her own toy, but had an aversion to the confederate's toy. 
 
 ```{r}
 bb_other_targeters <-
@@ -489,10 +470,9 @@ bb_other_targeters_no_flip <-
          secondFlip = str_detect(`2ndBehaviorCode`, "flip")) 
 ```
 
+[where was i going with this?]
 
 Of the `r bb_other_targeters$total` children in the Broken Button condition who targeted the other toy, only `r bb_other_targeters$flip` flipped or indicated that the confederate should flip the toy over. These children were therefore included in the unsuccessfully helpful category. However, the children did not know which button was on top, and so probably tried the obvious one first to see if it would work. When it did not produce music, 11/13 of these children tried again, mostly (10/11) by flipping over the other toy. Thus, even though children who targeted the top button on the other toy were counted as unhelpful, they were able to integrate prior knowledge about how the toys worked and respond appropriately to their own failure. 
-
-Regardless of which goal the confederate holds, children could help the most efficiently by turning over the confederate's toy and pressing the bottom button, as the bottom button on the confederate's toy is guaranteed to play music, whereas either button on the other toy only has a 50% chance of playing music. It is possible that children are not taking this information into account when deciding how to help, either because they do not realize which button has the highest probability of producing music or because, while motivated to help, they are not motivated to help as efficiently as possible. 
 
 ```{r}
 early_helpers <-
@@ -527,8 +507,6 @@ two_toy_tidy %>%
 There were also `r early_helpers_counts$total` children who offered help after the confederate pressed the top button on her chosen toy, but before she moved back to the center and asked the child to "show her." These children exhibited similar responses as did children who responded after the confederate gave her prompt. These children spontaneously helped and did not require the confederate to either state or goal or to prompt the child to "show her." Thus, they were motivated to inform the confederate about how the toys worked even though they were not explicitly asked to do so. About half of these children also helped from where they were sitting, without getting up to operate a toy themselves (`r early_helpers_sit$sit` / `r early_helpers_counts$total`), suggesting that they were informing the confederate about the toys, and not motivated solely by the desire to produce music themselves as soon as they saw the confederate fail to do so. 
 
 Thus, it is unclear what children thought of confederate's goal in this experiment, and subsequently why children in the Broken Button condition demonstrated no preference for either toy. In a third experiment, we made it clearer that the confederate's goal was to play with her chosen toy, as well as eliminated the possibility of demonstrating how to operate one toy by acting on another. 
-
-
 # Experiment 3
 
 In the third experiment, we changed the structure of one toy in each pair to make the toys visually and functionally distinct. This eliminated the possibility of demonstrating how to operate the confederate's toy by acting on the other toy. Additionally, when the confederate makes a choice between the two toys, it is now likelier that she is indicating her preference for one toy type over another, and thus likelier that she holds the specific goal.
@@ -584,7 +562,7 @@ The helping phase was identical to the helping phase in Experiment 2, except for
 
 Again, we coded the target of each child's first behavior after the confederate's failure (i.e., her first button press). This target was either the confederate's toy or the other toy, and all children who responded fell into one of these two categories. As in the previous two experiments, we also coded responses as successful or unsuccessful. The criteria were the same as in Experiment 2 for both conditions. 
 
-# Results
+## Results
 
 To verify that children did not express a bias for a particular toy type, side, confederate, or experimenter, we ran a logistic regression with all of the listed variables as predictors and an indicator variable representing whether or not children responded as predicted (i.e., targeted the confederate's toy in Broken Button or other toy in Broken Toy) as the response. None of the predictors were significant. See Table 2 for details.
 
@@ -676,7 +654,7 @@ Finally, as an exploratory analysis, we looked at the tendency of children to ta
 plot_flip(modified_tidy)
 ```
 
-# Discussion
+## Discussion
 
 The results from this experiment again replicate our main finding from Experiment 1 that children's responses to the confederate's request vary depending on the likely source of her failure. 
 
@@ -924,6 +902,7 @@ kable_glm_table("Targets non-obvious button", all_glms)
 - age analyses
 - jmz versus bing children
 - one year olds
+- rates of helping for other papers versus our kids
 
 
 # COMMENTS TO SELF/random things
@@ -936,6 +915,7 @@ Second, we can look at the content of children's helping behaviors. This is a st
 Another possible counterargument to the idea that children are helping the confederate, however, is that children are just answering a prompt. The confederate asks the child, either to help her or to show her, after stating that she likes music. Although this is often how people ask for help, it could also be interpreted as a command to the child or as "**Can** (i.e., are you capable of) helping me play music?". Children may also be more used to adults giving them commands than asking them for help. 
 
 What's the difference between helping and answering a question? Sometimes helping involves answering a question. For example, if someone asks you to explain a concept from a class they are struggling in, we would tend to count that as helping. However, question answering is often not helping, such as when having a casual conversation or answering a question during a job interview. What's the difference between these two scenarios? 
+
 
 
 ```{r}
