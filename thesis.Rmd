@@ -415,9 +415,34 @@ two_toy_tidy %>%
 
 [I actually probably wouldn't read this discussion---it's all over the place and things got out of order because I kept rewriting sections. it currently doesn't make much sense]
 
-In this experiment, 2- and 3-year-old children were again able to infer the likely cause of anther individual's failure and offer appropriate help. We replicated our main finding from Experiment 1---children's responses varied with the likely cause of the confederate's failure.
+In this experiment, 2- and 3-year-old children were again able to infer the likely cause of anther individual's failure and offer appropriate help. We replicated our main finding from Experiment 1---children's responses varied with the likely cause of the confederate's failure. We also replicated the finding that children in the Broken Toy condition were more likely to target a new toy than to target the confederate's toy.
 
-However, children showed no preference for either toy in the Broken Button condition, in contrast to Experiment 1, in which they showed a preference for the confederate's toy. There are several reasons why we might expect children to target the confederate's toy in this condition. First, children have more information about the confederate's toy and should choose the confederate's toy if they wish to maximize the probability of producing music on a single button push. Children witnessed the confederate press a button on the top of her toy and the toy fail to activate. If a child remembered how the toys worked, she could then infer that the bottom button on the confederate's toy must be the functional button. They have no such information about other toy. In this experiment, the functional and non-functional sides are not marked and it is therefore not clear which button will produce music on the other toy. Therefore, if children want to maximize the chance of producing music, it makes sense to target the bottom button on the confederate's toy. Second, the confederate chooses one toy over another, by both verbally by remarking, "Hmm, I think I'll play with this one," and by kneeling down behind her chosen toy and pressing a button on that toy only. It therefore is reasonable to conclude that these actions indicate that she has a preference for one toy over another. 
+In contrast to Experiment 1, children showed no preference for either toy in the Broken Button condition. In both experiments, it is possible to fulfill the confederate's goal of playing music by helping at either toy. However, the specificity of the confederate's goal is actually unclear: does she just want to play music in general (the *general* goal), or does she want to play music with her chosen toy (the *specific* goal)? If she just wants to play music and has no toy preference, than helping at either toy is equally helpful. If she wants help with her chosen toy, then it more clearly fulfills her goal to help her with that toy. However, because the toys are visually and functional identical in this condition, it is also possible to show her how her own toy works by targeting the other toy. 
+
+We believe it is most likely that children are not distinguishing between the two toys in this condition, and this likely leads to them not attributing a toy preference to the confederate, and therefore not preferentially targeting either toy. In the Broken Toy condition, although the toys are visually identical, they are functionally distinct, which may make the distinction between the confederate's toy and the other toy more salient. This is consistent with prior research suggesting that young toddlers view a repeated choice between two objects as a preference if the two objects are visually or functionally distinct, but will not view a repeated choice between two identical objects as an expression of a side preference (CITE THINGS HERE).
+
+Regardless of the confederate's goal, it would be more expedient to target the confederate's toy, since children have more information about this toy. They do not know which button (functional or inert) is which on the other toy, but they can infer that the functional button is on the bottom of the confederate's toy. Children do not appear to be taking this into account. Although it is possible that they are not inferring that the bottom button must play music, it seems more likely that they are not motivated to help in the most efficient way possible. They may not care about maximizing the probability of playing music on a single button press, as there is nothing to indicate that they can only press one button or offer one piece of help.  
+
+```{r}
+three_two_combined <-
+  three_toy_tidy %>% 
+  mutate(experiment = 1) %>% 
+  select(condition, firstChoice, experiment) %>% 
+  rbind(two_toy_tidy %>% 
+          mutate(experiment = 2) %>% 
+          select(condition, firstChoice, experiment)) %>% 
+  filter(condition == "Broken Button")
+
+p_value_three_two_bb <- 
+  get_fishers_p_value(table(three_two_combined$experiment, three_two_combined$firstChoice))
+
+two_between_response
+three_between_response
+```
+
+The percentages of children in the Broken Button condition who targeted the other toy in this experiment and in Experiment 1 were not significantly different (`r two_between_response$perc_bb`% vs. `r three_between_response$perc_bb`%; two-tailed Fisher’s Exact Test, p = `r p_value_three_two_bb`). Therefore, we cannot compare the two experiments to determine what differences may have led to children in this experiment failing to express a preference. 
+
+There are several reasons why we might expect children to target the confederate's toy in this condition. First, children have more information about the confederate's toy and should choose the confederate's toy if they wish to maximize the probability of producing music on a single button push. Children witnessed the confederate press a button on the top of her toy and the toy fail to activate. If a child remembered how the toys worked, she could then infer that the bottom button on the confederate's toy must be the functional button. They have no such information about other toy. In this experiment, the functional and non-functional sides are not marked and it is therefore not clear which button will produce music on the other toy. Therefore, if children want to maximize the chance of producing music, it makes sense to target the bottom button on the confederate's toy. Second, the confederate chooses one toy over another, by both verbally by remarking, "Hmm, I think I'll play with this one," and by kneeling down behind her chosen toy and pressing a button on that toy only. It therefore is reasonable to conclude that these actions indicate that she has a preference for one toy over another. 
 
 Here, we discuss several possible explanations of why children in the Broken Button condition demonstrated no preference for either toy.
 
@@ -541,6 +566,11 @@ We randomly assigned children to one of two conditions: the Broken Toy condition
 ### Stimuli
 
 We constructed three pairs of toys. One toy in each pair looked identical to the toys constructed in Experiment 2 (*top-bottom toys*). The other three toys had a button on the top and on an adjacent side (*top-side toys*), instead of on the top and bottom, but were otherwise identical to the toys in Experiment 2. The toys in one pair each had one functional button and one inert button. For the other two pairs of toys, one toy had two functional buttons and the other had two inert buttons. In one of these pairs, the functional toy was a top-bottom toy; in the other pair, the functional toy was a top-side toy. See Figure `r caption_figure()`.
+
+```{r, fig.cap="Schematic of the toys used in Experiment 3. "}
+
+```
+
 
 ![Figure `r fig_num_counter`](images/modified-toy-schematic.png)
 
