@@ -373,7 +373,7 @@ plot_responses <- function(data, title_prefix = "") {
                                firstChoice, 
                                "Confederate's toy", 
                                response_colors, 
-                               str_c(title_prefix, " Response by condition"), 
+                               str_c(title_prefix, "Response by condition"), 
                                "Target toy of first response", 
                                c("Other toy", "Confederate's toy"))
 }
@@ -383,7 +383,7 @@ plot_helpfulness <- function(data, title_prefix = "") {
                                helpfulCategory, 
                                "Helpful", 
                                helpfulness_colors, 
-                               str_c(title_prefix, " Success of helping behavior by condition"), 
+                               str_c(title_prefix, "Success of helping behavior by condition"), 
                                "Success of helping behavior", 
                                c("Unsuccessful", "Successful"))
 }
@@ -393,7 +393,7 @@ plot_flip <- function(data, title_prefix = "") {
                                flip,
                                TRUE,
                                flip_colors,
-                               str_c(title_prefix, " Button type targeted by condition"),
+                               str_c(title_prefix, "Button type targeted by condition"),
                                "Target button of first response",
                                c("Obvious", "Non-obvious"))
 }
@@ -403,7 +403,7 @@ plot_predicted <- function(data, title_prefix = "") {
                                as_predicted, 
                                1, 
                                predicted_colors, 
-                               str_c(title_prefix, " Target matches prediction by condition"), 
+                               str_c(title_prefix, "Target matches prediction by condition"), 
                                "Target toy matches prediction", 
                                c("No", "Yes"))
 }
@@ -430,6 +430,37 @@ plot_social_referencing <- function(data, title_prefix = "") {
          title = str_c(title_prefix, "Social referencing behavior"),
          caption = str_c("Figure", fig_num_counter, sep = " ")) +
     coord_cartesian(ylim = c(0, 1)) 
+}
+
+plot_change_type <- function(data, title_prefix = "") {
+  data %>% 
+    mutate(change_toy = firstChoice == "Other toy",
+           behavior_group = 
+             case_when(
+               change_toy & flip ~ "Change toy\nand action",
+               change_toy ~ "Change\ntoy",
+               flip ~ "Change\naction",
+               TRUE ~ "Imitate"
+              )
+           ) %>% 
+      group_by(condition, behavior_group) %>% 
+      summarise(n = n()) %>% 
+      mutate(percentage = n / sum(n)) %>% 
+      ungroup() %>% 
+      mutate(color = (condition == "Broken Toy" & str_detect(behavior_group, "toy")) |
+               (condition == "Broken Button" & str_detect(behavior_group, "action"))) %>% 
+      ggplot(aes(behavior_group, percentage, fill = color)) +
+      geom_col() +
+      facet_grid(~condition) +
+      scale_fill_manual(breaks = c(TRUE, FALSE),
+                        values = c("#dddddd", "#dc322f"),
+                        labels = c("Yes", "No"),
+                        name = "Helpful response") +
+      coord_cartesian(ylim = c(0, 1)) +
+      theme_minimal() +
+      labs(x = "Behavior type",
+           y = "Proportion of children",
+           title = str_c(title_prefix, "title filler until i think of a title")) #add title in here
 }
 
 #----------------------------------------------------------------------------------
