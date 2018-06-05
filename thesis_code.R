@@ -363,8 +363,8 @@ proportion_by_condition_plot <- function(data, variable, variable_option_1, colo
     theme_minimal() + 
     labs(x = "Condition",
          y = "Proportion of children",
-         title = title,
-         caption = str_c("Figure", fig_num_counter, sep = " ")) +
+         title = title) + #,
+         #caption = str_c("Figure", fig_num_counter, sep = " ")) +
     coord_fixed(ratio = 2/1)
 }
 
