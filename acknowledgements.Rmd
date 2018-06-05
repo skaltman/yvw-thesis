@@ -11,8 +11,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Acknowledgements
 
-I'd like to thank my advisor, Hyo Gweon, and my collaborator, Sophie Bridgers for their guidance, encouragement, mentorship, and excellent discussions. I'm extremely grateful to have gotten to spend the past two years working with such brilliant and thoughtful women. 
+I'd like to thank my advisor, Hyo Gweon, and my collaborator, Sophie Bridgers, for their guidance, encouragement, mentorship, and excellent discussions. I'm extremely grateful to have gotten to spend the past two years working with such brilliant and thoughtful researchers. 
 
 Thank you also to my second reader, Mike Frank, for providing helpful comments and for generally encouraging me to pursue research since I was an undergraduate. 
 
-Thanks also to the many different research assistants and one lab manager who helped with data collection: Fernanda Kramer, Maria Marta Rey Malca De Habich, Natalie Wu, Huda Akef, Ayushi Chandaria, and Grace Bennett-Pierre. 
+Thanks also to the many different research assistants and one lab manager who helped with data collection: Fernanda Kramer, Maria Marta Rey Malca De Habich, Natalie Wu, Huda Akef, Angelina Garron, Ayushi Chandaria, and Grace Bennett-Pierre. 
+
+This work also would not have been possible without the cooperation of Bing Nursery School, the Palo Alto Junior Museum and Zoo, and all the families who participated. 
+
+
+

@@ -86,11 +86,13 @@ Many helping scenarios, however, do involve choosing between multiple possible s
 
 Children as young as two are able to use variation and covariation information to infer the physical cause of a physical effect, and, by age three, children are able to intervene on such a system to stop the physical effect [@Gopnik2001]. Schulz and Gopnik (2004) suggests that this type of reasoning extends to other domains as well. They introduced 3- and 4-year-olds to a monkey that sneezed when in contact with some flowers, but not others. Similar to the children in Gopnik et al. (2001), these children were able to detect the flower that caused the monkey to sneeze when shown that the monkey sneezed in the presence of single flower, or in the presence of that flower and another flower, but not in the presence of the second flower only. Children were also able to keep track of the conditional probabilities that different flowers caused the monkey to sneeze when shown only various pairs of flowers, as well as intervene to remove the flower that caused the monkey to sneeze. They created a second set of scenarios in which children had to figure out which animal made a bunny scared. Children were again able to reason about cause of the bunny's fear and intervene by removing the causal animal. This works suggests not only that young children are able to reason about the cause of an effect and intervene to stop the effect, but also that they are able to do so when the effect in question is a reaction, either physical or psychological, of another agent. Young children may therefore be able to recruit their causal reasoning abilities in helping scenarios, which often involve reasoning about why a certain effect or emotion has been produced in other agent. 
 
-Furthermore, previous work by Gweon and Schulz (2011) suggests that children as young as sixteen months are capable of inferring the causes of their *own* failed actions and helping themselves accordingly. In the study, children either witnessed that a toy sometimes worked and sometimes did not, regardless of who operated the toy, or that the toy worked for some agents but not others. Children were then given the opportunity to try the toys for themselves, but the toys never activated. Children who witnessed that toy functionality did not depend on the agent were more likely to reach for a new toy, suggesting that they attributed their failure to the toy itself. In contrast, children who witnessed that toy functionality did depend on the agent were more likely to hand the toy off to a parent, suggesting that they attributed the failure to themselves.  
-
 ## Current Experiments
 
-We designed three experiments to investigate 24- to 48-month-olds ability to reason about the causes of others' failed actions and then offer effective help. In all three experiments, children observed an adult fail to activate a toy either because she took the wrong action on the toy or because she selected a broken toy. The adult then asked the child for help and the child could choose between helping her with the toy she had already tried or with a second toy. The effectiveness of each choice varied with the actual cause of the adult's failure. Therefore, if children are able to reason about the cause of the adult's failure and address that cause when helping, their responses would also vary with the cause of her failure. 
+Thus, by age 2, children can infer others' goals and beliefs from their actions, and willingly help in a variety of contexts. They are also able to reason about and intervene on causal systems. We investigated if children are able to recruit these cognitive abilities (goal and belief attribution; causal reasoning) in a helping scenario in which it is necessary to determine the cause of an agent's failed action in order to help effectively. 
+
+Previous work by Gweon and Schulz (2011) suggests that children as young as 16 months are capable of inferring the causes of their *own* failed actions and helping themselves accordingly. In the study, children either witnessed that a toy sometimes worked and sometimes did not, regardless of who operated the toy, or that the toy worked for some agents but not others. Children were then given the opportunity to try the toys for themselves, but the toys never activated. Children who witnessed that toy functionality did not depend on the agent were more likely to reach for a new toy, suggesting that they attributed their failure to the toy itself. In contrast, children who witnessed that toy functionality did depend on the agent were more likely to hand the toy off to a parent, suggesting that they attributed the failure to themselves. 
+
+We investigated if children incorporate similar inferences about *others'* failures when deciding how to help. We designed three experiments to investigate 24- to 48-month-olds ability to reason about the causes of others' failed actions and then offer effective help. In all three experiments, children observed an adult fail to activate a toy either because she took the wrong action on the toy or because she selected a broken toy. The adult then asked the child for help and the child could choose between helping her with the toy she had already tried or with a second toy. The effectiveness of each choice varied with the actual cause of the adult's failure. Therefore, if children are able to reason about the cause of the adult's failure and address that cause when helping, their responses would also vary with the cause of her failure. 
 
 Much has been written about altruism in humans [@Warneken2009; @Tomasello2009], but helping is not necessarily altruistic. Regardless of whether the helper is rewarded for her help, she had to harness the various cognitive skills discussed earlier. Therefore, the research discussed in this thesis investigates the cognitive skills involved in helping without dwelling on the exact motivations of the children involved. We wanted to know how children help when they are motivated, for whatever reason, to do so, and thus took various steps to motivate children to help. 
 
@@ -148,7 +150,7 @@ include_graphics("images/three-toy-helping-phase.png", dpi = NULL)
 
 The measures of interest were which toy children acted on and what actions they took on that toy after the confederate’s failure (i.e., her first button press). The target toy was coded either as the "confederate's toy" or the "toys on the tray." All children who responded fell into one of these two categories.
 
-To code what children did with the target toy, we coded whether the behavior was “successful" or “unsuccessful” in achieving the confederate’s goal of playing music. In the Broken Toy condition, we coded a child’s first response as “successful” if the child pressed the yellow button on a toy from the tray or directed the confederate to press it (e.g., telling her to do so, pointing, or handing her a toy yellow-side-up). “Unsuccessful” responses included pressing or directing the confederate to press the red button on any toy or the yellow button on the confederate’s toy. In the Broken Button condition, we coded a behavior as “successful” if a child flipped and pressed the yellow button or directed the confederate to do so (e.g., telling her to press it, flipping a toy and handing it to the confederate or pointing to a yellow side). Therefore, in the Broken Button condition, children could respond successfully regardless of which toy they targeted. In the Broken Toy condition, however, children could only respond successfully if they targeted the toys on the tray. A researcher blind to the hypotheses also coded these transcriptions for reliability and agreement with the original coder was 100%. [**note to sara: check**]
+To code what children did with the target toy, we coded whether the behavior was “successful" or “unsuccessful” in achieving the confederate’s goal of playing music. In the Broken Toy condition, we coded a child’s first response as “successful” if the child pressed the yellow button on a toy from the tray or directed the confederate to press it (e.g., telling her to do so, pointing, or handing her a toy yellow-side-up). “Unsuccessful” responses included pressing or directing the confederate to press the red button on any toy or the yellow button on the confederate’s toy. In the Broken Button condition, we coded a behavior as “successful” if a child flipped and pressed the yellow button or directed the confederate to do so (e.g., telling her to press it, flipping a toy and handing it to the confederate or pointing to a yellow side). Therefore, in the Broken Button condition, children could respond successfully regardless of which toy they targeted. In the Broken Toy condition, however, children could only respond successfully if they targeted the toys on the tray. A researcher blind to the hypotheses also coded these transcriptions for reliability and agreement with the original coder was 100%.
 
 ## Results
 
@@ -250,11 +252,11 @@ three_toy_tidy %>%
   plot_flip("Experiment 1: ")
 ```
 
-```{r}
-knitr::kable(glm_fit)
-```
-
 As an exploratory analysis, we also coded children’s first responses as “correct” (Broken Toy: “toys on tray”; Broken Button: “confederate’s toy”) or “incorrect”. We fit a generalized linear model with correctness as the outcome variable, condition as a categorical predictor variable, and age as a continuous predictor variable. This analysis revealed that age is a significant predictor of "correctness" ($\beta$ = `r age_stats$Estimate`, p = `r age_stats$p_value`), but that condition is not ($\beta$ = `r condition_stats$Estimate`, p = `r condition_stats$p_value`). For details, see Table 1.
+
+```{r}
+knitr::kable(glm_fit, caption = "Correctness")
+```
 
 ## Discussion
 
@@ -264,10 +266,7 @@ The only way to address the source of the confederate's failure in the Broken To
 
 Children not only responded according to the likely source of the confederate's failure, but also tailored their actions so that they effectively helped the confederate fulfill her goal. A majority of children in the Broken Toy condition targeted an obvious button, while a majority of children in the Broken Button condition targeted a non-obvious button, even though children saw the exact same toys in both conditions. This suggests that the children not only realized which toy could help the confederate fulfill her goal, but also which action to take on that toy would be the most effective. Furthermore, of the `r three_between_response$num_bb` out of `r summary_three_toy$num_bb` children in the Broken Button condition who targeted the toys on the tray, all targeted a bottom button. Thus, even though these children changed the toy, their behavior at their chosen toy suggests that they did not attribute the source of the confederate's failure solely to the toy itself. In contrast, none of the `r three_between_response$num_bt` children in the Broken Toy condition who targeted the toys on the tray targeted a bottom button.
 
-[**note to sara: need to check this**]
-
-We did find an age-related trend in terms of "correctness." However, this does not necessarily suggest that 2-year-olds are less capable of performing this task than 3-year-olds. Instead, it is possible that 2-year-olds are more likely to help by targeting the toys on the tray in this condition, which, as explained earlier, is still helpful. 2-year-olds may have a stronger aversion to acting on a toy that someone has already failed to work, or may interpret the confederate's goal differently than 3-year-olds. 
-
+We did find an age-related trend in terms of "correctness." However, this does not necessarily suggest that 2-year-olds are less capable of performing this task than 3-year-olds. Instead, it is possible that 2-year-olds are more likely to help by targeting the toys on the tray in the Broken Button condition, which, as explained earlier, is still helpful. 2-year-olds may have a stronger aversion to acting on a toy that someone has already failed to work, or may interpret the confederate's goal differently than 3-year-olds. 
 
 # Experiment 2
 
@@ -382,7 +381,7 @@ glm_control %>%
                               "Grace" = "5", 
                               "Huda" = "4", 
                               "Maria Marta" = "3"))) %>% 
-  knitr::kable(digits = 2)
+  knitr::kable(digits = 2, caption = "Correctness")
 ```
 
 As in Experiment 1, children in each condition saw identical-looking toys and watched the confederate perform the same set of actions. We manipulated the cause of the confederate's failure by varying the functionality of the toy chosen by the confederate. In the Broken Toy condition, one toy is fully inert and one plays music. Thus, the source of the confederate's failure is her toy. However, in the Broken Button condition, each toy is capable of making music. The source of the confederate's failure is her choice of button, not her choice of toy.
@@ -499,8 +498,6 @@ bb_other_targeters_no_flip <-
          secondFlip = str_detect(`2ndBehaviorCode`, "flip")) 
 ```
 
-Of the `r bb_other_targeters$total` children in the Broken Button condition who targeted the other toy, only `r bb_other_targeters$flip` flipped or indicated that the confederate should flip the toy over. The other `r bb_other_targeters$no_flip` children were therefore included in the unsuccessfully helpful category. However, the children did not know which button was on top, and so probably tried the obvious one first to see if it would work. When it did not produce music, 11/13 of these children tried again, mostly by flipping over the other toy (10/11). Thus, even though children who targeted the top button on the other toy were counted as unhelpful, they were able to integrate prior knowledge about how the toys worked and respond appropriately to their own failure. 
-
 ```{r}
 early_helpers <-
   two_toy_tidy %>%
@@ -606,7 +603,7 @@ glm(as_predicted ~ toySide + toyType + experimenter + confederate,
          `Z statistic` = statistic,
          `p-value` = p.value) %>% 
   rename_at(vars(term, estimate), str_to_title) %>% 
-  knitr::kable(caption = "Table 2", digits =  2)
+  knitr::kable(caption = "Correctness", digits =  2)
 ```
 
 
