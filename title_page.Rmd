@@ -1,0 +1,51 @@
+---
+title: ""
+author: ""
+date: ""
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \Large
+        \textbf{Prosocial Decision-Making in Early Childhood}
+        
+        \vspace{1cm}
+        \large
+        Sara Altman
+        
+        \vspace{1cm}
+        
+        \small
+        A thesis presented for the Master of Science \\
+        Symbolic Systems Program, Stanford University \\
+        June 2018
+        
+    \end{center}
+\end{titlepage}
+
+
+\newpage
+
+
+To the Directors of the Program on Symbolic Systems: \newline \newline
+I certify that I have read the thesis of Sara Altman in its final form for submission and have found it to be satisfactory for the degree of Master of Science. \newline  \newline
+\underline{(Signed electronically)} \newline  \newline
+06/05/2018 
+Hyowon Gweon \newline
+Psychology
+
+\vspace{1cm}
+
+To the Directors of the Program on Symbolic Systems: \newline \newline
+I certify that I have read the thesis of Sara Altman in its final form for submission and have found it to be satisfactory for the degree of Master of Science.\newline  \newline
+\underline{(Signed electronically)} \newline  \newline
+06/05/2018 \newline
+Michael C. Frank \newline
+Psychology
