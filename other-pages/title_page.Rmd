@@ -5,10 +5,6 @@ date: ""
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 \begin{titlepage}
     \begin{center}
         \vspace*{1cm}
@@ -36,7 +32,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 To the Directors of the Program on Symbolic Systems: \newline \newline
 I certify that I have read the thesis of Sara Altman in its final form for submission and have found it to be satisfactory for the degree of Master of Science. \newline  \newline
-\underline{\quad \quad \quad \quad \quad \quad} \newline  \newline
+\underline{Signed electronically} \newline \newline
 06/05/2018 \newline
 Hyowon Gweon \newline
 Psychology
@@ -45,7 +41,7 @@ Psychology
 
 To the Directors of the Program on Symbolic Systems: \newline \newline
 I certify that I have read the thesis of Sara Altman in its final form for submission and have found it to be satisfactory for the degree of Master of Science.\newline  \newline
-\underline{\quad \quad \quad \quad \quad \quad} \newline  \newline
+\underline{Signed electronically} \newline  \newline
 06/05/2018 \newline
 Michael Frank \newline
 Psychology

@@ -45,7 +45,7 @@ Young children's propensity to help also varies with the specifics of the helpin
 
 The 18-month-olds in the @Warneken2006 study also demonstrated considerable variability in helping behavior depending on the specifics of the task. Some of the tasks involved instrumental helping (e.g., fetching out-of-reach objects for the experiment, removing physical objects), but others involved informing the experimenter about the correct way to use an object once the child had observed her using it incorrectly. In these tasks, children had to observe the experimenter's actions and infer that they posssessed crucial knowledge taht the experimenter lacked. Fewer children helped in these types of tasks than in the ones that required instrumental helping.
 
-Therefore, children begin to help others early in life, but the context and type of help required are important. Children do not start helping in all scenarios at the same time. It is still unclear exactly why this variability exists. Different scenarios do require different motivations---a scenario involving emotional distress requires that the child is motivated to alleviate that distress, while other scenarios may the child to incur a heavy cost by giving up a possession. However, different scenarios require different cognitive abilities as well, which may also influence the scenarios in which children of various ages are willing to help. The remainder of this introduction will examine cognitive abilities commonly involved in helping scenarios and discuss how these abilities might influence helping behavior. 
+Therefore, children begin to help others early in life, but the context and type of help required are important. Children do not start helping in all scenarios at the same time. It is still unclear exactly why this variability exists. Different scenarios do require different motivations---a scenario involving emotional distress requires that the child is motivated to alleviate that distress, while other scenarios may require the child to incur a cost by giving up a possession. However, different scenarios require different cognitive abilities as well, which may also influence the scenarios in which children of various ages are willing to help. The remainder of this introduction will examine cognitive abilities commonly involved in helping scenarios and discuss how these abilities might influence helping behavior. 
 
 ## Reasoning about others' goals
 
@@ -584,8 +584,6 @@ Again, our primary measures of interest were the toy targeted and actions perfor
 
 To verify that children did not express a bias for a particular toy type, side, confederate, or experimenter, we ran a logistic regression with all of the those variables as predictors and an indicator variable representing whether or not children responded "correctly" (i.e., targeted the confederate's toy in Broken Button or other toy in Broken Toy) as the response. None of the predictors were significant. See Table 3 for details.
 
-\newpage
-
 ```{r}
 # we technically preregistered as running two of these? but i'm pretty sure this is equivalent...
 glm(as_predicted ~ toySide + toyType + experimenter + confederate, 
@@ -600,7 +598,6 @@ glm(as_predicted ~ toySide + toyType + experimenter + confederate,
   rename_at(vars(term, estimate), str_to_title) %>% 
   knitr::kable(caption = "Correctness", digits =  2)
 ```
-
 
 ```{r, out.width='60%', fig.cap = "Proportion of children whose first response was directed to the confederate’s toy (blue) or the other toy (red) in the helping phase. Error bars: bootstrapped 95\\% CI."}
 modified_between_response <-
@@ -642,6 +639,11 @@ As a secondary analysis, we investigated whether the proportion of children who 
 
 Since we found a significant difference across conditions, we then looked at the tendency to behave as predicted within each condition. These analyses are identical to the analyses run to test our predictions about response within each condition. Thus, both children in the Broken Toy condition and Broken Button condition were significantly more likely to behave as predicted than not.
 
+```{r, out.width='60%', fig.cap="Proportion of children who responded successfully (green) versus unsuccessfully (gray). Error bars: bootstrapped 95\\% CI."}
+modified_tidy %>% 
+  plot_helpfulness(title_prefix = "Experiment 3: ")
+```
+
 
 ```{r}
 modified_between_helpful <-
@@ -654,11 +656,6 @@ modified_within_helpful <-
 ```
 
 In each condition, children were more likely to help successfully than unsuccessfully (Broken Toy: `r modified_within_helpful$num_bt`/`r summary_modified$num_bt`; two-tailed binomial test, p < 0.001; Broken Button: `r modified_within_helpful$num_bb`/`r summary_modified$num_bb`; two-tailed binomial test, p = `r modified_within_helpful$p_value_bb`). However, children in the Broken Toy condition were significantly more likely to help successfully than children in the Broken Button condition (`r modified_between_helpful$perc_bt`% vs. `r modified_between_response$perc_bb`%; two-tailed Fisher’s Exact Test, p = `r modified_between_helpful$p_value`). 
-
-```{r, out.width='60%', fig.cap="Proportion of children who responded successfully (green) versus unsuccessfully (gray). Error bars: bootstrapped 95\\% CI."}
-modified_tidy %>% 
-  plot_helpfulness(title_prefix = "Experiment 3: ")
-```
 
 ```{r}
 modified_between_flip <- 

@@ -5,10 +5,6 @@ date: ""
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Acknowledgements
 
 I'd like to thank my advisor, Hyo Gweon, and my collaborator, Sophie Bridgers, for their guidance, encouragement, mentorship, and excellent discussions. I'm extremely grateful to have gotten to spend the past two years working with such brilliant and thoughtful researchers. 
