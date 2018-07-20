@@ -1,0 +1,148 @@
+---
+title: "yvw_analyses"
+author: "Sara Altman"
+date: "7/20/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(yvw)
+library(readxl)
+library(langcog)
+```
+
+Files/parameters
+```{r}
+three_toy_path <- "~/Dropbox/YouVWorld/Data/YouVWorldData_forSophie.xlsx"
+three_toy_sheet <- "DataUpdated"
+
+two_toy_path <- "~/Dropbox/YouVWorld/TwoToys/data/YouvWorld_TwoToys_SB.xlsx"
+two_toy_sheet <- "Data"
+
+modified_path <- "~/Dropbox/YouVWorld/TwoToys/new_version_data/YouVWorld_modified_toy_updated.xlsx"
+modified_sheet <- "Data"
+
+sr_path <- "~/Dropbox/YouVWorld/allExperimentsAnalysis/data/YouVWorld_SocialReferenceData.xlsx"
+```
+
+Read in data
+```{r}
+three_toy <- 
+  read_xlsx(path = three_toy_path, 
+            sheet = three_toy_sheet) %>% 
+  rename(excludeCode = exclude_code)   # want all excludeCode variables named the same thing
+
+two_toy <- 
+  read_xlsx(path = two_toy_path, 
+            sheet = two_toy_sheet)
+
+modified <- 
+  read_xlsx(path = modified_path, 
+            sheet = modified_sheet)
+
+three_toy_sr <- 
+  read_xlsx(path = sr_path, sheet = "three-toy") %>% 
+  rename_all(funs(str_replace_all(., " ", "_")))
+
+two_toy_sr <-
+  read_xlsx(path = sr_path, sheet = "two-toy") %>% 
+  rename_all(funs(str_replace_all(., " ", "_")))
+```
+
+Format data 
+```{r}
+three_toy_tidy <-
+  three_toy %>% 
+  format_data() %>% 
+  filter(exclude != "yes",
+         between(ageBucket, 2, 3),
+         n != 109) %>% 
+  mutate(firstChoiceCorrect = as.integer(firstChoiceCorrect)) %>% 
+  select(-contains("second"),
+         -contains("third"),
+         -contains("fourth"),
+         -contains("language"),
+         -contains("?"),
+         -contains("child's choice matches")) %>% 
+  rename(helpfulCategory = HelpfulCategory)
+
+two_toy_tidy <-
+  two_toy %>% 
+  format_data() %>% 
+  filter(exclude == "no") %>% 
+  mutate(helpfulCategory = HelpfulCategory,
+         firstChoiceCorrect = as.integer(firstChoiceCorrect))
+
+modified_tidy <-
+  modified %>% 
+  format_data() %>% 
+  filter(exclude != "yes") %>% 
+  rename(helpfulCategory = HelpfulCategory) %>% 
+  mutate(as_predicted = 
+           case_when(
+            condition == "Broken Toy" & firstChoice == "Other toy" ~ 1,
+            condition == "Broken Button" & firstChoice == "Confederate's toy" ~ 1,
+            TRUE ~ 0
+           )
+         ) %>% 
+  filter(n != 109,
+         n != 110)
+```
+
+# Experiment 1
+
+Summary statistics
+```{r}
+summary_three_toy <- 
+  summary_tibble(three_toy_tidy)
+
+# excluded kids 
+# check that these codes are right--some are different than ones in cogsci
+num_excluded <-
+  three_toy %>% 
+  get_num_excluded(excludeCode, parent, exp, withdrew)
+```
+
+Response and helpfulness within/between condition tests
+```{r}
+# Response: Between condition differences -- Fisher's exact test
+three_between_response <- 
+  three_toy_tidy %>% 
+  between_condition_response(digits = 3)
+
+# Response: Within condition differences -- 2 two-tailed binomial tests
+three_within_response <-
+  three_toy_tidy %>%
+  within_condition_response(digits = 3)
+
+# Helpfulness: Between condition differences -- Fishers exact test
+three_between_help <-
+  three_toy_tidy %>%
+  filter(n != 11) %>%
+  between_condition_helpful(digits = 3)
+
+# Helpfulness: Within condition differences -- 2 two-tailed binomial tests
+three_within_help <-
+  three_toy_tidy %>%
+  filter(n != 11) %>%
+  within_condition_helpful(digits = 9)
+```
+
+Plot responses
+```{r}
+three_toy_tidy %>% 
+  plot_responses("Experiment 1: ")
+```
+
+Plot helpfulness
+```{r}
+three_toy_tidy %>% 
+  filter(n != 11) %>% 
+  plot_helpfulness("Experiment 1: ")
+```
+
